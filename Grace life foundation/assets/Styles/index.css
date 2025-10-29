@@ -1,0 +1,131 @@
+ /* GLOBAL STYLES */
+*{
+  box-sizing:border-box;
+  padding: 0;
+  margin:0;
+}
+body{
+  font-family: "poppins", sans-serif;
+  width:100%;
+}
+h1{
+  font-size: 2.5rem;
+}
+h2{
+  font-size: 2rem;
+  color:#2a2a2a;
+}
+p,a,input,button{
+  font-size: 1.5rem;
+  color:#a1a1a1;
+}
+hr{
+  border:dotted 2px #d3d3d3;
+}
+/* MAIN HEADER */
+#header-container{
+  min-height: 5vh;
+  /* padding-left: 20px; */
+  /* padding-right: 30px; */
+  /* padding-bottom: 10px; */
+  background-color: #948e8e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99; */
+}
+.header-wrapper{
+ flex:1;
+ text-align:space-between;
+}
+.logo-wrapper {
+  flex:1;
+  padding-left:10px;
+}
+.header-wrapper a {
+  color:black;
+  font-size: 1rem;
+  text-decoration:none;
+  padding-left:20px;
+}
+.logo-image {
+  width:140px;
+  height:auto;
+  padding-top:5px;
+
+}
+a{
+  padding:20px;
+}
+
+/* ABOUT US */
+#about{
+  padding-top:30px;
+  padding-bottom:10px;
+  text-align: center;
+  border-bottom:3px dotted #eee; 
+}
+.about-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2,0.5fr);
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  /* width:100%; */
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.about-1{
+  border: 2px #eee solid;
+  background-color: white;
+  margin-top:30px;
+  margin-bottom:30px;
+  padding-top:10px; 
+  padding-bottom:5px;
+ } 
+.about-1 h2 {
+  font-size:1.5rem;
+  padding-bottom:15px; 
+}
+.about-1 p{
+  font-size:0.8rem;
+  color:#2a2a2a;
+  line-height: 25px;
+  padding-bottom:15px;
+} 
+.logo-2{
+  width:300px;
+  /* padding-left:10px;
+  padding-right:10px; */
+}
+.about-2{
+  border: 1px #eee  solid;
+  background-color: white;
+  margin-top:60px;
+  margin-bottom:60px;  
+  padding-top:15px; 
+  padding-bottom:15px;
+}
+.about-2 h2 {
+  font-size:1.5rem;
+  padding-bottom:15px; 
+}
+.about-2 p{
+  font-size:0.8rem;
+  color:#2a2a2a;
+  line-height: 25px;
+  padding-bottom:15px;
+} 
+.logo-2{
+  width:260px;
+  padding-left:10px;
+  padding-right:10px;
+}
