@@ -16,6 +16,7 @@
       font-size: 2.5rem;
       color: #2a2a2a;
       margin-bottom: 1rem;
+      text-align:center;
     }
 
     h2 {
@@ -114,9 +115,10 @@
 
     /* HERO SECTION */
     .hero-section {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/OCT30-3.jpg');
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/OCT30-9.jpg');
+      background-size:cover;
+      background-position:center;
+      background-repeat: no-repeat;
       color: white;
       text-align: center;
       padding: 6rem 2rem;
@@ -170,43 +172,299 @@
     /* ABOUT SECTION */
     #about {
       text-align: center;
-      background-color: #f9f9f9;
+      background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 50%, #f9f9f9 100%);
     }
 
-    .about-wrapper {
+    /* Mission and Vision Cards - Side by Side */
+    .mission-vision-wrapper {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin: 3rem 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+      max-width: 900px;
+      margin: 3rem auto;
     }
 
-    .about-card {
+    .mission-vision-card {
       background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
+      transition: all 0.4s ease;
+      border: 2px solid transparent;
+      text-align: center;
     }
 
-    .about-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    .mission-vision-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
     }
 
-    .about-card h3 {
+    .card-icon {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 1.5rem;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      border: 3px solid #d4af37;
+    }
+
+    .card-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      
+    }
+
+    .mission-vision-card h3 {
       color: #d4af37;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .mission-vision-card p {
+      color: #2a2a2a;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* Main About Content */
+    .about-content-wrapper {
+      max-width: 1100px;
+      margin: 4rem auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    }
+
+    .about-main-text {
+      text-align: left;
+    }
+
+    .about-main-text h2 {
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+    }
+
+    .intro-text {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    /* Impact Section with Grid */
+    .impact-section {
+      margin: 3rem 0;
+      padding: 2.5rem;
+      background: linear-gradient(135deg, #f9f9f9 0%, #fff5e6 100%);
+      border-radius: 15px;
+      border-left: 5px solid #d4af37;
+    }
+
+    .impact-section h3 {
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .impact-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .impact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 25px rgba(212, 175, 55, 0.2);
+    }
+
+    .impact-icon {
+      font-size: 2.5rem;
+      display: block;
       margin-bottom: 1rem;
     }
 
-    .logo-01, .logo-02 {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      margin-top: 1rem;
-      border-radius: 10px;
+    .impact-item p {
+      font-size: 1rem;
+      color: #2a2a2a;
+      margin: 0;
     }
 
-    /* LOGO MEANING */
+    /* Work Section */
+    .work-section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: #f9f9f9;
+      border-radius: 15px;
+    }
+
+    .work-section h3 {
+      color: #d4af37;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    
+
+    /* Involvement Section */
+    .involvement-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      max-width: 1100px;
+      margin: 4rem auto;
+    }
+
+    .why-matters, .get-involved {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+
+    .why-matters h3, .get-involved h3 {
+      color: #d4af37;
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+    }
+
+    .why-matters ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .why-matters li {
+      padding: 0.8rem 0;
+      padding-left: 2rem;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .why-matters li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    .involvement-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .involvement-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      padding: 1.2rem 2rem;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .volunteer-btn {
+      background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    }
+
+    .volunteer-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(76, 175, 80, 0.5);
+    }
+
+    .donate-btn {
+      background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    .donate-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+    }
+
+    .btn-icon {
+      font-size: 1.4rem;
+    }
+
+    .involvement-text {
+      text-align: center;
+      font-style: italic;
+      color: #666;
+    }
+
+    /* Notable Wrapper Improved */
+    .notable-wrapper {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 3rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    }
+
+    .notable-wrapper h2 {
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .notable-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .notable-item {
+      text-align: center;
+    }
+
+    .founder-image {
+      width: 100%;
+      height: 350px;
+      object-fit:cover;
+      object-position:center top;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .founder-image:hover {
+      transform: scale(1.03);
+    }
+
+    .notable-item p {
+      font-size: 1.05rem;
+      color: #2a2a2a;
+      line-height: 1.7;
+    }
+
+     /* LOGO MEANING */
     .logo-meaning {
       background: white;
       padding: 3rem;
@@ -243,11 +501,25 @@
       margin-bottom: 0.5rem;
       font-size: 1.2rem;
     }
-
+    
     /* VOLUNTEER SECTION */
     .volunteer {
       margin: 3rem 0;
       text-align: center;
+    }
+
+    .volunteer-header{
+      background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .volunteer-header p{
+      color: white;
+      font-size: 1.5rem;
     }
 
     .volunteer-image {
@@ -261,30 +533,37 @@
       object-fit: cover;
     }
 
+   .join-us-container {
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 1200px;
+    }
+
     .join-us {
       display: flex;
       align-items: center;
       gap: 2rem;
-      margin: 3rem 0;
       flex-wrap: wrap;
+      margin-bottom: 2rem;
     }
 
     .join-us > div {
       flex: 1;
-      min-width: 300px;
+      min-width: 300px; 
     }
 
-    .join-us-h2 {
+    .join-us-container h2 {
       text-align: center;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem; 
+      font-size: 2rem;
     }
 
     .join-us-image {
-       width: 100%;
-      height: auto;
-      object-fit: contain;
+      width: 100%;      
+      max-width: 400px; 
+      height: auto;     
       display: block;
-      min-height: 250px;
+      margin: 0 auto; 
       border-radius: 10px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     }
@@ -293,7 +572,7 @@
       font-size: 1.2rem;
       color: #1a1818;
       line-height: 1.8;
-      text-align: center;
+      text-align: center; 
     }
 
     .join-button {
@@ -304,7 +583,7 @@
       font-size: 1.2rem;
       font-weight: bold;
       border-radius: 50px;
-      margin-top: 1rem;
+      margin-top: 2rem; 
       box-shadow: 0 4px 15px rgba(212,175,55,0.4);
       transition: all 0.3s ease;
     }
@@ -329,7 +608,7 @@
       margin-bottom: 2rem;
       text-align: center;
     }
-
+   
     .volunteer-wrapper {
       max-width: 600px;
       margin: 0 auto;
@@ -473,11 +752,11 @@
     }
 
     .gallery-item img {
-      width: 100%;             /* Fills the grid column */
-      height: 250px;            /* Maintains a consistent height */
-      object-fit: cover;        /* This is the magic property! */
-      object-position: center;  /* Keeps the image centered */
-      display: block;           /* Good practice for images */
+      width: 100%;             
+      height: 250px;        
+      object-fit: cover;        
+      object-position: center;  
+      display: block;           
     }
 
     .image-gallery-three{
@@ -599,29 +878,19 @@
       font-size: 1.3rem;
       font-weight: bold;
       border-radius: 50px;
-      display: inline-block;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
       cursor: pointer;
       border: none;
-      transition: all 0.3s ease;
     }
 
     .donate-button:hover {
       background: #f5f5f5;
-      transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
 
     .account-details {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease, margin 0.5s ease;
-      margin-top: 0;
-    }
-
-    .account-details.show {
-      max-height: 1000px;
-      margin-top: 3rem;
+      margin-top: 50px;
+      margin-bottom:50px;
     }
 
     .account-details h2 {
@@ -668,7 +937,7 @@
 
     /* CONTACT SECTION */
     #contact {
-      background-color: #f9f9f9;
+      background-color: white;
       text-align: center;
     }
 
@@ -714,639 +983,1188 @@
     }
 
    /* ========================================
-       RESPONSIVE MEDIA QUERIES
-       ======================================== */
-
-    /* LARGE DESKTOP (1200px and above) */
-    @media (min-width: 1200px) {
-      section {
-        max-width: 1400px;
-      }
-
-      .hero-section h1 {
-        font-size: 3.5rem;
-      }
-
-      .hero-section p {
-        font-size: 1.5rem;
-      }
-
-      .image-gallery {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
-      .about-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
-      }
-
-      .contact-info {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    /* LAPTOP/DESKTOP (992px - 1199px) */
-    @media (min-width: 992px) and (max-width: 1199px) {
-      section {
-        max-width: 1140px;
-        padding: 4rem 1.5rem;
-      }
-
-      .hero-section h1 {
-        font-size: 3rem;
-      }
-
-      .hero-section p {
-        font-size: 1.3rem;
-      }
-
-      .image-gallery {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .about-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2.5rem;
-      }
-
-      .contact-info {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .account-cards-wrapper {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    /* TABLET (768px - 991px) */
-    @media (min-width: 768px) and (max-width: 991px) {
-      #header-container {
-        padding: 1rem 1.5rem;
-      }
-
-      .logo-image {
-        height: 60px;
-      }
-
-      .header-wrapper {
-        gap: 1.5rem;
-      }
-
-      .header-wrapper a {
-        font-size: 1rem;
-        padding: 0.5rem 0.8rem;
-      }
-
-      .hero-section {
-        padding: 5rem 1.5rem;
-      }
-
-      .hero-section h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero-section p {
-        font-size: 1.2rem;
-      }
-
-      section {
-        padding: 3rem 1.5rem;
-      }
-
-      h1 {
-        font-size: 2.2rem;
-      }
-
-      h2 {
-        font-size: 1.8rem;
-      }
-
-      .image-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.2rem;
-      }
-
-      .gallery-item img {
-        height: 300px;
-      }
-
-      .about-wrapper {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .logo-meaning {
-        padding: 2rem;
-      }
-
-      .about-logo {
-        max-width: 350px;
-      }
-
-      .join-us {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .join-us > div {
-        min-width: 100%;
-      }
-
-      .volunteer-image {
-        max-width: 250px;
-      }
-
-      .contact-info {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-      }
-
-      .account-cards-wrapper {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .program1-header h2, .program2-header h2 {
-        font-size: 1.5rem;
-      }
-
-      .program1-text, .program2-text, .program-text {
-        padding: 1.5rem;
-      }
-    }
-
-    /* MOBILE LANDSCAPE & SMALL TABLET (481px - 767px) */
-    @media (min-width: 481px) and (max-width: 767px) {
-      .hamburger {
-        display: flex;
-      }
-
-      #header-container {
-        padding: 1rem;
-      }
-
-      .logo-image {
-        height: 55px;
-      }
-
-      .header-wrapper {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 70%;
-        max-width: 300px;
-        background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
-        padding: 2rem;
-        transition: right 0.3s ease;
-        box-shadow: -2px 0 10px rgba(0,0,0,0.2);
-      }
-
-      .header-wrapper.active {
-        right: 0;
-      }
-
-      .header-wrapper a {
-        width: 100%;
-        text-align: center;
-        font-size: 1.2rem;
-        padding: 1rem;
-      }
-
-      .hero-section {
-        padding: 4rem 1.5rem;
-      }
-
-      .hero-section h1 {
-        font-size: 2rem;
-      }
-
-      .hero-section p {
-        font-size: 1.1rem;
-      }
-
-      .cta-button {
-        padding: 0.9rem 2rem;
-        font-size: 1.1rem;
-      }
-
-      section {
-        padding: 2.5rem 1.5rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      h2 {
-        font-size: 1.6rem;
-      }
-
-      h3 {
-        font-size: 1.3rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .image-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-      }
-
-      .image-gallery.two-column {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-item img {
-        height: 280px;
-      }
-
-      .image-gallery.two-column .gallery-item img {
-        height: 320px;
-      }
-
-      .about-wrapper {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .about-card {
-        padding: 1.5rem;
-      }
-
-      .logo-meaning {
-        padding: 1.8rem;
-      }
-
-      .about-logo {
-        max-width: 300px;
-      }
-
-      .volunteer-image {
-        max-width: 220px;
-        margin: 0.8rem;
-      }
-
-      .join-us {
-        flex-direction: column;
-      }
-
-      .volunteer-form {
-        padding: 2rem;
-      }
-
-      .contact-info {
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
-      }
-
-      .contact-card {
-        padding: 1.5rem;
-      }
-
-      .account-cards-wrapper {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .donate-button {
-        padding: 1rem 2.5rem;
-        font-size: 1.2rem;
-      }
-
-      .program1-header h2, .program2-header h2 {
-        font-size: 1.4rem;
-      }
-
-      .program1-text, .program2-text, .program-text {
-        padding: 1.3rem;
-      }
-    }
-
-    /* MOBILE (max-width: 480px) */
-    @media (max-width: 480px) {
-      .hamburger {
-        display: flex;
-      }
-
-      #header-container {
-        padding: 0.8rem 1rem;
-      }
-
-      .logo-image {
-        height: 50px;
-      }
-
-      .header-wrapper {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 80%;
-        max-width: 280px;
-        background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-        flex-direction: column;
-        justify-content: center;
-        gap: 1.5rem;
-        padding: 1.5rem;
-        transition: right 0.3s ease;
-        box-shadow: -2px 0 10px rgba(0,0,0,0.2);
-      }
-
-      .header-wrapper.active {
-        right: 0;
-      }
-
-      .header-wrapper a {
-        width: 100%;
-        text-align: center;
-        font-size: 1.1rem;
-        padding: 0.8rem;
-      }
-
-      .hero-section {
-        padding: 3rem 1rem;
-      }
-
-      .hero-section h1 {
-        font-size: 1.7rem;
-      }
-
-      .hero-section p {
-        font-size: 1rem;
-      }
-
-      .cta-button {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-      }
-
-      section {
-        padding: 2rem 1rem;
-      }
-
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      h2 {
-        font-size: 1.4rem;
-      }
-
-      h3 {
-        font-size: 1.2rem;
-      }
-
-      p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-      }
-
-      .image-gallery {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
-      .image-gallery.two-column {
-        grid-template-columns: 1fr;
-      }
-
-      .image-gallery-three{
-        grid-template-columns:1fr;
-      }
-      
-      .gallery-item img {
-        height: 250px;
-      }
-
-      .image-gallery.two-column .gallery-item img {
-        height: 280px;
-      }
-
-      .about-wrapper {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .about-card {
-        padding: 1.5rem;
-      }
-
-      .logo-meaning {
-        padding: 1.5rem;
-      }
-
-      .about-logo {
-        max-width: 250px;
-      }
-
-      .logo-item {
-        padding: 1rem;
-      }
-
-      .logo-item strong {
-        font-size: 1.1rem;
-      }
-
-      .volunteer-image {
-        max-width: 100%;
-        margin: 0.5rem auto;
-        display: block;
-      }
-
-      .join-us {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .join-us-text {
-        font-size: 1rem;
-      }
-
-      .join-button {
-        padding: 0.9rem 1.8rem;
-        font-size: 1.1rem;
-      }
-
-      .volunteer-form {
-        padding: 1.5rem;
-      }
-
-      .volunteer-form h2 {
-        font-size: 1.5rem;
-      }
-
-      .volunteer-form label {
-        font-size: 0.95rem;
-      }
-
-      .volunteer-form input,
-      .volunteer-form textarea {
-        padding: 0.7rem;
-        font-size: 0.95rem;
-      }
-
-      .volunteer-form button[type="submit"] {
-        padding: 0.9rem 1.5rem;
-        font-size: 1rem;
-      }
-
-      .contact-info {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
-      .contact-card {
-        padding: 1.3rem;
-      }
-
-      .contact-card h3 {
-        font-size: 1.2rem;
-      }
-
-      .contact-card p {
-        font-size: 0.9rem;
-      }
-
-      .account-cards-wrapper {
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
-      }
-
-      .account-card {
-        padding: 1.5rem;
-      }
-
-      .account-card h3 {
-        font-size: 1.1rem;
-      }
-
-      .account-card p {
-        font-size: 0.9rem;
-      }
-
-      .donate-button {
-        padding: 1rem 2rem;
-        font-size: 1.1rem;
-      }
-
-      #donate h2 {
-        font-size: 2rem;
-      }
-
-      #donate p {
-        font-size: 1.1rem;
-      }
-
-      .program1-header, .program2-header {
-        padding: 1.5rem;
-      }
-
-      .program1-header h2, .program2-header h2 {
-        font-size: 1.2rem;
-      }
-
-      .program1-text, .program2-text, .program-text {
-        padding: 1.2rem;
-      }
-
-      .program1-text p, .program2-text p, .program-text p {
-        font-size: 0.95rem;
-      }
-
-      .impact-text {
-        padding: 1.5rem;
-      }
-
-      .impact-text p {
-        font-size: 1rem;
-      }
-
-      .read-more-btn {
-        padding: 8px 16px;
-        font-size: 14px;
-      }
-
-      footer {
-        padding: 1.5rem 1rem;
-      }
-
-      footer p {
-        font-size: 0.9rem;
-      }
-    }
-
-    /* EXTRA SMALL MOBILE (max-width: 360px) */
-    @media (max-width: 360px) {
-      .logo-image {
-        height: 45px;
-      }
-
-      .hero-section h1 {
-        font-size: 1.5rem;
-      }
-
-      .hero-section p {
-        font-size: 0.9rem;
-      }
-
-      .cta-button {
-        padding: 0.7rem 1.3rem;
-        font-size: 0.95rem;
-      }
-
-      h1 {
-        font-size: 1.6rem;
-      }
-
-      h2 {
-        font-size: 1.3rem;
-      }
-
-      h3 {
-        font-size: 1.1rem;
-      }
-
-      p {
-        font-size: 0.9rem;
-      }
-
-      .gallery-item img {
-        height: 220px;
-      }
-
-      .about-card {
-        padding: 1.2rem;
-      }
-
-      .logo-meaning {
-        padding: 1.2rem;
-      }
-
-      .volunteer-form {
-        padding: 1.2rem;
-      }
-
-      .contact-card {
-        padding: 1.2rem;
-      }
-
-      .account-card {
-        padding: 1.2rem;
-      }
-
-      .program1-header h2, .program2-header h2 {
-        font-size: 1.1rem;
-      }
-
-      .donate-button {
-        padding: 0.9rem 1.5rem;
-        font-size: 1rem;
-      }
-
-    }
+   IMPROVED RESPONSIVE MEDIA QUERIES
+   Replace the existing media queries section with this
+   ======================================== */
+
+/* LARGE DESKTOP (1200px and above) */
+@media (min-width: 1200px) {
+  /* Container & Spacing */
+  section {
+    max-width: 1400px;
+    padding: 5rem 2rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 7rem 2rem;
+  }
+
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.5rem;
+  }
+
+  /* Typography Enhancements */
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  .about-main-text h2 {
+    font-size: 2.5rem;
+  }
+
+  /* 4-column Image Galleries */
+  .image-gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .image-gallery-three {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .image-gallery.two-column {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* Contact Section - 4 columns */
+  .contact-info {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+
+  /* Account Cards - 3 columns */
+  .account-cards-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  /* Notable Grid - 3 columns */
+  .notable-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .founder-image {
+    height: 380px;
+  }
+
+  /* Impact Grid - 4 columns */
+  .impact-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  /* Mission/Vision Cards */
+  .mission-vision-wrapper {
+    max-width: 1000px;
+    gap: 3rem;
+  }
+
+  /* Involvement Section - 2 columns */
+  .involvement-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  /* Content Wrappers */
+  .about-content-wrapper,
+  .latest-outreach,
+  .notable-wrapper {
+    padding: 3.5rem;
+  }
+}
+
+/* LAPTOP/DESKTOP (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Container & Spacing */
+  section {
+    max-width: 1140px;
+    padding: 4rem 1.5rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 6rem 1.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .hero-section p {
+    font-size: 1.3rem;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  /* 3-column Image Galleries */
+  .image-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .image-gallery-three {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .image-gallery.two-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-item img {
+    height: 280px;
+  }
+
+  .image-gallery.two-column .gallery-item img {
+    height: 380px;
+  }
+
+  /* Contact - 2 columns */
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* Account Cards - 3 columns */
+  .account-cards-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* Notable Grid - 3 columns */
+  .notable-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .founder-image {
+    height: 340px;
+  }
+
+  /* Impact Grid - 3 columns */
+  .impact-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Mission/Vision - 2 columns */
+  .mission-vision-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  /* Involvement - 2 columns */
+  .involvement-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* TABLET (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Header */
+  #header-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .logo-image {
+    height: 60px;
+  }
+
+  .header-wrapper {
+    gap: 1.5rem;
+  }
+
+  .header-wrapper a {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 5rem 1.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+
+  /* Sections */
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+
+  /* 2-column Galleries */
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .image-gallery-three {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .gallery-item img {
+    height: 300px;
+  }
+
+  .image-gallery.two-column .gallery-item img {
+    height: 350px;
+  }
+
+  /* Mission/Vision - Single Column */
+  .mission-vision-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mission-vision-card {
+    padding: 2rem 1.5rem;
+  }
+
+  /* Content Wrappers */
+  .about-content-wrapper,
+  .latest-outreach,
+  .notable-wrapper {
+    padding: 2.5rem;
+  }
+
+  /* Impact Grid - 2 columns */
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+  }
+
+  .impact-section {
+    padding: 2rem;
+  }
+
+  /* Notable Grid - 2 columns */
+  .notable-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .founder-image {
+    height: 320px;
+  }
+
+  /* Logo Section */
+  .logo-meaning {
+    padding: 2rem;
+  }
+
+  .about-logo {
+    max-width: 350px;
+  }
+
+  /* Join Us - Stacked */
+  .join-us {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .join-us > div {
+    min-width: 100%;
+  }
+
+  .join-us-image {
+    max-width: 350px;
+  }
+
+  /* Volunteer */
+  .volunteer-image {
+    max-width: 250px;
+  }
+
+  /* Involvement - Single Column */
+  .involvement-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Contact - 2 columns */
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Account Cards - 2 columns */
+  .account-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Programs */
+  .program1-header h2,
+  .program2-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .program1-header,
+  .program2-header {
+    padding: 1.8rem;
+  }
+
+  .program1-text,
+  .program2-text,
+  .program-text {
+    padding: 1.5rem;
+  }
+
+  /* Forms */
+  .volunteer-form {
+    padding: 2.5rem;
+  }
+}
+
+/* MOBILE LANDSCAPE & SMALL TABLET (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Activate Hamburger Menu */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Header */
+  #header-container {
+    padding: 1rem;
+  }
+
+  .logo-image {
+    height: 55px;
+  }
+
+  /* Mobile Navigation Menu */
+  .header-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    z-index: 99;
+  }
+
+  .header-wrapper.active {
+    right: 0;
+  }
+
+  .header-wrapper a {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  /* Sections */
+  section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  /* Galleries - 2 columns for standard, 1 for special */
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .image-gallery.two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .image-gallery-three {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .gallery-item img {
+    height: 280px;
+  }
+
+  .image-gallery.two-column .gallery-item img {
+    height: 320px;
+  }
+
+  /* Mission/Vision - Single Column */
+  .mission-vision-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Content Wrappers */
+  .about-content-wrapper,
+  .latest-outreach,
+  .notable-wrapper {
+    padding: 2rem;
+  }
+
+  .about-main-text h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Impact Section */
+  .impact-section {
+    padding: 1.8rem;
+  }
+
+  .impact-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .impact-icon {
+    font-size: 2.2rem;
+  }
+
+  /* Work Section */
+  .work-section {
+    padding: 1.8rem;
+  }
+
+  /* Notable Grid - 1 column */
+  .notable-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .founder-image {
+    height: 300px;
+  }
+
+  /* Logo Section */
+  .logo-meaning {
+    padding: 1.8rem;
+  }
+
+  .about-logo {
+    max-width: 300px;
+  }
+
+  /* Volunteer Section */
+  .volunteer-header {
+    padding: 1.8rem;
+  }
+
+  .volunteer-header p {
+    font-size: 1.2rem;
+  }
+
+  .volunteer-image {
+    max-width: 220px;
+    margin: 0.8rem;
+  }
+
+  .join-us {
+    flex-direction: column;
+  }
+
+  .join-us-image {
+    max-width: 320px;
+  }
+
+  .join-us-text {
+    font-size: 1.05rem;
+  }
+
+  /* Involvement Section */
+  .involvement-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .why-matters,
+  .get-involved {
+    padding: 2rem;
+  }
+
+  .involvement-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Forms */
+  .volunteer-form {
+    padding: 2rem;
+  }
+
+  .volunteer-form input,
+  .volunteer-form textarea {
+    padding: 0.75rem;
+    font-size: 0.98rem;
+  }
+
+  /* Contact - 1 column */
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  /* Account Cards - 1 column */
+  .account-cards-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Donate Section */
+  #donate {
+    padding: 4rem 1.5rem;
+  }
+
+  .donate-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  /* Programs */
+  .program1-header,
+  .program2-header {
+    padding: 1.5rem;
+  }
+
+  .program1-header h2,
+  .program2-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .program1-text,
+  .program2-text,
+  .program-text {
+    padding: 1.3rem;
+  }
+
+  .impact-text {
+    padding: 1.5rem;
+  }
+
+  .impact-text p {
+    font-size: 1.05rem;
+  }
+}
+
+/* MOBILE PORTRAIT (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Activate Hamburger Menu */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Header */
+  #header-container {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo-image {
+    height: 50px;
+  }
+
+  /* Mobile Navigation */
+  .header-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 80%;
+    max-width: 280px;
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    z-index: 99;
+  }
+
+  .header-wrapper.active {
+    right: 0;
+  }
+
+  .header-wrapper a {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Sections */
+  section {
+    padding: 2rem 1rem;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Single Column Galleries */
+  .image-gallery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .image-gallery.two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .image-gallery-three {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .gallery-item img {
+    height: 250px;
+  }
+
+  .image-gallery.two-column .gallery-item img {
+    height: 280px;
+  }
+
+  /* Mission/Vision Cards */
+  .mission-vision-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .mission-vision-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .card-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Content Wrappers */
+  .about-content-wrapper,
+  .latest-outreach,
+  .notable-wrapper {
+    padding: 1.5rem;
+  }
+
+  .about-main-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  /* Impact Section */
+  .impact-section {
+    padding: 1.5rem;
+  }
+
+  .impact-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .impact-icon {
+    font-size: 2rem;
+  }
+
+  /* Work Section */
+  .work-section {
+    padding: 1.5rem;
+  }
+
+  .work-section h3 {
+    font-size: 1.3rem;
+  }
+
+  /* Notable Section */
+  .notable-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .founder-image {
+    height: 280px;
+  }
+
+  .notable-item p {
+    font-size: 0.95rem;
+  }
+
+  /* Logo Section */
+  .logo-meaning {
+    padding: 1.5rem;
+  }
+
+  .about-logo {
+    max-width: 250px;
+  }
+
+  .logo-item {
+    padding: 1rem;
+  }
+
+  .logo-item strong {
+    font-size: 1.1rem;
+  }
+
+  /* Volunteer Section */
+  .volunteer-header {
+    padding: 1.5rem;
+  }
+
+  .volunteer-header p {
+    font-size: 1.1rem;
+  }
+
+  .volunteer-image {
+    max-width: 100%;
+    margin: 0.5rem auto;
+    display: block;
+  }
+
+  /* Join Us Section */
+  .join-us {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .join-us > div {
+    min-width: 100%;
+  }
+
+  .join-us-image {
+    max-width: 100%;
+  }
+
+  .join-us-text {
+    font-size: 1rem;
+  }
+
+  .join-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1.1rem;
+  }
+
+  /* Involvement Section */
+  .involvement-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .why-matters,
+  .get-involved {
+    padding: 1.5rem;
+  }
+
+  .why-matters h3,
+  .get-involved h3 {
+    font-size: 1.3rem;
+  }
+
+  .why-matters li {
+    font-size: 0.95rem;
+  }
+
+  .involvement-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .btn-icon {
+    font-size: 1.2rem;
+  }
+
+  /* Forms */
+  .volunteer-form {
+    padding: 1.5rem;
+  }
+
+  .volunteer-form h2 {
+    font-size: 1.3rem;
+  }
+
+  .volunteer-form label {
+    font-size: 0.9rem;
+  }
+
+  .volunteer-form input,
+  .volunteer-form textarea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .volunteer-form button[type="submit"] {
+    padding: 0.8rem 1.3rem;
+    font-size: 0.95rem;
+  }
+
+  .form-message {
+    padding: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Contact Section */
+  .contact-card {
+    padding: 1.2rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .contact-card p {
+    font-size: 0.85rem;
+  }
+
+  /* Donate Section */
+  #donate {
+    padding: 3rem 0.8rem;
+  }
+
+  #donate h2 {
+    font-size: 1.8rem;
+  }
+
+  #donate p {
+    font-size: 1rem;
+  }
+
+  .donate-button {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .account-details {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .account-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .account-card {
+    padding: 1.2rem;
+  }
+
+  .account-card h3 {
+    font-size: 1rem;
+  }
+
+  .account-card p {
+    font-size: 0.85rem;
+  }
+
+  .bank-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Programs */
+  .program1-header,
+  .program2-header {
+    padding: 1.2rem;
+  }
+
+  .program1-header h2,
+  .program2-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .program1-text,
+  .program2-text,
+  .program-text {
+    padding: 1rem;
+  }
+
+  .program1-text p,
+  .program2-text p,
+  .program-text p {
+    font-size: 0.9rem;
+  }
+
+  .impact-text {
+    padding: 1.2rem;
+  }
+
+  .impact-text p {
+    font-size: 0.95rem;
+  }
+
+  .read-more-btn {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1.2rem 0.8rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ========================================
+   LANDSCAPE ORIENTATION ADJUSTMENTS
+   ======================================== */
+
+/* Small devices in landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+  .header-wrapper {
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: flex-start;
+    overflow-y: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .header-wrapper a {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.7rem 1.5rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES FOR BETTER CONTROL
+   ======================================== */
+
+/* Hide elements on mobile */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Hide elements on desktop */
+@media (min-width: 768px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Text alignment utilities */
+@media (max-width: 767px) {
+  .text-center-mobile {
+    text-align: center !important;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY IMPROVEMENTS
+   ======================================== */
+
+/* Improve touch targets on mobile */
+@media (max-width: 767px) {
+  button,
+  a.cta-button,
+  a.donate-button,
+  a.join-button,
+  .involvement-btn,
+  .read-more-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .header-wrapper a {
+    min-height: 48px;
+  }
+}
+
+/* Ensure focus states are visible */
+@media (max-width: 767px) {
+  a:focus,
+  button:focus,
+  input:focus,
+  textarea:focus {
+    outline: 3px solid #d4af37;
+    outline-offset: 2px;
+  }
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* Reduce animations on small screens for better performance */
+@media (max-width: 480px) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Keep essential hover effects */
+  .gallery-item:hover,
+  .contact-card:hover,
+  .mission-vision-card:hover {
+    transform: none;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
