@@ -1837,6 +1837,7 @@
 
   /* Volunteer Section */
   .volunteer-header {
+     margin:1rem;
     padding: 1.5rem;
   }
 
@@ -1845,9 +1846,8 @@
   }
 
   .volunteer-image {
-    max-width: 100%;
-    margin: 0.5rem auto;
-    display: block;
+    max-width: 80%;
+    margin: 1.5rem;
   }
 
   /* Join Us Section */
@@ -1861,10 +1861,11 @@
   }
 
   .join-us-image {
-    max-width: 100%;
+    max-width: 80%;
   }
 
   .join-us-text {
+     margin:0.5rem;
     font-size: 1rem;
   }
 
@@ -2167,4 +2168,5 @@
     scroll-behavior: auto !important;
   }
 }
+
 
