@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="assets/Styles/index.css">
 </head>
 <body>
- <!-- HEADER -->
+
+
+  <!-- HEADER -->
   <header id="header-container">
     <div class="logo-wrapper">
       <img src="assets/images/logo.jpg" alt="Grace Life Foundation Logo" class="logo-image">
@@ -24,10 +26,11 @@
     </div>
     
     <nav class="header-wrapper" id="headerNav">
-      <a href="#home">Home</a>
+      <a href="index.html">Home</a>
       <a href="#about">About</a>
-      <a href="#programs">Programs</a>
-      <a href="#donate">Donate</a>
+      <a href="volunteer.html">Volunteers</a>
+      <a href="programs.html">Programs</a>
+      <a href="donate.html">Donate</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -40,454 +43,179 @@
   </section>
 
   <!-- ABOUT SECTION -->
-  <section id="about">
-    <h1>About Us</h1>
-    <div class="about-wrapper">
-      <div class="about-card">
-        <h3>Our Mission</h3>
-        <p>To serve through compassion, uplift the underserved, and grow together in purpose.</p>
-        <img src="assets/images/logo.jpg" alt="Mission" class="logo-01">
-      </div>
-      <div class="about-card">
-        <h3>Our Vision</h3>
-        <p>A world where every individual has access to opportunities for growth, education, and dignity, empowered to reach their full potential.</p>
-        <img src="assets/images/logo.jpg" alt="Vision" class="logo-02">
-      </div>
-    </div>
+ <section id="about">
+  <h1>About Us</h1>
+  
 
-    <hr class="section-divider">
+  <!-- Main About Content -->
+  <div class="about-content-wrapper">
+    <div class="about-main-text">
+      <h2>Grace Life Foundation For Social Impacts</h2>
+      <p class="intro-text"> 
+        Grace Life Foundation For Social Impacts is a registered non-profit committed to reducing hardship in vulnerable communities. We support health needs like urgent surgery, but we also work on social welfare, education support, and community outreach.
+      </p>
+      <p class="intro-text">
+        Our goal is to lift people out of difficult situations through practical, targeted help. We work with hospitals, local groups, and donors to deliver real impact.
+      </p>
 
-    <div class="logo-meaning">
-      <h2>What Our Logo Represents</h2>
-      <img src="assets/images/about logo.jpg" alt="Grace Life Foundation Logo Breakdown" class="about-logo">
-      
-      <div class="logo-description">
-        <div class="logo-item">
-          <strong>The Color Gold</strong>
-          <p>Symbolizes value, dignity, and excellence in everything we do.</p>
-        </div>
-        
-        <div class="logo-item">
-          <strong>The Heart Frame</strong>
-          <p>Represents love, care, and functional support. The design signifies that all of our foundation's actions are driven by compassion and deep care for humanity.</p>
-        </div>
-        
-        <div class="logo-item">
-          <strong>The Human Figure</strong>
-          <p>Represents empowerment and upliftment. The stylized human form rising upward emphasizes that people are active participants in their growth.</p>
-        </div>
-        
-        <div class="logo-item">
-          <strong>The Flowing Lines/Leaves</strong>
-          <p>Represent growth, transformation, and life. They suggest organic growth, renewal, and the positive ripple effect of compassionate actions.</p>
+      <!-- Impact Section with Icons -->
+      <div class="impact-section">
+        <h3>Our Impact</h3>
+        <div class="impact-grid">
+          <div class="impact-item">
+            <span class="impact-icon">🏥</span>
+            <p>Support for urgent surgeries and critical health needs</p>
+          </div>
+          <div class="impact-item">
+            <span class="impact-icon">🍲</span>
+            <p>Food and welfare support for low-income families</p>
+          </div>
+          <div class="impact-item">
+            <span class="impact-icon">🤝</span>
+            <p>Outreach in Communities</p>
+          </div>
+          <div class="impact-item">
+            <span class="impact-icon">📚</span>
+            <p>Education support and community awareness programs</p>
+          </div>
         </div>
       </div>
 
-      <hr class="section-divider">
-      
-      <div class="volunteer">
-        <h2>Our Volunteers</h2>
+      <!-- Our Work Section -->
+      <div class="work-section">
+        <h3>Our Work</h3>
         <p>
-          At Grace Life Foundation, our volunteers are the heart and soul of our mission. Their dedication, compassion, and 
-          tireless efforts drive our initiatives forward, enabling us to make a meaningful impact in the communities we serve.
+          We run projects that address the core struggles people face every day.
+          This includes medical assistance, social relief, youth support, and community education.
+          We track results and publish clear updates so supporters see where every contribution goes.
         </p>
-        <img src="assets/images/volunteer-1.jpg" alt="Volunteers working together" class="volunteer-image">
-        <img src="assets/images/volunteer-2.jpg" alt="Community service by volunteers" class="volunteer-image">
-        <img src="assets/images/volunteer-3.jpg" alt="Volunteers in action" class="volunteer-image">
-        <img src="assets/images/volunteer-4.jpg" alt="Helping hands of volunteers" class="volunteer-image">
-      </div>
-      
-      <div class="join-us">
-        <div>
-          <h2 class="join-us-h2">Join Us</h2>
-          <img src="assets/images/volunteer flyer.jpg" alt="Join Us as a Volunteer" class="join-us-image">
-        </div>
-        <div>
-          <p class="join-us-text">
-            If you're passionate about making a difference and want to be part of a community dedicated to compassion and growth, 
-            consider joining Grace Life Foundation as a volunteer.
-          </p>
-        </div>
-      </div>
-      <a href="#volunteerForm" class="join-button">Become a Volunteer</a>
-    </div>
-
-    <!-- VOLUNTEER FORM -->
-    <div class="volunteer-form" id="volunteerForm">
-      <h2>Volunteer with Us</h2>
-      <div class="volunteer-wrapper">
-        <form id="volunteerApplicationForm">
-          <input type="hidden" name="access_key" value="5632c71e-ac90-47d3-ba27-548d15721be8">
-          
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" required>
-
-          <label for="age">Age:</label>
-          <input type="number" id="age" name="age" min="18" required>
-
-          <label for="message">Why do you want to volunteer with us?</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-
-          <button type="submit">Submit Application</button>
-        </form>
-        <div class="form-message" id="formMessage"></div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- PROGRAMS SECTION -->
-  <section id="programs">
-    <h1>Our Programs</h1>
+
+
+  <!-- Why This Matters & Get Involved -->
+  <div class="involvement-section">
+    <div class="why-matters">
+      <h3>Why This Matters</h3>
+      <ul>
+        <li>Many families face health and social challenges with no support</li>
+        <li>Small interventions stop deeper hardship</li>
+        <li>Community welfare strengthens long-term development</li>
+      </ul>
+    </div>
+
+    <div class="get-involved">
+      <h3>Get Involved</h3>
+      <div class="involvement-buttons">
+        <a href="volunteer.html" class="involvement-btn volunteer-btn">
+          <span class="btn-icon">🙋</span>
+          Become a Volunteer
+        </a>
+        <a href="#donate" class="involvement-btn donate-btn">
+          <span class="btn-icon">💝</span>
+          Make a Donation
+        </a>
+      </div>
+      <p class="involvement-text">
+        You can help someone get treatment, food support, or access to education.
+        Your contribution creates real change.
+      </p>
+    </div>
+  </div>
+
+  <!-- Notable Meetings -->
+  <div class="notable-wrapper">
+    <h2>Meeting With Notable People</h2>
+    <div class="notable-grid">
+      <div class="notable-item">
+        <img src="assets/images/founder-1.jpg" alt="Meeting with the commissioner of education" class="founder-image">
+        <p>
+          Grace Life Foundation had a fruitful meeting with the Honourable Commisioner of Education
+          to discuss our outreach programs. Our focus is to equip students with vocational skills,
+          provide menstrual health support and distribute essential learning materials to
+          underserved schools.
+
+        </p>
+      </div>
+      <div class="notable-item">
+        <img src="assets/images/founder-2.jpg" alt="Meeting with the AARE of Ogele" class="founder-image">
+        <p>
+          Grace Life Foundation visited Ogele today and had a warm interaction with the AARE.
+          We shared our plans for the school outreach and listened to his advice on how best 
+          to support the children and families. His encouragement as we work hand in hand with 
+          the community.
+        </p>
+      </div>
+      <div class="notable-item">
+        <img src="assets/images/founder-3.jpg" alt="Meeting with UNICEF" class="founder-image">
+        <p>
+          Grateful for the visit from UNICEF. It's inspiring to see our efforts
+          recognized and supported by those leading global change!.
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- Mission and Vision Cards -->
+  <div class="mission-vision-wrapper">
+    <div class="mission-vision-card">
+      <div class="card-icon">
+        <img src="assets/images/logo.jpg" alt="Mission Icon">
+      </div>
+      <h3>Our Mission</h3>
+      <p>To serve through compassion, uplift the underserved, and grow together in purpose.</p>
+    </div>
     
-    <div class="program-wrapper">
-      <div class="program1-header">
-        <h2>Bright Smiles</h2>
+    <div class="mission-vision-card">
+      <div class="card-icon">
+        <img src="assets/images/logo.jpg" alt="Vision Icon">
       </div>
-      <div class="image-gallery">
-        <div class="gallery-item">
-          <img src="assets/images/OCT30-5.jpg" alt="A young pretty girl smiling">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT30-3.jpg" alt="A handsome boy smiling">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT30-4.jpg" alt="Children smiling">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT30-9.jpg" alt="A handsome boy smiling">
-        </div>
-      </div>
+      <h3>Our Vision</h3>
+      <p>A world where every individual has access to opportunities for growth, education, and dignity, empowered to reach their full potential.</p>
+    </div>
+  </div>
 
-      <!-- NOVEMBER 7 -->
-        <div class="program1-header">
-        <h2>7th NOVEMBER 2025: Empowering and building healthier children</h2>
-      </div>
-      <div class="image-gallery">
-        <div class="gallery-item">
-          <img src="assets/images/NOV7-1.jpg" alt="Happy children">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/NOV7-2.jpg" alt="Beatiful children">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/NOV7-3.jpg" alt="Happy children">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/NOV7-4.jpg" alt="Today activities">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/NOV7-5.jpg" alt="Today activities">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/NOV7-6.jpg" alt="empowering children">
-        </div>
-      </div>
-      <div class="program1-text">
-        <p>
-          Through this outreach, Grace Life Foundation strengthened its mission to empower children and build healthier, more connected communities. 
-          Your donations make efforts like this possible!
-          <a href="#donate">DONATE HERE.</a>
-        </p>
-      </div>
-
-      <!-- NOVEMBER 1st -->
-      <div class="program1-header">
-        <h2>1st November 2025: WE NEED YOUR HELP</h2>
-      </div>
-      <div class="program1-text">
-        <p>
-          A Dentist who visited GOVERNMENT DAY SECONDARY SCHOOL ADEWOLE recommended 
-          that JUSTINA removes a tooth after she complained of tooth pain that is 
-          not allowing her to eat properly. GRACE LIFE FOUNDATION is offering to sponsor 
-          this treatment for JUSTINA. 
-          <a href="#donate">DONATE HERE.</a>
-        </p>
-      </div>
-      <div class="image-gallery two-column">
-        <div class="gallery-item">
-          <img src="assets/images/cryhelp-1.jpg" alt="Dental care needed">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/cryhelp-2.jpg" alt="Dental care needed">
-        </div>
-      </div>
-
-      <!-- OCTOBER 31st -->
-      <div class="program1-header">
-        <h2>31st October 2025: WE NEED YOUR HELP</h2>
-      </div>
-      <div class="program1-text">
-        <p>
-          During our oral care outreach, We discovered AMEEN ABDULRAHMAN is in need of dental attention.
-          A dentist who visited the school recommended him to have 3 teeth removed to prevent an overbite. 
-          If this is not done, he will likely need braces later, which would incur a cost of approximately 1.5 MILLION NAIRA. 
-          The Grace Life Foundation is offering to sponsor this treatment with Yusjib Hospital's partnership 
-          to address the issue promptly and avoid further complications. 
-          <a href="#donate">DONATE HERE.</a>
-        </p>
-      </div>
-      <div class="image-gallery-three">
-        <div class="gallery-item">
-          <img src="assets/images/help-1.jpg" alt="Ameen's Teeth">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/help-2.jpg" alt="Ameen's Teeth">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/help-3.jpg" alt="Ameen's Teeth">
-        </div>
-      </div>
-
-      <!-- OCTOBER 30 -->
-      <div class="program1-header">
-        <h2>30th October 2025: Grace Life Foundation Visits School to Educate Students on Oral Hygiene</h2>
-      </div>
-      <div class="image-gallery">
-        <div class="gallery-item">
-          <img src="assets/images/OCT30-1.jpg" alt="Health education">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT30-2.jpg" alt="Dental care program">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT30-3.jpg" alt="Community health">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT30-4.jpg" alt="Wellness activities">
-        </div>
-      </div>
-      <div class="program1-text">
-        <p>
-          Beyond brushing and toothpaste, it's about giving children confidence in their smiles!
-        </p>
-      </div>
-
-      <!-- OCTOBER 28TH -->
-      <div class="program1-header">
-        <h2>28th October 2025: Grace Life Foundation Visits School for Dental Health Education</h2>
-      </div>
-      <div class="program1-text">
-        <p>
-          Grace Life Foundation visited a school to discuss dental health. They distributed toothpaste and talked to the students about the importance of brushing their teeth daily.
-        </p>
+  <!-- Logo Meaning -->
+  <div class="logo-meaning">
+    <h2>What Our Logo Represents</h2>
+    <img src="assets/images/about logo.jpg" alt="Grace Life Foundation Logo Breakdown" class="about-logo">
+    
+    <div class="logo-description">
+      <div class="logo-item">
+        <strong>The Color Gold</strong>
+        <p>Symbolizes value, dignity, and excellence in everything we do.</p>
       </div>
       
-      <div class="image-gallery">
-        <div class="gallery-item">
-          <img src="assets/images/OCT28-1.jpg" alt="Health education">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT28-2.jpg" alt="Dental care program">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT28-3.jpg" alt="Community health">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT28-4.jpg" alt="Wellness activities">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT28-5.jpg" alt="Health education">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT28-6.jpg" alt="Dental care program">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT28-7.jpg" alt="Community health">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT28-8.jpg" alt="Wellness activities">
-        </div>
-      </div>
-      <div class="program1-text">
-        <p>
-          Each smile tells a story of care, kindness, and possibility. Together, we're helping children build healthy habits and bright futures!
-        </p>
-      </div>
-
-      <!-- OCTOBER 28th - Campaign Start -->
-      <div class="program1-header">
-        <h2>28th October 2025: The Start of Our Oral Hygiene Campaign at Adewole Estate, Ilorin</h2>
-      </div>
-      <div class="image-gallery">
-        <div class="gallery-item">
-          <img src="assets/images/OCT28-9.jpg" alt="Health education">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT28-10.jpg" alt="Health education">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT28-11.jpg" alt="Health education">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT28-12.jpg" alt="Health education">
-        </div>
-      </div>
-      <div class="program-text">
-        <p>We kick off our oral hygiene outreach today!</p>
-      </div>
-
-      <!-- OCTOBER 7th -->
-      <div class="program1-header">
-        <h2>7th October 2025: Grace Life Foundation Talks About Female Genital Mutilation</h2>
-      </div>
-      <div class="image-gallery-three">
-        <div class="gallery-item">
-          <img src="assets/images/OCT7-1.jpg" alt="Health education">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT7-2.jpg" alt="Dental care program">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT7-3.jpg" alt="Community health">
-        </div>
-      </div>
-      <div class="program1-text">
-        <p>
-          Our recent outreach on Female Genital Mutilation was an eye-opening and impactful experience. The session brought together community members to learn about the dangers of FGM and the importance of protecting the rights and health of girls.
-        </p>
-        <p>
-          Participants engaged actively, shared personal thoughts, and asked important questions about culture, health, and education. Many expressed a clearer understanding of how harmful FGM is and why it must be stopped.
-        </p>
-        <p>
-          The team from Grace Life Foundation emphasized that ending FGM starts with awareness and collective responsibility. We encouraged everyone to speak out, educate others, and support survivors with compassion.
-        </p>
-        <p>
-          We're grateful to the community leaders who welcomed us and made this campaign a success. Together, we're building a safer future for every girl with 
-          <a href="https://www.instagram.com/whatabouther.ng/" target="_blank" style="color: #d4af37;">@whatabouther.ng</a>
-        </p>
-      </div>
-
-      <!-- OCTOBER 3RD -->
-      <div class="program1-header">
-        <h2>3rd October 2025: Grace Life Foundation Visits An-Sarul Islam School</h2>
-      </div>
-      <div class="image-gallery">
-        <div class="gallery-item">
-          <img src="assets/images/OCT3-1.jpg" alt="Health education">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT3-2.jpg" alt="Dental care program">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT3-3.jpg" alt="Community health">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT3-4.jpg" alt="Wellness activities">
-        </div>
-      </div>
-      <div class="program1-text">
-        <p>
-          Today, Grace Life Foundation visited Ansarul Islam School on 3rd October, 2025 to share stationeries with the students. 
-          Seeing their smiles reminded us why we do this – to support their learning and brighten their future. Little things like a pen or a book go a long way in their journey. 
-          We thank the school and the community for welcoming us with open arms.
-        </p>
-      </div>
-
-      <!-- OCTOBER 2nd -->
-      <div class="program2-header">
-        <h2>2nd October 2025: Giving Back to the Community</h2>
-      </div>
-      <div class="image-gallery two-column">
-        <div class="gallery-item">
-          <img src="assets/images/OCT2-1.jpg" alt="Using sanitary pad">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/OCT2-2.jpg" alt="Health awareness">
-        </div>
-      </div>
-      <div class="program2-text">
-        <p>
-          When a girl stays in school, she changes her future and her community. 
-          Grace Life Foundation distributes sanitary pads to girls in need, giving them dignity and opportunity. 
-          Your support makes this possible. Donate and be part of the change.
-        </p>
-      </div>
-
-      <!-- SEPTEMBER 30th -->
-      <div class="program1-header">
-        <h2>30th September 2025: Vocational Skills Outreach Activity Report</h2>
-      </div>
-      <div class="program1-text collapsible-text">
-        <div class="text-content">
-          <p><strong>Program:</strong> Vocational Skills Outreach</p>
-          <p><strong>Location:</strong> Community Secondary School, Ogele</p>
-          
-          <h3>Objectives</h3>
-          <ul>
-            <li>To introduce students to vocational skills as a pathway to self-reliance</li>
-            <li>To provide practical training in bead making and Art Making</li>
-            <li>To encourage interest in entrepreneurship and skill acquisition among secondary school students</li>
-          </ul>
-          
-          <h3>Activities Conducted</h3>
-          <ul>
-            <li>Orientation Session: Brief introduction about Grace Life Foundation and the purpose of the outreach</li>
-            <li>Skill Training 1 – BEAD MAKING: Students were guided step-by-step in designing simple bead works</li>
-            <li>Skill Training 2 – ART MAKING: Demonstration of Art making with active student participation</li>
-            <li>Q&A Session: Students asked questions and shared their thoughts on how the skills could be applied</li>
-          </ul>
-          
-          <h3>Outcomes</h3>
-          <ul>
-            <li>Students gained hands-on experience in bead making and Art making</li>
-            <li>Increased awareness among students about the importance of vocational skills</li>
-            <li>Positive feedback from teachers and students regarding the relevance of the training</li>
-            <li>Strengthened relationship between Grace Life Foundation and the Ogele community</li>
-          </ul>
-          
-          <h3>Next Steps</h3>
-          <ul>
-            <li>Follow up with the school to assess how students are practicing the skills learned</li>
-            <li>Plan similar skill outreach programs in other schools within the community</li>
-            <li>Explore opportunities for sustained vocational training through partnerships and mentorship</li>
-          </ul>
-          
-          <h3>Conclusion</h3>
-          <p>
-            The vocational skills outreach at Community Secondary School, Ogele, was a success. It achieved its 
-            objectives of equipping students with practical knowledge, fostering creativity, and inspiring a mindset of self-reliance.
-            Grace Life Foundation remains committed to expanding these initiatives to reach more schools and empower more young people.
-          </p>
-        </div>
-        
-        <button class="read-more-btn">Read more</button>
+      <div class="logo-item">
+        <strong>The Heart Frame</strong>
+        <p>Represents love, care, and functional support. The design signifies that all of our foundation's actions are driven by compassion and deep care for humanity.</p>
       </div>
       
-      <div class="image-gallery">
-        <div class="gallery-item">
-          <img src="assets/images/SEP30-1.jpg" alt="Children in art program">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/SEP30-2.jpg" alt="Creative learning">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/SEP30-3.jpg" alt="Educational outreach">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/images/SEP30-4.jpg" alt="Student engagement">
-        </div>
+      <div class="logo-item">
+        <strong>The Human Figure</strong>
+        <p>Represents empowerment and upliftment. The stylized human form rising upward emphasizes that people are active participants in their growth.</p>
       </div>
       
-      <div class="impact-text">
-        <p>At Grace Life Foundation, we believe education and creativity go hand in hand. Our outreach programs empower children with the skills and opportunities to learn, express themselves, and grow into tomorrow's leaders.</p>
+      <div class="logo-item">
+        <strong>The Flowing Lines/Leaves</strong>
+        <p>Represent growth, transformation, and life. They suggest organic growth, renewal, and the positive ripple effect of compassionate actions.</p>
       </div>
     </div>
-
-    <hr class="section-divider">
-  </section>
+  </div>
+   <hr class="section-divider">
+</section>
 
   <!-- DONATE SECTION -->
   <section id="donate">
     <div class="donate-wrapper">
       <h2>Support Our Mission</h2>
       <p>Your donation helps us continue empowering communities and changing lives</p>
-      <button class="donate-button" id="donateBtn">Donate Now</button>
+      <a class="donate-button" href="#accountDetails">Donate Now</a>
     </div>
     
     <div class="account-details" id="accountDetails">
@@ -546,8 +274,8 @@
       <div class="contact-card">
         <h3>Follow Us</h3>
         <p>
-          <a href="https://www.tiktok.com/@gracelifefoundation" target="_blank">TikTok</a> |  
-          <a href="https://www.instagram.com/grace_life_foundation" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com/@gracelifefoundation" target="_blank" rel="noopener">TikTok</a> |  
+          <a href="https://www.instagram.com/grace_life_foundation" target="_blank" rel="noopener">Instagram</a>
         </p>
       </div>
     </div>
@@ -558,9 +286,7 @@
     <p>&copy; 2025 Grace Life Foundation. All rights reserved.</p>
     <p>Empowering Communities • Uplifting Lives • Growing Together</p>
   </footer>
-  <script  type="text/javaScript" src="assets/Scripts/index.js"></script>
+  <script type="text/javascript" src="assets/Scripts/index.js"></script>
    
 </body>
-
 </html>
-
