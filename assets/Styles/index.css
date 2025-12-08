@@ -42,77 +42,6 @@
       transition: all 0.3s ease;
     }
 
-    /* HEADER WITH HAMBURGER MENU */
-    #header-container {
-      background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .logo-wrapper {
-      flex: 0 0 auto;
-    }
-
-    .logo-image {
-      height: 70px;
-      width: auto;
-    }
-
-    .header-wrapper {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .header-wrapper a {
-      color: white;
-      font-size: 1.1rem;
-      font-weight: 500;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-    }
-
-    .header-wrapper a:hover {
-      background-color: rgba(255,255,255,0.2);
-      transform: translateY(-2px);
-    }
-
-    /* HAMBURGER MENU */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      z-index: 101;
-    }
-
-    .hamburger span {
-      width: 30px;
-      height: 3px;
-      background-color: white;
-      border-radius: 3px;
-      transition: all 0.3s ease;
-    }
-
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(8px, 8px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -7px);
-    }
-
     /* HERO SECTION */
     .hero-section {
       background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/OCT30-9.jpg');
@@ -155,6 +84,7 @@
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(212,175,55,0.6);
     }
+
 
     /* SECTIONS */
     section {
@@ -765,7 +695,39 @@
       gap: 1.0rem;
       margin: 2rem 0;
     }
+
+    .gallery2-item{
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      display: flex; align-items: center; 
+      justify-content: center;
+    }
+
+    .gallery2-item img{
+      width: 100%;             
+      height: 500px;        
+      object-fit: cover;        
+      object-position: center;  
+      display: block;
+    }
+
+    .image-gallery.centered-gallery {
+      display:block;
+      /* justify-content: center;
+      align-items: center; */
     
+    }
+    
+    .gallery-item img {
+      width: 100%;             
+      height: 300px;        
+      object-fit: cover;        
+      object-position: center;    
+      border-radius: 15px;         
+    }
 
     /* TWO-COLUMN GALLERY FIX */
     .image-gallery.two-column {
@@ -1177,6 +1139,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
+
 }
 
 /* TABLET (768px - 991px) */
@@ -1316,6 +1279,11 @@
   /* Volunteer */
   .volunteer-image {
     max-width: 250px;
+  }
+
+  .join-us-text{
+    margin:1.5rem;
+    /* background-color:black; */
   }
 
   /* Involvement - Single Column */
@@ -1555,7 +1523,7 @@
   }
 
   .join-us-text {
-    font-size: 1.05rem;
+    font-size: 0.8rem;
   }
 
   /* Involvement Section */
@@ -1837,7 +1805,7 @@
 
   /* Volunteer Section */
   .volunteer-header {
-     margin:1rem;
+    margin:1rem;
     padding: 1.5rem;
   }
 
@@ -1847,8 +1815,8 @@
 
   .volunteer-image {
     max-width: 80%;
-    margin: 1.5rem;
-  }
+    margin: 1.5rem ;
+  } 
 
   /* Join Us Section */
   .join-us {
@@ -1865,7 +1833,7 @@
   }
 
   .join-us-text {
-     margin:0.5rem;
+    margin: 0.5rem;
     font-size: 1rem;
   }
 
@@ -2168,6 +2136,4 @@
     scroll-behavior: auto !important;
   }
 }
-
-
 
