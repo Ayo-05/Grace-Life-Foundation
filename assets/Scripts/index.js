@@ -1,42 +1,46 @@
 
 
 // Hamburger Menu Toggle
-    const hamburger = document.getElementById('hamburger');
-    const headerNav = document.getElementById('headerNav');
+const hamburger = document.getElementById('hamburger');
+const headerNav = document.getElementById('headerNav');
 
-    if (hamburger && headerNav) {
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        headerNav.classList.toggle('active');
-      });
+if (hamburger && headerNav) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    headerNav.classList.toggle('active');
+  });
 
-      // Mobile dropdown toggle
-      document.querySelectorAll('.dropdown').forEach(dropdown => {
-        dropdown.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
-            e.stopPropagation();
-            dropdown.classList.toggle('active');
-          }
-        });
-      });
+  // Mobile dropdown toggle
+  document.querySelectorAll('.dropdown').forEach(dropdown => {
+    dropdown.addEventListener('click', (e) => {
+      if (window.innerWidth <= 1024) {
+        e.stopPropagation();
+        dropdown.classList.toggle('active');
+      }
+    });
+  });
 
-      // Close menu when clicking on a link
-      document.querySelectorAll('.header-wrapper a').forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('active');
-          headerNav.classList.remove('active');
-        });
-      });
+  // Close menu when clicking on a link
+  document.querySelectorAll('.header-wrapper a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      headerNav.classList.remove('active');
+    });
+  });
 
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!headerNav.contains(e.target) && !hamburger.contains(e.target)) {
-          hamburger.classList.remove('active');
-          headerNav.classList.remove('active');
-        }
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!headerNav.contains(e.target) && !hamburger.contains(e.target)) {
+      hamburger.classList.remove('active');
+      headerNav.classList.remove('active');
+      
+      // Also close all internal dropdowns so it resets for next time
+      document.querySelectorAll('.dropdown.active').forEach(openDropdown => {
+        openDropdown.classList.remove('active');
       });
     }
-
+  });
+}
 
 
 // Volunteer Form Submission Handler
