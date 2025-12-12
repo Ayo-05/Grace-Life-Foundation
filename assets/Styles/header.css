@@ -173,7 +173,7 @@
       color: white;
       padding: 2rem;
       border-radius: 15px;
-      margin: 3rem 0;
+      margin:3rem;
       text-align: center;
     }
 
@@ -199,7 +199,7 @@
     .project-gallery-three {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+      gap: 3rem;
       margin: 2rem auto;
       max-width: 1200px;
       padding: 0 2rem;
@@ -412,7 +412,7 @@
    ADD THIS TO THE BOTTOM OF HEADER.CSS
    ========================================= */
 
-@media (max-width: 768px) {
+@media (max-width:1024px) {
     /* 1. Show the Hamburger Icon */
     .hamburger {
         display: flex; 
@@ -454,7 +454,7 @@
     /* 5. Adjust Dropdowns for Mobile */
     .dropdown-content {
         position: relative;
-        background: rgba(255,255,255,0.1); /* Transparent white */
+        background: rgba(255,255,255,0.1); 
         box-shadow: none;
         top: 0;
         width: 100%;
@@ -464,4 +464,16 @@
         color: white;
         padding-left: 2rem;
     }
+
+    .dropdown.active .dropdown-content {
+        display: flex; /* Changed from block to flex for better layout */
+        flex-direction: column;
+        animation: fadeIn 0.3s ease; /* Optional: Makes it appear smoothly */
+    }
+
+    .dropdown.active .nav-item::after {
+        transform: rotate(180deg);
+    }
+
+
 }
