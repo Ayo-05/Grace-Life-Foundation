@@ -1,5 +1,3 @@
-
-
 // Hamburger Menu Toggle
 const hamburger = document.getElementById('hamburger');
 const headerNav = document.getElementById('headerNav');
@@ -10,34 +8,67 @@ if (hamburger && headerNav) {
     headerNav.classList.toggle('active');
   });
 
-  // Mobile dropdown toggle
+  // Desktop dropdown toggle - Click to open/close
   document.querySelectorAll('.dropdown').forEach(dropdown => {
-    dropdown.addEventListener('click', (e) => {
-      if (window.innerWidth <= 1024) {
+    const navItem = dropdown.querySelector('.nav-item');
+    
+    if (navItem) {
+      navItem.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
+        
+        // Close other dropdowns first
+        document.querySelectorAll('.dropdown').forEach(other => {
+          if (other !== dropdown) {
+            other.classList.remove('active');
+          }
+        });
+        
+        // Toggle this dropdown
         dropdown.classList.toggle('active');
-      }
+      });
+    }
+  });
+
+  // Close menu when clicking on a dropdown link
+  document.querySelectorAll('.dropdown-content a').forEach(link => {
+    link.addEventListener('click', () => {
+      // Close all dropdowns
+      document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+      
+      // Close mobile menu if open
+      hamburger.classList.remove('active');
+      headerNav.classList.remove('active');
     });
   });
 
-  // Close menu when clicking on a link
-  document.querySelectorAll('.header-wrapper a').forEach(link => {
+  // Close menu when clicking on regular navigation links
+  document.querySelectorAll('.header-wrapper > a').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
       headerNav.classList.remove('active');
     });
   });
 
-  // Close menu when clicking outside
+  // Close dropdowns when clicking outside
   document.addEventListener('click', (e) => {
-    if (!headerNav.contains(e.target) && !hamburger.contains(e.target)) {
+    const clickedInsideDropdown = e.target.closest('.dropdown');
+    const clickedInsideNav = headerNav.contains(e.target);
+    const clickedHamburger = hamburger.contains(e.target);
+    
+    if (!clickedInsideDropdown && !clickedHamburger) {
+      // Close all dropdowns
+      document.querySelectorAll('.dropdown.active').forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+    
+    // Close mobile menu if clicking outside
+    if (!clickedInsideNav && !clickedHamburger) {
       hamburger.classList.remove('active');
       headerNav.classList.remove('active');
-      
-      // Also close all internal dropdowns so it resets for next time
-      document.querySelectorAll('.dropdown.active').forEach(openDropdown => {
-        openDropdown.classList.remove('active');
-      });
     }
   });
 }
