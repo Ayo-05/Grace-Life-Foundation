@@ -1,479 +1,470 @@
 /* GLOBAL STYLES */
-    * {
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-    }
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      width: 100%;
-      line-height: 1.6;
-      color: #333;
-    }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    line-height: 1.6;
+    color: #333;
+  }
 
-    h1 {
-      font-size: 2.5rem;
-      color: #2a2a2a;
-      margin-bottom: 1rem;
-      text-align:center;
-    }
+  h1 {
+    font-size: 2.5rem;
+    color: #2a2a2a;
+    margin-bottom: 1rem;
+    text-align:center;
+  }
 
-    h2 {
-      font-size: 2rem;
-      color: #2a2a2a;
-      margin-bottom: 1rem;
-    }
+  h2 {
+    font-size: 2rem;
+    color: #2a2a2a;
+    margin-bottom: 1rem;
+  }
 
-    h3 {
-      font-size: 1.5rem;
-      color: #2a2a2a;
-      margin-bottom: 0.5rem;
-    }
+  h3 {
+    font-size: 1.5rem;
+    color: #2a2a2a;
+    margin-bottom: 0.5rem;
+  }
 
-    p {
-      font-size: 1.1rem;
-      color: #1a1818;
-      line-height: 1.8;
-    }
+  p {
+    font-size: 1.1rem;
+    color: #1a1818;
+    line-height: 1.8;
+  }
 
-    a {
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
+  a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
 
-    /* HEADER STYLES */
-    #header-container {
-     background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-      padding: 0.5rem 1rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  /* HEADER STYLES */
+  #header-container {
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    /* NAVIGATION */
-    .header-wrapper {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-    }
+  /* NAVIGATION */
+  .header-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
 
-    .header-wrapper > a,
-    .nav-item {
-      color: white;
-      text-decoration: none;
-      padding: 0.8rem 1.2rem;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      font-weight: 500;
-      position: relative;
-    }
+  .header-wrapper > a,
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+  }
 
-    .header-wrapper > a:hover,
-    .nav-item:hover {
-      background: rgba(255,255,255,0.2);
-      transform: translateY(-2px);
-    }
-     .logo-wrapper {
-      flex: 0 0 auto;
-    }
+  .header-wrapper > a:hover,
+  .nav-item:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+  }
+    .logo-wrapper {
+    flex: 0 0 auto;
+  }
 
-    .logo-image {
-      height: 70px;
-      width: auto;
-    }
+  .logo-image {
+    height: 70px;
+    width: auto;
+  }
 
-    /* DROPDOWN MENU */
-    .nav-item {
-      cursor: pointer;
-    }
+  /* DROPDOWN MENU */
+  .nav-item {
+    cursor: pointer;
+  }
 
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background: white;
-      min-width: 200px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      border-radius: 8px;
-      top: 100%;
-      left: 0;
-      margin-top: 0.5rem;
-      overflow: hidden;
-    }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+    overflow: hidden;
+  }
 
-    .dropdown-content a {
-      color: #333;
-      padding: 0.8rem 1.2rem;
-      text-decoration: none;
-      display: block;
-      transition: all 0.3s ease;
-    }
+  .dropdown-content a {
+    color: #333;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+  }
 
-    .dropdown-content a:hover {
-      background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-      color: white;
-    }
+  .dropdown-content a:hover {
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    color: white;
+  }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+  /* REMOVED HOVER EFFECT - Now click-based only */
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
 
-    .nav-item::after {
-      content: '▼';
-      margin-left: 0.5rem;
-      font-size: 0.7rem;
-      transition: transform 0.3s ease;
-    }
+  .nav-item::after {
+    content: '▼';
+    margin-left: 0.5rem;
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+  }
 
-    .dropdown:hover .nav-item::after {
-      transform: rotate(180deg);
-    }
+  .dropdown.active .nav-item::after {
+    transform: rotate(180deg);
+  }
 
-    /* HAMBURGER MENU */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      z-index: 101;
-    }
+  /* HAMBURGER MENU */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 101;
+  }
 
-    .hamburger span {
-      width: 30px;
-      height: 3px;
-      background-color: white;
-      border-radius: 3px;
-      transition: all 0.3s ease;
-    }
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
 
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(8px, 8px);
-    }
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
 
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
 
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -7px);
-    }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
 
   /* PROJECT 2026 SECTION */
-    .project-header {
-      background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+  .project-header {
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin:3rem;
+    text-align: center;
+  }
+
+  .project-header h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+  }
+
+  section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .section-divider {
+    border: none;
+    border-top: 2px dotted #d3d3d3;
+    margin: 3rem 0;
+  }
+
+  /* PROJECT GALLERY THREE */
+  .project-gallery-three {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+  }
+
+  .project-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  .project-gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  }
+
+  .project-gallery-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* CONTENT SECTION */
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+  }
+
+  .content-wrapper p {
+    font-size: 1.1rem;
+    color: #1a1818;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .content-wrapper h3 {
+    color: #d4af37;
+    font-size: 1.6rem;
+    margin: 2rem 0 1rem;
+  }
+
+  .content-wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 2rem;
+  }
+
+  .content-wrapper li {
+    padding: 1rem 0 1rem 2.5rem;
+    position: relative;
+    line-height: 1.7;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .content-wrapper li:last-child {
+    border-bottom: none;
+  }
+
+  .content-wrapper li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .content-wrapper strong {
+    color: #d4af37;
+    font-size: 1.15rem;
+  }
+  
+  /* DONATE SECTION */
+  #donate {
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+  }
+
+  #donate h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #donate p {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .donate-button {
+    background: white;
+    color: #d4af37;
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+    border: none;
+  }
+
+  .donate-button:hover {
+    background: #f5f5f5;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+
+  .account-details {
+    margin-top: 50px;
+    margin-bottom:50px;
+  }
+
+  .account-details h2 {
+    color: white;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .account-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .account-card {
+    background: #e9c85c;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    text-align: left;
+  }
+
+  .account-card h3 {
+    color: white;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  .account-card p {
+    color: #2a2a2a;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  .bank-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  /* CONTACT SECTION */
+  #contact {
+    background-color: white;
+    text-align: center;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .contact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  }
+
+  .contact-card h3 {
+    color: #d4af37;
+    margin-bottom: 1rem;
+  }
+
+  .contact-card a {
+    color: #2a2a2a;
+  }
+
+  /* FOOTER */
+  footer {
+    background-color: #2a2a2a;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  footer p {
+    color: #ccc;
+  }
+  
+  @media (max-width:1024px) {
+  .hamburger {
+      display: flex; 
+  }
+
+  .header-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    height: 100vh;
+    width: 75%;
+    max-width: 300px;
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    flex-direction: column;
+    justify-content: flex-start; 
+    padding-top: 6rem; 
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 99;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+  }
+
+  .header-wrapper.active {
+      right: 0;
+  }
+
+  .header-wrapper a, 
+  .nav-item {
       color: white;
-      padding: 2rem;
-      border-radius: 15px;
-      margin:3rem;
-      text-align: center;
-    }
-
-    .project-header h2 {
-      color: white;
-      font-size: 1.8rem;
-      margin: 0;
-    }
-
-    section {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 4rem 2rem;
-    }
-
-    .section-divider {
-      border: none;
-      border-top: 2px dotted #d3d3d3;
-      margin: 3rem 0;
-    }
-
-    /* PROJECT GALLERY THREE */
-    .project-gallery-three {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
-      margin: 2rem auto;
-      max-width: 1200px;
-      padding: 0 2rem;
-    }
-
-    .project-gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
+      font-size: 1.2rem;
       width: 100%;
-    }
+      text-align: center;
+      padding: 1rem;
+  }
 
-    .project-gallery-item:hover {
-      transform: scale(1.02);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-    }
-
-    .project-gallery-item img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-    }
-
-    /* CONTENT SECTION */
-    .content-wrapper {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 0 2rem;
-    }
-
-    .content-wrapper p {
-      font-size: 1.1rem;
-      color: #1a1818;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-
-    .content-wrapper h3 {
-      color: #d4af37;
-      font-size: 1.6rem;
-      margin: 2rem 0 1rem;
-    }
-
-    .content-wrapper ul {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0 2rem;
-    }
-
-    .content-wrapper li {
-      padding: 1rem 0 1rem 2.5rem;
+  .dropdown-content {
       position: relative;
-      line-height: 1.7;
-      border-bottom: 1px solid #f0f0f0;
-    }
-
-    .content-wrapper li:last-child {
-      border-bottom: none;
-    }
-
-    .content-wrapper li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #d4af37;
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-
-    .content-wrapper strong {
-      color: #d4af37;
-      font-size: 1.15rem;
-    }
-    
-    /* DONATE SECTION */
-    #donate {
-      background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+      background: rgba(255,255,255,0.1); 
+      box-shadow: none;
+      top: 0;
+      width: 100%;
+  }
+  
+  .dropdown-content a {
       color: white;
-      text-align: center;
-      padding: 5rem 2rem;
-    }
+      padding-left: 2rem;
+  }
 
-    #donate h2 {
-      color: white;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
+  .dropdown.active .dropdown-content {
+      display: flex; 
+      flex-direction: column;
+      animation: fadeIn 0.3s ease;
+  }
 
-    #donate p {
-      color: white;
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-    }
-
-    .donate-button {
-      background: white;
-      color: #d4af37;
-      padding: 1.2rem 3rem;
-      font-size: 1.3rem;
-      font-weight: bold;
-      border-radius: 50px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      cursor: pointer;
-      border: none;
-    }
-
-    .donate-button:hover {
-      background: #f5f5f5;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    }
-
-    .account-details {
-      margin-top: 50px;
-      margin-bottom:50px;
-    }
-
-    .account-details h2 {
-      color: white;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .account-cards-wrapper {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .account-card {
-      background: #e9c85c;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-      text-align: left;
-    }
-
-    .account-card h3 {
-      color: white;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1.3rem;
-    }
-
-    .account-card p {
-      color: #2a2a2a;
-      margin: 0.5rem 0;
-      font-size: 1rem;
-    }
-
-    .bank-logo {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-    }
-
-    /* CONTACT SECTION */
-    #contact {
-      background-color: white;
-      text-align: center;
-    }
-
-    .contact-info {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-
-    .contact-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-    }
-
-    .contact-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-    }
-
-    .contact-card h3 {
-      color: #d4af37;
-      margin-bottom: 1rem;
-    }
-
-    .contact-card a {
-      color: #2a2a2a;
-    }
-
-    /* FOOTER */
-    footer {
-      background-color: #2a2a2a;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    footer p {
-      color: #ccc;
-    }
-    /* =========================================
-   ADD THIS TO THE BOTTOM OF HEADER.CSS
-   ========================================= */
-
-@media (max-width:1024px) {
-    /* 1. Show the Hamburger Icon */
-    .hamburger {
-        display: flex; 
-    }
-
-    /* 2. Hide the desktop menu links by default */
-    .header-wrapper {
-        position: fixed;
-        top: 0;
-        right: -100%; /* Hide off-screen to the right */
-        height: 100vh;
-        width: 75%;
-        max-width: 300px;
-        background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-        flex-direction: column;
-        justify-content: flex-start; /* Start from top */
-        padding-top: 6rem; /* Space for close button */
-        gap: 2rem;
-        transition: right 0.3s ease-in-out;
-        z-index: 99;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
-    }
-
-    /* 3. Slide the menu in when Active */
-    .header-wrapper.active {
-        right: 0;
-    }
-
-    /* 4. Style links for mobile */
-    .header-wrapper a, 
-    .nav-item {
-        color: white;
-        font-size: 1.2rem;
-        width: 100%;
-        text-align: center;
-        padding: 1rem;
-    }
-
-    /* 5. Adjust Dropdowns for Mobile */
-    .dropdown-content {
-        position: relative;
-        background: rgba(255,255,255,0.1); 
-        box-shadow: none;
-        top: 0;
-        width: 100%;
-    }
-    
-    .dropdown-content a {
-        color: white;
-        padding-left: 2rem;
-    }
-
-    .dropdown.active .dropdown-content {
-        display: flex; /* Changed from block to flex for better layout */
-        flex-direction: column;
-        animation: fadeIn 0.3s ease; /* Optional: Makes it appear smoothly */
-    }
-
-    .dropdown.active .nav-item::after {
-        transform: rotate(180deg);
-    }
-
-
+  .dropdown.active .nav-item::after {
+      transform: rotate(180deg);
+  }
 }
