@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Grace Life Foundation - Serving through compassion to uplift the underserved and grow together in purpose">
-  <meta name="keywords" content="Grace Life Foundation, charity, community service, education, social impact">
+  <meta name="description" content="Grace Life Foundation (Non-Govermental Organization) - Cleaner Environment, Safer Health and Stronger Communities.">
+  <meta name="keywords" content="Grace Life Foundation, NGO, Cleaner Environment, charity, Safer Health, service, education, social impact">
   <link rel="icon" type="image/x-icon" href="assets/images/logo.jpg">
   <title>GRACE LIFE FOUNDATION - GRACE LIFE FOUNDATION FOR SOCIAL IMPACTS</title>
   <link rel="canonical" href="https://gracelifefoundation.org/">
@@ -35,21 +35,16 @@
           <a href="programs.html">Programs (2025)</a>
         </div>
       </div>
-      <div class="dropdown">
-        <span class="nav-item">Micro-plastics</span>
-        <div class="dropdown-content">
-          <a href="2026.html">Micro-plastics Programs (2026)</a>
-          <a href="Legal and Medical Research.html">Legal/Medical Research</a>
-        </div>
-      </div>
 
+      <a href="2026.html">Micro-plastics</a>
       <a href="volunteer.html">Volunteers</a>
       <a href="donate.html">Donate</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
-<!-- Volunteer Section -->
-<div class="volunteer">
+
+  <!-- Volunteer Section -->
+  <div class="volunteer">
     <h2>Our Amazing Volunteers</h2>
     <div class="volunteer-header">
       <p>
@@ -57,11 +52,29 @@
         tireless efforts drive our initiatives forward, enabling us to make a meaningful impact in the communities we serve.
       </p>
     </div>
-    <img src="assets/images/volunteer-1.jpg" alt="Volunteers working together" class="volunteer-image">
-    <img src="assets/images/volunteer-2.jpg" alt="Community service by volunteers" class="volunteer-image">
-    <img src="assets/images/volunteer-3.jpg" alt="Volunteers in action" class="volunteer-image">
-    <img src="assets/images/volunteer-4.jpg" alt="Helping hands of volunteers" class="volunteer-image">
-    <img src="assets/images/volunteer-5.jpg" alt="Helping hands of volunteers" class="volunteer-image">
+    <div class="image-gallery">
+      <div class="gallery-item">
+          <img src="assets/images/volunteer-1.jpg" alt="Volunteers working together" class="gallery-item img">
+      </div>
+       <div class="gallery-item">
+          <img src="assets/images/volunteer-2.jpg" alt="Volunteers working together" class="gallery-item img">
+      </div>
+       <div class="gallery-item">
+          <img src="assets/images/volunteer-3.jpg" alt="Volunteers working together" class="gallery-item img">
+      </div>
+       <div class="gallery-item">
+          <img src="assets/images/volunteer-4.jpg" alt="Volunteers working together" class="gallery-item img">
+      </div>
+       <div class="gallery-item">
+          <img src="assets/images/volunteer-5.jpg" alt="Volunteers working together" class="gallery-item img">
+      </div>
+       <div class="gallery-item">
+          <img src="assets/images/Volunteer-6.jpg" alt="Volunteers working together" class="gallery-item img">
+      </div>
+       <div class="gallery-item">
+          <img src="assets/images/volunteer-7.jpg" alt="Volunteers working together" class="gallery-item img">
+      </div>
+    </div>
   </div>
   
   <div class="join-us-container">
@@ -82,32 +95,87 @@
     <a href="#volunteerForm" class="join-button">Become a Volunteer</a>
   </div>
   <!-- VOLUNTEER FORM -->
-    <div class="volunteer-form" id="volunteerForm">
-      <h2>Volunteer with Us</h2>
-      <div class="volunteer-wrapper">
-        <form id="volunteerApplicationForm">
-          <input type="hidden" name="access_key" value="5632c71e-ac90-47d3-ba27-548d15721be8">
-          
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required>
+   <div class="volunteer-form" id="volunteerForm">
+  <h2>Volunteer with Us</h2>
+  <div class="volunteer-wrapper">
+    <form id="volunteerApplicationForm">
+      <input type="hidden" name="access_key" value="5632c71e-ac90-47d3-ba27-548d15721be8">
+      
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
 
-          <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" required>
+      <label for="gender">Gender:</label>
+      <div class="gender-selection">
+        <label class="radio-label">
+          <input type="radio" id="male" name="gender" value="male" required>
+          <span>Male</span>
+        </label>
 
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" required>
-
-          <label for="age">Age:</label>
-          <input type="number" id="age" name="age" min="18" required>
-
-          <label for="message">Why do you want to volunteer with us?</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-
-          <button type="submit">Submit Application</button>
-        </form>
-        <div class="form-message" id="formMessage"></div>
+        <label class="radio-label">
+          <input type="radio" id="female" name="gender" value="female" required>
+          <span>Female</span>
+        </label>
       </div>
-    </div>
+      
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+234" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="18" required>
+
+      <label for="location">Location:</label>
+      <select id="location" name="location" required>
+        <option value="">-- Select your state --</option>
+        <option value="Abia">Abia</option>
+        <option value="Adamawa">Adamawa</option>
+        <option value="Akwa Ibom">Akwa Ibom</option>
+        <option value="Anambra">Anambra</option>
+        <option value="Bauchi">Bauchi</option>
+        <option value="Bayelsa">Bayelsa</option>
+        <option value="Benue">Benue</option>
+        <option value="Borno">Borno</option>
+        <option value="Cross River">Cross River</option>
+        <option value="Delta">Delta</option>
+        <option value="Ebonyi">Ebonyi</option>
+        <option value="Edo">Edo</option>
+        <option value="Ekiti">Ekiti</option>
+        <option value="Enugu">Enugu</option>
+        <option value="FCT">Federal Capital Territory (FCT)</option>
+        <option value="Gombe">Gombe</option>
+        <option value="Imo">Imo</option>
+        <option value="Jigawa">Jigawa</option>
+        <option value="Kaduna">Kaduna</option>
+        <option value="Kano">Kano</option>
+        <option value="Katsina">Katsina</option>
+        <option value="Kebbi">Kebbi</option>
+        <option value="Kogi">Kogi</option>
+        <option value="Kwara">Kwara</option>
+        <option value="Lagos">Lagos</option>
+        <option value="Nasarawa">Nasarawa</option>
+        <option value="Niger">Niger</option>
+        <option value="Ogun">Ogun</option>
+        <option value="Ondo">Ondo</option>
+        <option value="Osun">Osun</option>
+        <option value="Oyo">Oyo</option>
+        <option value="Plateau">Plateau</option>
+        <option value="Rivers">Rivers</option>
+        <option value="Sokoto">Sokoto</option>
+        <option value="Taraba">Taraba</option>
+        <option value="Yobe">Yobe</option>
+        <option value="Zamfara">Zamfara</option>
+      </select>
+
+      <label for="message">Why do you want to volunteer with us?</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+    <div class="form-message" id="formMessage"></div>
+  </div>
+</div>
   </section>
 
   
@@ -137,7 +205,9 @@
         <h3>Follow Us</h3>
         <p>
           <a href="https://www.tiktok.com/@gracelifefoundation" target="_blank" rel="noopener">TikTok</a> |  
-          <a href="https://www.instagram.com/grace_life_foundation" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.instagram.com/grace_life_foundation" target="_blank" rel="noopener">Instagram</a> |
+          <a href="https://www.x.com/GracelifeI" target="_blank" rel="noopener">X</a> |  
+          <a href="https://www.linkedin.com/in/grace-life-foundation-for-social-impacts-80000a39b" target="_blank" rel="noopener">LinkedIn</a> 
         </p>
       </div>
     </div>
@@ -145,7 +215,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Grace Life Foundation. All rights reserved.</p>
+    <p>&copy; 2026 Grace Life Foundation. All rights reserved.</p>
     <p>Empowering Communities • Uplifting Lives • Growing Together</p>
   </footer>
   <script  type="text/javaScript" src="assets/Scripts/index.js"></script>
