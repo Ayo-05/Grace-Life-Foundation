@@ -667,7 +667,16 @@
       border: 2px solid #f5c6cb;
       display: block;
     }
-
+    
+    /* THE TEAM IMAGE */
+    .team-image-container{
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .team-image{
+      width: 80%;
+      object-fit:contain;
+    }
     /* PROGRAMS SECTION */
     #programs {
       background-color: white;
@@ -777,6 +786,8 @@
       object-position: center;  
       display: block;    
     }
+
+
 
     .gallery-item video{
       width: 100%;             
@@ -1251,6 +1262,26 @@
   .image-gallery.two-column .gallery-item img {
     height: 350px;
   }
+
+  #about {
+    flex-direction: column;
+    text-align: center; 
+  }
+
+  /* TEAM IMAGE */
+  .team-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 1.5rem;  
+  }
+
+  .team-image {
+    max-width: 80%;  
+    height: auto;  
+    margin: 0 auto;  
+  }
+
 
   /* Mission/Vision - Single Column */
   .mission-vision-wrapper {
@@ -1752,6 +1783,11 @@
     height: 280px;
   }
 
+  /* TEAM IMAGE */
+  .team-image {
+    width: 80%;
+    object-fit: contain;
+  }
   /* Mission/Vision Cards */
   .mission-vision-wrapper {
     grid-template-columns: 1fr;
@@ -1995,6 +2031,14 @@
   }
 
   /* Programs */
+  .gallery-item-1{
+    width: 100%;             
+    height: 500px;        
+    /* object-fit: cover;         */
+    /* object-position: center;   */
+    /* display: block;  */
+  }
+
   .program1-header,
   .program2-header {
     padding: 1.2rem;
@@ -2172,5 +2216,7 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
+  
 }
 
