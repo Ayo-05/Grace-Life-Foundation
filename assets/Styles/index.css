@@ -105,6 +105,8 @@
       background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 50%, #f9f9f9 100%);
     }
 
+
+
     /* Mission and Vision Cards - Side by Side */
     .mission-vision-wrapper {
       display: grid;
@@ -680,7 +682,8 @@
     /* PROGRAMS SECTION */
     #programs {
       background-color: white;
-      
+      /* margin:0;
+      padding:0; */
     }
 
 
@@ -748,7 +751,6 @@
       margin: 2rem 0;
     }
 
-   
     .gallery-item-2{
       position: relative;
       overflow: hidden;
@@ -779,6 +781,7 @@
       justify-content: center;
     }
     
+
     .gallery-item-1 img {
       width: 100%;             
       height: 500px;        
@@ -787,7 +790,10 @@
       display: block;    
     }
 
-
+    .sanitation-image{
+      width:80%;
+      object-fit:contain;
+    }
 
     .gallery-item video{
       width: 100%;             
@@ -1263,6 +1269,12 @@
     height: 350px;
   }
 
+  .sanitation-image{
+    width:50%;
+    height:300px;
+    /* object-fit:contain; */
+  }
+ 
   #about {
     flex-direction: column;
     text-align: center; 
@@ -1277,9 +1289,8 @@
   }
 
   .team-image {
-    max-width: 80%;  
-    height: auto;  
-    margin: 0 auto;  
+    width: 100%;  
+    object-fit: contain; 
   }
 
 
@@ -1317,7 +1328,7 @@
   }
 
   .founder-image {
-    height: 320px;
+    height: 400px;
   }
 
   /* Logo Section */
@@ -1463,6 +1474,11 @@
     padding: 2.5rem 1.5rem;
   }
 
+  /* TEAM IMAGE */
+  .team-image{
+    width:100%;
+    object-fit:contain;
+  }
   /* Typography */
   h1 {
     font-size: 2rem;
@@ -1502,6 +1518,11 @@
 
   .image-gallery.two-column .gallery-item img {
     height: 320px;
+  }
+    /* SANITATION IMAGE */
+  .sanitation-image{
+    width:80%;
+    object-fit:contain;
   }
 
   /* Mission/Vision - Single Column */
@@ -1556,7 +1577,7 @@
   }
 
   .founder-image {
-    height: 300px;
+    height: auto;
   }
 
   /* Logo Section */
@@ -1591,7 +1612,7 @@
   }
 
   .join-us-text {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   /* Involvement Section */
@@ -1785,8 +1806,14 @@
 
   /* TEAM IMAGE */
   .team-image {
-    width: 80%;
+    width: 90%;
     object-fit: contain;
+  }
+
+    /* SANITATION IMAGE */
+  .sanitation-image{
+    width:auto;
+    object-fit:contain;
   }
   /* Mission/Vision Cards */
   .mission-vision-wrapper {
@@ -1852,7 +1879,7 @@
   }
 
   .founder-image {
-    height: 280px;
+    height: auto;
   }
 
   .notable-item p {
@@ -1879,7 +1906,7 @@
   /* Volunteer Section */
   .volunteer-header {
     margin:1rem;
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .volunteer-header p {
@@ -1888,7 +1915,7 @@
 
   .volunteer-image {
     max-width: 80%;
-    margin: 1.5rem ;
+    margin: 1.7rem ;
   } 
 
   /* Join Us Section */
@@ -1906,7 +1933,7 @@
   }
 
   .join-us-text {
-    margin: 0.5rem;
+    margin: 0.9rem;
     font-size: 1rem;
   }
 
@@ -2034,10 +2061,13 @@
   .gallery-item-1{
     width: 100%;             
     height: 500px;        
-    /* object-fit: cover;         */
-    /* object-position: center;   */
-    /* display: block;  */
   }
+  /* SANITATION IMAGE */
+  /* .sanitation-image{
+    width: 50px;
+    height:10px;
+    object-fit:contain;
+  } */
 
   .program1-header,
   .program2-header {
@@ -2219,4 +2249,3 @@
 
   
 }
-
