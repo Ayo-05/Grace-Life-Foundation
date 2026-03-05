@@ -1,0 +1,377 @@
+/* HERO SECTION */
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/DEC29-3.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero-section h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section p {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #d4af37;
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(212,175,55,0.4);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #b8941f;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(212,175,55,0.6);
+}
+
+/* ABOUT SECTION */
+#about {
+  text-align: center;
+  background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 50%, #f9f9f9 100%);
+}
+
+
+
+/* Mission and Vision Cards - Side by Side */
+.mission-vision-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 3rem auto;
+}
+
+.mission-vision-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.mission-vision-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
+}
+
+.card-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  border: 3px solid #d4af37;
+}
+
+.card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.mission-vision-card h3 {
+  color: #d4af37;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.mission-vision-card p {
+  color: #2a2a2a;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Main About Content */
+.about-content-wrapper {
+  max-width: 1100px;
+  margin: 4rem auto;
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.about-main-text {
+  text-align: left;
+}
+
+.about-main-text h2 {
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.intro-text {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Impact Section with Grid */
+.impact-section {
+  margin: 3rem 0;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #f9f9f9 0%, #fff5e6 100%);
+  border-radius: 15px;
+  border-left: 5px solid #d4af37;
+}
+
+.impact-section h3 {
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.impact-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.impact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.2);
+}
+
+.impact-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.impact-item p {
+  font-size: 1rem;
+  color: #2a2a2a;
+  margin: 0;
+}
+
+/* Work Section */
+.work-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 15px;
+}
+
+.work-section h3 {
+  color: #d4af37;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+
+
+/* Involvement Section */
+.involvement-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 4rem auto;
+}
+
+.why-matters, .get-involved {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.why-matters h3, .get-involved h3 {
+  color: #d4af37;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.why-matters ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-matters li {
+  padding: 0.8rem 0;
+  padding-left: 2rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.why-matters li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.involvement-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.involvement-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.volunteer-btn {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.volunteer-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(76, 175, 80, 0.5);
+}
+
+.donate-btn {
+  background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.donate-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+}
+
+.btn-icon {
+  font-size: 1.4rem;
+}
+
+.involvement-text {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+/* Notable Wrapper Improved */
+.notable-wrapper {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 3rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.notable-wrapper h2 {
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.notable-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.notable-item {
+  text-align: center;
+}
+
+.founder-image {
+  width: 100%;
+  height: 350px;
+  object-fit:cover;
+  object-position:center top;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.founder-image:hover {
+  transform: scale(1.03);
+}
+
+.notable-item p {
+  font-size: 1.05rem;
+  color: #2a2a2a;
+  line-height: 1.7;
+}
+
+  /* LOGO MEANING */
+.logo-meaning {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin: 3rem 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.about-logo {
+  max-width: 400px;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.logo-description {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.logo-item {
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-left: 4px solid #d4af37;
+  border-radius: 5px;
+}
+
+.logo-item strong {
+  color: #d4af37;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}

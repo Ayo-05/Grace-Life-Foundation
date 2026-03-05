@@ -1,0 +1,1258 @@
+/* LARGE DESKTOP (1200px and above) */
+@media (min-width: 1200px) {
+  /* Container & Spacing */
+  section {
+    max-width: 1400px;
+    padding: 5rem 2rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 7rem 2rem;
+  }
+
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.5rem;
+  }
+
+  /* Typography Enhancements */
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  .about-main-text h2 {
+    font-size: 2.5rem;
+  }
+
+  /* 4-column Image Galleries */
+  .image-gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .image-gallery-three {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .image-gallery.two-column {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* Contact Section - 4 columns */
+  .contact-info {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+
+  /* Account Cards - 3 columns */
+  .account-cards-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  /* Notable Grid - 3 columns */
+  .notable-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .founder-image {
+    height: 380px;
+  }
+
+  /* Impact Grid - 4 columns */
+  .impact-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  /* Mission/Vision Cards */
+  .mission-vision-wrapper {
+    max-width: 1000px;
+    gap: 3rem;
+  }
+
+  /* Involvement Section - 2 columns */
+  .involvement-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  /* Content Wrappers */
+  .about-content-wrapper,
+  .latest-outreach,
+  .notable-wrapper {
+    padding: 3.5rem;
+  }
+}
+
+/* LAPTOP/DESKTOP (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Container & Spacing */
+  section {
+    max-width: 1140px;
+    padding: 4rem 1.5rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 6rem 1.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .hero-section p {
+    font-size: 1.3rem;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  /* 3-column Image Galleries */
+  .image-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .image-gallery-three {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .image-gallery.two-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-item img {
+    height: 280px;
+  }
+
+  .image-gallery.two-column .gallery-item img {
+    height: 380px;
+  }
+
+  /* Contact - 2 columns */
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* Account Cards - 3 columns */
+  .account-cards-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* Notable Grid - 3 columns */
+  .notable-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .founder-image {
+    height: 340px;
+  }
+
+  /* Impact Grid - 3 columns */
+  .impact-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Mission/Vision - 2 columns */
+  .mission-vision-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  /* Involvement - 2 columns */
+  .involvement-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+}
+
+/* TABLET (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Header */
+  #header-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .logo-image {
+    height: 60px;
+  }
+
+  .header-wrapper {
+    gap: 1.5rem;
+  }
+
+  .header-wrapper a {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 5rem 1.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+
+  /* Sections */
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+
+  /* 2-column Galleries */
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .image-gallery-three {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .gallery-item img {
+    height: 300px;
+  }
+
+  .image-gallery.two-column .gallery-item img {
+    height: 350px;
+  }
+
+  .sanitation-image{
+    width:50%;
+    height:300px;
+    /* object-fit:contain; */
+  }
+ 
+  #about {
+    flex-direction: column;
+    text-align: center; 
+  }
+
+  /* TEAM IMAGE */
+  .team-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 1.5rem;  
+  }
+
+  .team-image {
+    width: 100%;  
+    object-fit: contain; 
+  }
+
+
+  /* Mission/Vision - Single Column */
+  .mission-vision-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mission-vision-card {
+    padding: 2rem 1.5rem;
+  }
+
+  /* Content Wrappers */
+  .about-content-wrapper,
+  .latest-outreach,
+  .notable-wrapper {
+    padding: 2.5rem;
+  }
+
+  /* Impact Grid - 2 columns */
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+  }
+
+  .impact-section {
+    padding: 2rem;
+  }
+
+  /* Notable Grid - 2 columns */
+  .notable-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .founder-image {
+    height: 400px;
+  }
+
+  /* Logo Section */
+  .logo-meaning {
+    padding: 2rem;
+  }
+
+  .about-logo {
+    max-width: 350px;
+  }
+
+  /* Join Us - Stacked */
+  .join-us {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .join-us > div {
+    min-width: 100%;
+  }
+
+  .join-us-image {
+    max-width: 350px;
+  }
+
+  /* Volunteer */
+  .volunteer-image {
+    max-width: 250px;
+  }
+
+  .join-us-text{
+    margin:1.5rem;
+    /* background-color:black; */
+  }
+
+  /* Involvement - Single Column */
+  .involvement-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Contact - 2 columns */
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Account Cards - 2 columns */
+  .account-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Programs */
+  .program1-header h2,
+  .program2-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .program1-header,
+  .program2-header {
+    padding: 1.8rem;
+  }
+
+  .program1-text,
+  .program2-text,
+  .program-text {
+    padding: 1.5rem;
+  }
+
+  /* Forms */
+  .volunteer-form {
+    padding: 2.5rem;
+  }
+}
+
+/* MOBILE LANDSCAPE & SMALL TABLET (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Activate Hamburger Menu */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Header */
+  #header-container {
+    padding: 1rem;
+  }
+
+  .logo-image {
+    height: 55px;
+  }
+
+  /* Mobile Navigation Menu */
+  .header-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    z-index: 99;
+  }
+
+  .header-wrapper.active {
+    right: 0;
+  }
+
+  .header-wrapper a {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  /* Sections */
+  section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  /* TEAM IMAGE */
+  .team-image{
+    width:100%;
+    object-fit:contain;
+  }
+  /* Typography */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  /* Galleries - 2 columns for standard, 1 for special */
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .image-gallery-2 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .image-gallery-three {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .gallery-item img {
+    height: 280px;
+  }
+
+  .image-gallery.two-column .gallery-item img {
+    height: 320px;
+  }
+    /* SANITATION IMAGE */
+  .sanitation-image{
+    width:80%;
+    object-fit:contain;
+  }
+
+  /* Mission/Vision - Single Column */
+  .mission-vision-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Content Wrappers */
+  .about-content-wrapper,
+  .latest-outreach,
+  .notable-wrapper {
+    padding: 2rem;
+  }
+
+  .about-main-text h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Impact Section */
+  .impact-section {
+    padding: 1.8rem;
+  }
+
+  .impact-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .impact-icon {
+    font-size: 2.2rem;
+  }
+
+  /* Work Section */
+  .work-section {
+    padding: 1.8rem;
+  }
+
+  /* Notable Grid - 1 column */
+  .notable-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .founder-image {
+    height: auto;
+  }
+
+  /* Logo Section */
+  .logo-meaning {
+    padding: 1.8rem;
+  }
+
+  .about-logo {
+    max-width: 300px;
+  }
+
+  /* Volunteer Section */
+  .volunteer-header {
+    padding: 1.8rem;
+  }
+
+  .volunteer-header p {
+    font-size: 1.2rem;
+  }
+
+  .volunteer-image {
+    max-width: 220px;
+    margin: 0.8rem;
+  }
+
+  .join-us {
+    flex-direction: column;
+  }
+
+  .join-us-image {
+    max-width: 320px;
+  }
+
+  .join-us-text {
+    font-size: 1rem;
+  }
+
+  /* Involvement Section */
+  .involvement-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .why-matters,
+  .get-involved {
+    padding: 2rem;
+  }
+
+  .involvement-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Forms */
+  .volunteer-form {
+    padding: 2rem;
+  }
+
+  .volunteer-form input,
+  .volunteer-form textarea {
+    padding: 0.75rem;
+    font-size: 0.98rem;
+  }
+
+  /* Contact - 1 column */
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  /* Account Cards - 1 column */
+  .account-cards-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Donate Section */
+  #donate {
+    padding: 4rem 1.5rem;
+  }
+
+  .donate-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  /* Programs */
+  .program1-header,
+  .program2-header {
+    padding: 1.5rem;
+  }
+
+  .program1-header h2,
+  .program2-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .program1-text,
+  .program2-text,
+  .program-text {
+    padding: 1.3rem;
+  }
+
+  .impact-text {
+    padding: 1.5rem;
+  }
+
+  .impact-text p {
+    font-size: 1.05rem;
+  }
+}
+
+/* MOBILE PORTRAIT (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Activate Hamburger Menu */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Header */
+  #header-container {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo-image {
+    height: 50px;
+  }
+
+  /* Mobile Navigation */
+  .header-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 80%;
+    max-width: 280px;
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    z-index: 99;
+  }
+
+  .header-wrapper.active {
+    right: 0;
+  }
+
+  .header-wrapper a {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Sections */
+  section {
+    padding: 2rem 1rem;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+   /* Programs */
+  .gallery-item-1 img{
+      width: 100%;             
+      height: auto;        
+      object-fit: cover;        
+      object-position: center;  
+      display: block;         
+  }
+  .image-gallery-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .gallery-item-img-4{
+    width:100%;
+    height:auto;
+  }
+  /* SANITATION IMAGE */
+  /* .sanitation-image{
+    width: 50px;
+    height:10px;
+    object-fit:contain;
+  } */
+
+  .program1-header,
+  .program2-header {
+    padding: 1.2rem;
+  }
+
+  .program1-header h2,
+  .program2-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .program1-text,
+  .program2-text,
+  .program-text {
+    padding: 1rem;
+  }
+
+  .program1-text p,
+  .program2-text p,
+  .program-text p {
+    font-size: 0.9rem;
+  }
+
+  .impact-text {
+    padding: 1.2rem;
+  }
+
+  .impact-text p {
+    font-size: 0.95rem;
+  }
+
+  .read-more-btn {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+
+  /* Single Column Galleries */
+  .image-gallery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .image-gallery.two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .image-gallery-three {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .gallery-item img {
+    height: 250px;
+  }
+
+  .image-gallery.two-column .gallery-item img {
+    height: 280px;
+  }
+
+  /* TEAM IMAGE */
+  .team-image {
+    width: 90%;
+    object-fit: contain;
+  }
+
+    /* SANITATION IMAGE */
+  .sanitation-image{
+    width:80%;
+    object-fit:contain;
+  }
+  /* Mission/Vision Cards */
+  .mission-vision-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .mission-vision-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .card-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Content Wrappers */
+  .about-content-wrapper,
+  .latest-outreach,
+  .notable-wrapper {
+    padding: 1.5rem;
+  }
+
+  .about-main-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  /* Impact Section */
+  .impact-section {
+    padding: 1.5rem;
+  }
+
+  .impact-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .impact-icon {
+    font-size: 2rem;
+  }
+
+  /* Work Section */
+  .work-section {
+    padding: 1.5rem;
+  }
+
+  .work-section h3 {
+    font-size: 1.3rem;
+  }
+
+  /* Notable Section */
+  .notable-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .founder-image {
+    height: auto;
+  }
+
+  .notable-item p {
+    font-size: 0.95rem;
+  }
+
+  /* Logo Section */
+  .logo-meaning {
+    padding: 1.5rem;
+  }
+
+  .about-logo {
+    max-width: 250px;
+  }
+
+  .logo-item {
+    padding: 1rem;
+  }
+
+  .logo-item strong {
+    font-size: 1.1rem;
+  }
+
+  /* Volunteer Section */
+  .volunteer-header {
+    margin:1rem;
+    padding: 1rem;
+  }
+
+  .volunteer-header p {
+    font-size: 1.1rem;
+  }
+
+  .volunteer-image {
+    max-width: 80%;
+    margin: 1.7rem ;
+  } 
+
+  /* Join Us Section */
+  .join-us {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .join-us > div {
+    min-width: 100%;
+  }
+
+  .join-us-image {
+    max-width: 80%;
+  }
+
+  .join-us-text {
+    margin: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .join-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1.1rem;
+  }
+
+  /* Involvement Section */
+  .involvement-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .why-matters,
+  .get-involved {
+    padding: 1.5rem;
+  }
+
+  .why-matters h3,
+  .get-involved h3 {
+    font-size: 1.3rem;
+  }
+
+  .why-matters li {
+    font-size: 0.95rem;
+  }
+
+  .involvement-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .btn-icon {
+    font-size: 1.2rem;
+  }
+
+  /* Forms */
+  .volunteer-form {
+    padding: 1.5rem;
+  }
+
+  .volunteer-form h2 {
+    font-size: 1.3rem;
+  }
+
+  .volunteer-form label {
+    font-size: 0.9rem;
+  }
+
+  .volunteer-form input,
+  .volunteer-form textarea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .volunteer-form button[type="submit"] {
+    padding: 0.8rem 1.3rem;
+    font-size: 0.95rem;
+  }
+
+  .form-message {
+    padding: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Contact Section */
+  .contact-card {
+    padding: 1.2rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .contact-card p {
+    font-size: 0.85rem;
+  }
+
+  /* Donate Section */
+  #donate {
+    padding: 3rem 0.8rem;
+  }
+
+  #donate h2 {
+    font-size: 1.8rem;
+  }
+
+  #donate p {
+    font-size: 1rem;
+  }
+
+  .donate-button {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .account-details {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .account-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .account-card {
+    padding: 1.2rem;
+  }
+
+  .account-card h3 {
+    font-size: 1rem;
+  }
+
+  .account-card p {
+    font-size: 0.85rem;
+  }
+
+  .bank-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+
+  /* Footer */
+  footer {
+    padding: 1.2rem 0.8rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ========================================
+   LANDSCAPE ORIENTATION ADJUSTMENTS
+   ======================================== */
+
+/* Small devices in landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+  .header-wrapper {
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: flex-start;
+    overflow-y: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .header-wrapper a {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.7rem 1.5rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES FOR BETTER CONTROL
+   ======================================== */
+
+/* Hide elements on mobile */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Hide elements on desktop */
+@media (min-width: 768px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Text alignment utilities */
+@media (max-width: 767px) {
+  .text-center-mobile {
+    text-align: center !important;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY IMPROVEMENTS
+   ======================================== */
+
+/* Improve touch targets on mobile */
+@media (max-width: 767px) {
+  button,
+  a.cta-button,
+  a.donate-button,
+  a.join-button,
+  .involvement-btn,
+  .read-more-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .header-wrapper a {
+    min-height: 48px;
+  }
+}
+
+/* Ensure focus states are visible */
+@media (max-width: 767px) {
+  a:focus,
+  button:focus,
+  input:focus,
+  textarea:focus {
+    outline: 3px solid #d4af37;
+    outline-offset: 2px;
+  }
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+/* Reduce animations on small screens for better performance */
+@media (max-width: 480px) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Keep essential hover effects */
+  .gallery-item:hover,
+  .contact-card:hover,
+  .mission-vision-card:hover {
+    transform: none;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
