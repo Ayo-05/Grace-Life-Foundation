@@ -1,6 +1,6 @@
 /* HERO SECTION */
 .hero-section {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/DEC29-3.jpg');
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/2026-MAR11-20.jpg');
   background-size:cover;
   background-position:center;
   background-repeat: no-repeat;
@@ -374,4 +374,5 @@
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
+
 }
