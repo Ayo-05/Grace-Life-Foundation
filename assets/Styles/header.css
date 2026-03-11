@@ -83,7 +83,7 @@
   }
 
   .logo-image {
-    height: 70px;
+    height: 40px;
     width: auto;
   }
 
@@ -468,4 +468,5 @@
   .dropdown.active .nav-item::after {
       transform: rotate(180deg);
   }
+
 }
