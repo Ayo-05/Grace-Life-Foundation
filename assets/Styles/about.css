@@ -1,12 +1,13 @@
 /* HERO SECTION */
 .hero-section {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/2026-MAR11-21.jpg');
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/2026-MAR11-21.jpg') ;
   background-size:cover;
   background-position:center;
   background-repeat: no-repeat;
   color: white;
   text-align: center;
   padding: 6rem 2rem;
+  margin-top:0px;
 }
 
 .hero-section h1 {
@@ -179,11 +180,17 @@
   margin: 0;
 }
 
+.impact-section p {
+  text-align: center;
+  margin-top: 2rem;
+  color:#666;
+}
+
 /* Work Section */
 .work-section {
   margin: 3rem 0;
   padding: 2rem;
-  background: #f9f9f9;
+  background: linear-gradient(135deg, #f9f9f9 0%, #fff5e6 100%);
   border-radius: 15px;
 }
 
@@ -193,52 +200,45 @@
   font-size: 1.6rem;
 }
 
-
-
-/* Involvement Section */
-.involvement-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
-  max-width: 1100px;
-  margin: 4rem auto;
+.work-section h5 {
+  color: #d4af37;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
 }
 
-.why-matters, .get-involved {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-  text-align: left;
+.work-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
 }
 
-.why-matters h3, .get-involved h3 {
+.work-section p {
+    color: #666;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* WHY MATTERS */
+.why-matters, .get-involved  {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f9f9f9 0%, #fff5e6 100%);
+  color: #2a2a2a;
+  border-radius: 15px;
+}
+
+.why-matters h3,.get-involved h3 {
   color: #d4af37;
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
 }
 
-.why-matters ul {
-  list-style: none;
-  padding: 0;
+.why-matters p {
+  font-size: 1.05rem;
+  line-height: 1.8;
 }
 
-.why-matters li {
-  padding: 0.8rem 0;
-  padding-left: 2rem;
-  position: relative;
-  line-height: 1.6;
-}
-
-.why-matters li:before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #d4af37;
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-
+/* GET INVOLVED */
 .involvement-buttons {
   display: flex;
   flex-direction: column;
@@ -319,7 +319,7 @@
 
 .founder-image {
   width: 100%;
-  height: 350px;
+  height: 500px;
   object-fit:cover;
   object-position:center top;
   border-radius: 15px;
@@ -335,7 +335,7 @@
 .notable-item p {
   font-size: 1.05rem;
   color: #2a2a2a;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
   /* LOGO MEANING */
@@ -374,6 +374,4 @@
   display: block;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
-
 }
-
