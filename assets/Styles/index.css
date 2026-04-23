@@ -457,6 +457,11 @@
       background: linear-gradient(135deg, #f9f9f9 0%, #fff5e6 100%);  
     }
 
+   .program-text-4 ul{
+      list-style: none;
+      padding-left:6px;
+    }
+
     .sanitation-image{
       width:80%;
       object-fit:contain;
