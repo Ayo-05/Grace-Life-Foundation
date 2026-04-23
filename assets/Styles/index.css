@@ -431,7 +431,7 @@
     .image-gallery-4 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+      gap: 1rem;
       margin: 2rem 0;
     }
 
@@ -451,6 +451,10 @@
       object-fit: cover;        
       object-position: center;  
       display: block;           
+    }
+
+   .program-text-4{
+      background: linear-gradient(135deg, #f9f9f9 0%, #fff5e6 100%);  
     }
 
     .sanitation-image{
