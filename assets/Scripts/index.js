@@ -1,77 +1,116 @@
-// Hamburger Menu Toggle
 const hamburger = document.getElementById('hamburger');
 const headerNav = document.getElementById('headerNav');
-
+ 
 if (hamburger && headerNav) {
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     headerNav.classList.toggle('active');
   });
-
-  // Desktop dropdown toggle - Click to open/close
+ 
+  // Desktop dropdown toggle — click to open/close
   document.querySelectorAll('.dropdown').forEach(dropdown => {
     const navItem = dropdown.querySelector('.nav-item');
-    
     if (navItem) {
       navItem.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        
-        // Close other dropdowns first
+        // Close all other dropdowns first
         document.querySelectorAll('.dropdown').forEach(other => {
-          if (other !== dropdown) {
-            other.classList.remove('active');
-          }
+          if (other !== dropdown) other.classList.remove('active');
         });
-        
-        // Toggle this dropdown
         dropdown.classList.toggle('active');
       });
     }
   });
-
-  // Close menu when clicking on a dropdown link
+ 
+  // Close menu when a dropdown link is clicked
   document.querySelectorAll('.dropdown-content a').forEach(link => {
     link.addEventListener('click', () => {
-      // Close all dropdowns
-      document.querySelectorAll('.dropdown').forEach(dropdown => {
-        dropdown.classList.remove('active');
-      });
-      
-      // Close mobile menu if open
+      document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
       hamburger.classList.remove('active');
       headerNav.classList.remove('active');
     });
   });
-
-  // Close menu when clicking on regular navigation links
+ 
+  // Close menu when a regular nav link is clicked
   document.querySelectorAll('.header-wrapper > a').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
       headerNav.classList.remove('active');
     });
   });
-
-  // Close dropdowns when clicking outside
+ 
+  // Close dropdowns (and mobile menu) when clicking outside
   document.addEventListener('click', (e) => {
     const clickedInsideDropdown = e.target.closest('.dropdown');
-    const clickedInsideNav = headerNav.contains(e.target);
-    const clickedHamburger = hamburger.contains(e.target);
-    
+    const clickedInsideNav     = headerNav.contains(e.target);
+    const clickedHamburger     = hamburger.contains(e.target);
+ 
     if (!clickedInsideDropdown && !clickedHamburger) {
-      // Close all dropdowns
-      document.querySelectorAll('.dropdown.active').forEach(dropdown => {
-        dropdown.classList.remove('active');
-      });
+      document.querySelectorAll('.dropdown.active').forEach(d => d.classList.remove('active'));
     }
-    
-    // Close mobile menu if clicking outside
     if (!clickedInsideNav && !clickedHamburger) {
       hamburger.classList.remove('active');
       headerNav.classList.remove('active');
     }
   });
 }
+// SCROLL TO TOP BUTTON  
+const scrollBtn = document.getElementById('scrollToTopBtn');
+ 
+if (scrollBtn) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  });
+ 
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+ 
+
+// ACTIVE PAGE INDICATOR
+(function setActiveNavLink() {
+  const path        = window.location.pathname;
+  // Resolve filename: '' and '/' both mean index.html
+  const currentFile = path.split('/').pop() || 'index.html';
+ 
+  // ── Regular top-level links ──────────────────────────────
+  document.querySelectorAll('.header-wrapper > a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#')) return; // ignore hash-only links
+ 
+    // Normalise: strip leading slash, take filename portion
+    const linkFile = href.replace(/^\//, '').split('/').pop() || 'index.html';
+ 
+    const isHomePage =
+      (href === '/' || linkFile === 'index.html') &&
+      (path === '/' || path.endsWith('/') || currentFile === '' || currentFile === 'index.html');
+ 
+    const isCurrentPage =
+      !isHomePage && linkFile !== '' && linkFile === currentFile;
+ 
+    if (isHomePage || isCurrentPage) {
+      link.classList.add('nav-active');
+    }
+  });
+ 
+  // ── Dropdown sub-links ───────────────────────────────────
+  // If the current page matches a dropdown item, mark the
+  // parent .dropdown as .nav-active so the trigger is highlighted.
+  document.querySelectorAll('.dropdown-content a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const linkFile = href.split('/').pop();
+    if (linkFile && linkFile === currentFile) {
+      link.closest('.dropdown').classList.add('nav-active');
+    }
+  });
+})();
 
 
 // Volunteer Form Submission Handler
@@ -100,7 +139,7 @@ if (volunteerForm) {
       const data = await response.json();
       
       if (data.success) {
-        formMessage.textContent = 'Thank you for your interest! We will contact you soon.';
+        formMessage.textContent = 'Thank you for your volunteering. We will get in touch with you soon';
         formMessage.className = 'form-message success';
         volunteerForm.reset();
         
@@ -170,19 +209,34 @@ window.addEventListener('scroll', () => {
     }
   });
 });
-// Scroll To Top Button
-const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-if (scrollToTopBtn) {
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-      scrollToTopBtn.classList.add('visible');
-    } else {
-      scrollToTopBtn.classList.remove('visible');
-    }
-  });
-
-  scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
+// CIRCULAR 
+(function () {
+  var CIRC = 2 * Math.PI * 50; /* circumference for r=50 */
+ 
+  function animateRings() {
+    document.querySelectorAll('#impact-stats .ring-card').forEach(function (card, i) {
+      var pct = parseFloat(card.getAttribute('data-pct')) / 100;
+      var bar = card.querySelector('.ring-bar');
+      setTimeout(function () {
+        bar.style.strokeDashoffset = CIRC * (1 - pct);
+      }, i * 130 + 250);
+    });
+  }
+ 
+  /* Animate when section scrolls into view */
+  var section = document.getElementById('impact-stats');
+  if (!section) return;
+ 
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) {
+        animateRings();
+        obs.disconnect();
+      }
+    }, { threshold: 0.2 });
+    obs.observe(section);
+  } else {
+    animateRings(); /* fallback for old browsers */
+  }
+})();
