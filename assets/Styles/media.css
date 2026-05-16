@@ -47,12 +47,33 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-
-  /* Contact Section - 4 columns */
-  .contact-info {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2.5rem;
+  /* 2026 Goals */
+  /* .goal-wrapper h2 {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+  } */
+/* 
+  .goal-wrapper > p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
+
+  .goal-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .goal-image {
+    width: 80%;
+    height: 800px;
+    overflow:hidden;
+  }
+
+  .goal-item p {
+    padding: 1rem 1.2rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  } */
 
   /* Account Cards - 3 columns */
   .account-cards-wrapper {
@@ -144,7 +165,10 @@
   .gallery-item img {
     height: 280px;
   }
-
+  .goal-grid{
+    grid-template-columns: repeat(3, 1fr);
+    gap:1.5rem;
+  }
   .image-gallery.two-column .gallery-item img {
     height: 380px;
   }
@@ -191,6 +215,38 @@
 
 }
 
+/* 2026 Goals */
+   .goal-wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .goal-wrapper > p {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .goal-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .goal-image {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+   .goal-item p {
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  } 
+  .image-gallery.two-column .gallery-item img {
+    height: 380px;
+  }
+
 /* TABLET (768px - 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   /* Header */
@@ -202,15 +258,18 @@
     height: 60px;
   }
 
-  .header-wrapper {
-    gap: 1.5rem;
-  }
+  /* NOTE: Hamburger & slide-out nav are fully handled by the
+     ≤1024px rule in header.css. Do NOT override header-wrapper
+     layout properties (position, right, height, width) here —
+     doing so breaks the slide-out animation. */
 
-  .header-wrapper a {
-    font-size: 1rem;
-    padding: 0.5rem 0.8rem;
+  /* SCROLL TO TOP — only override what differs from the base style */
+  .scroll-to-top {
+    width: 52px;
+    height: 52px;
+    right: 1.5rem;
   }
-
+  
   /* Hero Section */
   .hero-section {
     padding: 5rem 1.5rem;
@@ -322,7 +381,34 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
+  /* Goals */
+ /* 2026 Goals — 2 columns; 3 is too tight at this viewport width */
+  .goal-wrapper h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
 
+  .goal-wrapper > p {
+    font-size: 0.98rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .goal-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+  }
+
+  .goal-image {
+    width: 100%;
+    height: 410px;
+    object-position: center;
+  }
+
+  .goal-item p {
+    padding: 0.8rem 1rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }  
   .founder-image {
     height: 400px;
   }
@@ -348,6 +434,34 @@
 
   .join-us-image {
     max-width: 350px;
+  }
+  
+  /* 2026 GOALS */
+  .goal-wrapper h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .goal-wrapper > p {
+    font-size: 0.98rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .goal-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+  }
+
+  .goal-image {
+    width: 100%;
+    height: 500px;
+    object-position: center;
+  }
+
+  .goal-item p {
+    padding: 0.8rem 1rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
   }
 
   /* Volunteer */
@@ -403,10 +517,11 @@
 
 /* MOBILE LANDSCAPE & SMALL TABLET (481px - 767px) */
 @media (min-width: 481px) and (max-width: 767px) {
-  /* Activate Hamburger Menu */
-  .hamburger {
-    display: flex;
-  }
+  /* NOTE: Hamburger display:flex is already set by the ≤1024px
+     rule in header.css — no need to redeclare it here.
+     Slide-out nav styles (position, right, height, width) are
+     also fully defined there; redeclaring them here causes
+     cascade conflicts. */
 
   /* Header */
   #header-container {
@@ -417,34 +532,13 @@
     height: 55px;
   }
 
-  /* Mobile Navigation Menu */
-  .header-wrapper {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 70%;
-    max-width: 300px;
-    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-    transition: right 0.3s ease;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
-    z-index: 99;
-  }
-
-  .header-wrapper.active {
-    right: 0;
-  }
-
-  .header-wrapper a {
-    width: 100%;
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 1rem;
-    border-radius: 8px;
+  /* SCROLL TO TOP — smaller touch target on mobile landscape */
+  .scroll-to-top {
+    width: 46px;
+    height: 46px;
+    font-size: 1.3rem;
+    right: 1rem;
+    bottom: 1.5rem;
   }
 
   /* Hero Section */
@@ -692,10 +786,9 @@
 
 /* MOBILE PORTRAIT (max-width: 480px) */
 @media (max-width: 480px) {
-  /* Activate Hamburger Menu */
-  .hamburger {
-    display: flex;
-  }
+  /* NOTE: Hamburger and slide-out nav are fully handled by
+     the ≤1024px rule in header.css. Redeclaring them here
+     creates cascade conflicts and is unnecessary. */
 
   /* Header */
   #header-container {
@@ -706,34 +799,41 @@
     height: 50px;
   }
 
-  /* Mobile Navigation */
-  .header-wrapper {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 80%;
-    max-width: 280px;
-    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    transition: right 0.3s ease;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
-    z-index: 99;
+  /* SCROLL TO TOP — compact for small screens, meets 44px touch target */
+  .scroll-to-top {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    right: 1rem;
+    bottom: 1.2rem;
   }
 
-  .header-wrapper.active {
-    right: 0;
+  .goal-wrapper h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
   }
 
-  .header-wrapper a {
+  .goal-wrapper > p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .goal-grid {
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+  }
+
+  .goal-image {
     width: 100%;
-    text-align: center;
-    font-size: 1.1rem;
-    padding: 0.8rem;
-    border-radius: 8px;
+    height: 410px;
+    /* object-fit: cover; */
+    object-position: center;
+  }
+
+  .goal-item p {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   /* Hero Section */
@@ -779,11 +879,10 @@
 
    /* Programs */
   .gallery-item-1 img{
-      width: 100%;             
-      height: auto;        
-      object-fit: cover;        
-      object-position: center;  
-      display: block;         
+    width: 100%;             
+    height: auto;        
+    object-fit: cover;        
+    object-position: center;  
   }
   .image-gallery-4 {
     display: grid;
@@ -960,8 +1059,7 @@
 
   /* Volunteer Section */
   .volunteer-header {
-    margin:1rem;
-    padding: 1rem;
+    padding:0.3rem;
   }
 
   .volunteer-header p {
@@ -974,9 +1072,9 @@
   } 
 
   /* Join Us Section */
-  .join-us {
-    flex-direction: column;
-    gap: 1rem;
+  .join-us-h2 {
+    margin:2rem;
+    padding:0.5rem;
   }
 
   .join-us > div {
@@ -1120,6 +1218,16 @@
 
   footer p {
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+  }
+  .stats-heading-wrap h2 {
+    font-size: 1.5rem;
   }
 }
 
