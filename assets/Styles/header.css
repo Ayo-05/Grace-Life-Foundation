@@ -78,6 +78,43 @@
     background: rgba(255,255,255,0.2);
     transform: translateY(-2px);
   }
+
+  /* ACTIVE PAGE INDICATOR */
+
+  /* Highlight background on active link */
+  .header-wrapper > a.nav-active,
+  .dropdown.nav-active > .nav-item {
+    background: rgba(255, 255, 255, 0.22);
+    font-weight: 600;
+  }
+
+  /* White dot beneath the active desktop link */
+  .header-wrapper > a.nav-active::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  /* Mobile drawer: left-border accent instead of dot */
+  @media (max-width: 1024px) {
+    .header-wrapper > a.nav-active,
+    .dropdown.nav-active > .nav-item {
+      border-left: 4px solid white;
+      border-radius: 0 8px 8px 0;
+      padding-left: calc(1rem - 4px);
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .header-wrapper > a.nav-active::before {
+      display: none;
+    }
+  }
     .logo-wrapper {
     flex: 0 0 auto;
   }
@@ -123,7 +160,6 @@
     color: white;
   }
 
-  /* REMOVED HOVER EFFECT - Now click-based only */
   .dropdown.active .dropdown-content {
     display: block;
   }
@@ -182,18 +218,6 @@
     color: white;
     font-size: 1.8rem;
     margin: 0;
-  }
-
-  section {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-  }
-
-  .section-divider {
-    border: none;
-    border-top: 2px dotted #d3d3d3;
-    margin: 3rem 0;
   }
 
   /* PROJECT GALLERY THREE */
@@ -280,13 +304,12 @@
   }
   
   /* DONATE SECTION */
-  #donate {
-    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+  .donate-container{
+    /* background-color: linear-gradient(135deg, #d4af37 0%, #b8941f 100%); */
     color: white;
     text-align: center;
-    padding: 5rem 2rem;
+    /* padding: 4rem 2rem; */
   }
-
   #donate h2 {
     color: white;
     font-size: 2.5rem;
@@ -410,7 +433,7 @@
     color: #ccc;
   }
 
-  /* MEDIA QUERIES */
+  /* harmburger */
   @media (max-width:1024px) {
   .hamburger {
       display: flex; 
@@ -421,13 +444,13 @@
     top: 0;
     right: -100%; 
     height: 100vh;
-    width: 75%;
+    width: 55%;
     max-width: 300px;
     background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
     flex-direction: column;
     justify-content: flex-start; 
     padding-top: 6rem; 
-    gap: 2rem;
+    gap: 1rem;
     transition: right 0.3s ease-in-out;
     z-index: 99;
     box-shadow: -5px 0 15px rgba(0,0,0,0.2);
@@ -474,7 +497,7 @@
 .scroll-to-top {
   position: fixed;
   bottom: 2rem;
-  right: 0.5rem;
+  right: 1.5rem;
   background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
   color: white;
   border: none;
