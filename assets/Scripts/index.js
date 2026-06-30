@@ -79,7 +79,7 @@ if (scrollBtn) {
   // Resolve filename: '' and '/' both mean index.html
   const currentFile = path.split('/').pop() || 'index.html';
  
-  // ── Regular top-level links ──────────────────────────────
+  // Regular top-level links
   document.querySelectorAll('.header-wrapper > a').forEach(link => {
     const href = link.getAttribute('href');
     if (!href || href.startsWith('#')) return; // ignore hash-only links
@@ -99,7 +99,7 @@ if (scrollBtn) {
     }
   });
  
-  // ── Dropdown sub-links ───────────────────────────────────
+  // Dropdown sub-links
   // If the current page matches a dropdown item, mark the
   // parent .dropdown as .nav-active so the trigger is highlighted.
   document.querySelectorAll('.dropdown-content a').forEach(link => {
