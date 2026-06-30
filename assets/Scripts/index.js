@@ -116,49 +116,51 @@ if (scrollBtn) {
 // Volunteer Form Submission Handler
 const volunteerForm = document.getElementById('volunteerApplicationForm');
 const formMessage = document.getElementById('formMessage');
-
+ 
 if (volunteerForm) {
   volunteerForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+ 
     const submitBtn = volunteerForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
-    
+ 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Submitting...';
     formMessage.style.display = 'none';
-    
+ 
     try {
       const formData = new FormData(volunteerForm);
-      
+ 
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
+        headers: { Accept: 'application/json' },
         body: formData
       });
-      
+ 
       const data = await response.json();
-      
-      if (data.success) {
-        formMessage.textContent = 'Thank you for your volunteering. We will get in touch with you soon';
+ 
+      if (response.ok && data.success) {
+        formMessage.textContent = 'Thank you for volunteering! We will get in touch with you soon.';
         formMessage.className = 'form-message success';
+        formMessage.style.display = 'block';
         volunteerForm.reset();
-        
+ 
         setTimeout(() => {
           formMessage.style.display = 'none';
         }, 5000);
       } else {
-        throw new Error('Form submission failed');
+        throw new Error(data.message || 'Form submission failed');
       }
     } catch (error) {
       formMessage.textContent = 'Oops! Something went wrong. Please try again.';
       formMessage.className = 'form-message error';
+      formMessage.style.display = 'block';
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = originalText;
     }
   });
 }
-
 // Read More button Functionality
 document.querySelectorAll('.read-more-btn').forEach(button => {
   button.addEventListener('click', () => {
