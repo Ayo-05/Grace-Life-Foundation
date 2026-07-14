@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initScrollTop();
@@ -54,7 +53,15 @@ function initScrollTop(){
   });
 }
 
-
+/* Animate the impact stat rings based on HTML data-percent */
+function initStatRings() {
+  const circles = document.querySelectorAll('.stat-ring .fg');
+  circles.forEach(circle => {
+    const percent = circle.getAttribute('data-percent') || 0;
+    // Inject the percentage value directly into the CSS formula calculation
+    circle.style.setProperty('--percent', percent);
+  });
+}
 
 /* Donate modal — bank account details popup, triggered from #donate-trigger */
 function initDonateModal(){
