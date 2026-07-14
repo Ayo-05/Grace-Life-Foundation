@@ -89,7 +89,73 @@ p{ margin: 0 0 1em; }
 
 :focus-visible{ outline: 2px solid var(--gold); outline-offset: 3px; }
 
+.hero-visual{
+  position:relative; z-index:2;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: conic-gradient(from 200deg, var(--gold), var(--clay), var(--leaf), var(--gold));
+  padding: 6px;
+  justify-self:center;
+  max-width: 340px;
+}
+.hero-visual-inner{
+  width:100%; height:100%; border-radius:50%;
+  background: var(--forest-deep);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding: 20px;
+}
+.hero-visual-inner .num{ font-family: var(--font-mono); font-size:2.6rem; color: var(--gold); font-weight:700; }
+.hero-visual-inner .label{ font-size:0.85rem; color: rgba(250,246,236,0.7); margin-top:6px; }
 
+/* ---------- Stats (impact rings) ---------- */
+.stats-section{ padding: 90px 0; background: var(--paper); }
+
+.stats-grid{
+  display:grid; grid-template-columns: repeat(4, 1fr); 
+  gap: 25px; margin-top: 50px;
+}
+
+.stat-card{
+  text-align:center; padding: 30px 16px;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--white);
+}
+
+.stat-ring{
+  width: 92px; height:92px; margin: 0 auto 16px;
+  position:relative;
+}
+
+.stat-ring svg { 
+  width:100%; 
+  height:100%; 
+  transform: rotate(-90deg); 
+}
+
+.stat-ring circle{ fill:none; stroke-width: 6; }
+.stat-ring .bg{ stroke: var(--paper-dim); }
+
+.stat-ring .fg{
+  stroke: var(--gold); 
+  stroke-linecap: round;
+  stroke-dasharray: 251;
+  --percent: 0; 
+  stroke-dashoffset: calc(251 - (251 * var(--percent) / 100)); 
+  transition: stroke-dashoffset 1.4s cubic-bezier(.2,.7,.2,1);
+}
+
+.stat-card.leaf-tone .stat-ring .fg{ stroke: var(--leaf); }
+.stat-card.clay-tone .stat-ring .fg{ stroke: var(--clay); }
+
+.stat-num{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-family: var(--font-mono); font-weight:700; font-size:1.1rem; color: var(--forest);
+}
+
+.stat-title{ font-weight:600; margin-bottom:4px; text-align: left;}
+.stat-desc{ font-size:0.88rem; color: var(--ink-soft); 
+  margin:0; text-align:left;
+}
 /* ---------- Hero ---------- */
 .hero{
   position:relative;
@@ -123,40 +189,6 @@ p{ margin: 0 0 1em; }
 .hero-visual-inner .num{ font-family: var(--font-mono); font-size:2.6rem; color: var(--gold); font-weight:700; }
 .hero-visual-inner .label{ font-size:0.85rem; color: rgba(250,246,236,0.7); margin-top:6px; }
 
-/* ---------- Stats (impact rings) ---------- */
-.stats-section{ padding: 90px 0; background: var(--paper); }
-.stats-grid{
-  display:grid; grid-template-columns: repeat(4, 1fr); 
-  gap: 28px; margin-top: 50px;
-}
-.stat-card{
-  text-align:center; padding: 30px 16px;
-  border: 1px solid var(--line); border-radius: var(--radius);
-  background: var(--white);
-}
-.stat-ring{
-  width: 92px; height:92px; margin: 0 auto 16px;
-  position:relative;
-}
-.stat-ring svg{ width:100%; height:100%; transform: rotate(-90deg); }
-.stat-ring circle{ fill:none; stroke-width: 6; }
-.stat-ring .bg{ stroke: var(--paper-dim); }
-.stat-ring .fg{
-  stroke: var(--gold); stroke-linecap: round;
-  stroke-dasharray: 251;
-  stroke-dashoffset: 251;
-  transition: stroke-dashoffset 1.4s cubic-bezier(.2,.7,.2,1);
-}
-.stat-card.leaf-tone .stat-ring .fg{ stroke: var(--leaf); }
-.stat-card.clay-tone .stat-ring .fg{ stroke: var(--clay); }
-.stat-num{
-  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  font-family: var(--font-mono); font-weight:700; font-size:1.1rem; color: var(--forest);
-}
-.stat-title{ font-weight:600; margin-bottom:4px; text-align: left;}
-.stat-desc{ font-size:0.88rem; color: var(--ink-soft); 
-  margin:0; text-align:left;
-}
 
 /* ---------- Section basics ---------- */
 .section{ padding: 50px 0; }
@@ -178,7 +210,7 @@ p{ margin: 0 0 1em; }
 .program-card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(22,52,42,0.1); }
 .program-icon{
   width:300px; height:300px; border-radius:14px;
- /
+ 
 }
 .program-icon img{ width:100%; height:100%; 
   stroke: var(--forest);
@@ -390,21 +422,18 @@ textarea{ resize: vertical; min-height:120px; }
 .site-footer{ 
   background: var(--forest-deep); 
   color: rgba(250,246,236,0.75); 
-  padding: 70px 0 30px; margin-top: 100px; 
-}
-.footer-grid{ 
-  display:grid; grid-template-columns: 1.7fr 1fr 1fr 1fr; 
-  gap: 25px; margin-bottom: 50px; 
+  padding: 10px 0 10px;
 }
 .footer-logo{ 
-  display:flex; align-items:center; gap:10px; 
+  display:flex; 
+  align-items:center; gap:10px; 
   font-family: var(--font-display); font-size:1.15rem; color: var(--white); margin-bottom:14px; 
 }
 .footer-col h5{ 
   color: var(--paper); font-family: var(--font-body); 
   font-size:0.85rem; text-transform:uppercase; 
   letter-spacing:0.08em;
-   margin-bottom:16px; 
+   margin-bottom:10px; 
 }
 .footer-col a{ 
   display:block; padding: 6px 0; 
@@ -412,16 +441,16 @@ textarea{ resize: vertical; min-height:120px; }
 }
 .footer-col a:hover{ color: var(--gold); }
 .footer-bottom{ 
-  display:flex; justify-content:space-between; 
-  align-items:center; border-top:1px solid rgba(250,246,236,0.1); 
-  padding-top: 24px; font-size:0.82rem; flex-wrap:wrap; 
+  text-align:center; border-top:1px solid rgba(250,246,236,0.1); 
+  padding-top:5px; 
   gap:10px; 
 }
 .social-row{ display:flex; gap:14px; }
 .social-row a{ 
   width:36px; height:36px; border-radius:50%; 
   border:1px solid rgba(250,246,236,0.2); display:flex; 
-  align-items:center; justify-content:center; 
+  align-items:center; justify-content:center;
+  margin-bottom: 4px; 
 }
 .social-row a:hover{ 
   background: var(--gold); border-color: var(--gold); 
