@@ -1,5 +1,46 @@
 [
   {
+    "id": "promoting-environmental-responsinility",
+    "title": "Promoting Environmental Responsibility at Kwara State Environmental Day",
+    "excerpt": "Engaging market traders with practical environmental awareness to inspire healthier communities and a more sustainable Kwara.",
+    "category":"sanitation & environment",
+    "author": "Grace Life Foundation for Social Impacts Team and the Kwara Sate Government",
+    "date":"2026-07-25",
+    "readTime":"4 min read",
+    "image":"assets/images/blogs/2026-JUL25-04.jpg",
+    "content":[
+      "Today, we joined the Kwara State Environmental Day by engaging market traders on the importance of proper waste disposal, environmental sanitation, and the shared responsibility of protecting our environment. Through interactive discussions, we highlighted how everyday actions contribute to cleaner markets, healthier communities, and a more sustainable future.",
+      {
+        "type": "gallery",
+        "caption":"Cleaner Kwara Together",
+        "items":[
+          {"type":"image","src":"assets/images/blogs/2026-JUL25-02.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-JUL25-03.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-JUL25-01.jpg","alt":"Highlights of our day"}
+        ]
+      },
+      "Our outreach focused on raising awareness that environmental cleanliness is not the responsibility of government alone. Every trader, resident, and visitor has a role to play in maintaining safe and hygienic public spaces. By adopting simple habits such as proper waste disposal and keeping surroundings clean, we can significantly reduce pollution and prevent environmental health risks.",
+      {
+        "type": "gallery",
+        "caption":"Cleaner Kwara Together",
+        "items":[
+          {"type":"image","src":"assets/images/blogs/2026-JUL25-05.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-JUL25-06.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-JUL25-07.jpg","alt":"Highlights of our day"}
+        ]
+      },
+      "Meaningful change begins with informed communities and consistent action. We remain committed to educating, empowering, and inspiring people to become active stewards of their environment because a cleaner, healthier, and more sustainable Kwara starts with each of us.",
+      {
+        "type": "gallery",
+        "caption":"Cleaner Kwara Together",
+        "items":[
+          {"type":"image","src":"assets/images/blogs/2026-JUL25-08.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-JUL25-09.jpg","alt":"Highlights of our day"}
+        ]
+      }
+    ]
+  },
+  {
     "id" : "kwara-state-environmental",
     "title": "Celebrating Kwara State Environmental Day",
     "excerpt": "Environmental Day reminds us that protecting our environment is a shared responsibility that begins with everyday actions.",
