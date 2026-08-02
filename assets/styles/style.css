@@ -560,11 +560,10 @@ textarea{ resize: vertical; min-height:120px; }
 /* Contact */
 .contact-info-card{
   background: var(--paper-dim);
-   color: var(--gold-soft); 
+   color: black; 
    /* border-radius: var(--radius); */
   padding: 36px; height:fit-content;
 }
-.contact-info-card h3{ color: var(--gold-soft); }
 .contact-info-row{ display:flex; gap:14px; padding: 16px 0; border-bottom:1px solid rgba(250,246,236,0.14); }
 .contact-info-row:last-child{ border-bottom:none; }
 .contact-info-row svg{ width:20px; height:20px; stroke: var(--gold); flex-shrink:0; margin-top:2px; }
