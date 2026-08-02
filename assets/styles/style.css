@@ -53,7 +53,7 @@ p{ margin: 0 0 1em; }
 .eyebrow{
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
   display:inline-flex;
@@ -79,10 +79,11 @@ p{ margin: 0 0 1em; }
   cursor:pointer;
   transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
 }
-.btn-primary{ background: var(--gold); color: var(--forest-deep); }
+.btn-primary{ 
+  background: var(--gold); color: var(--paper); text-align: center; }
 .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(233,169,74,0.35); }
-.btn-outline{ background: transparent; color: var(--paper); border-color: rgba(250,246,236,0.4); }
-.btn-outline:hover{ background: rgba(250,246,236,0.1); border-color: var(--paper); }
+/* .btn-outline{ background: transparent; color: var(--paper); border-color: rgba(250,246,236,0.4); } */
+/* .btn-outline:hover{ background: rgba(250,246,236,0.1); border-color: var(--paper); } */
 .btn-dark{ background: var(--forest); color: var(--paper); }
 .btn-dark:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(22,52,42,0.3); }
 .btn btn-outline{color:var(--gold)}
@@ -199,6 +200,8 @@ p{ margin: 0 0 1em; }
 .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
 .section-head p{ color: var(--ink-soft); font-size:1.05rem; }
 .section-forest .section-head p{ color: rgba(250,246,236,0.75); }
+.section{ padding: 50px 0; }
+/* .section-volunteer{padding:120px 100px; } */
 
 /* ---------- Programs ---------- */
 .eyebrow-programs{
@@ -359,14 +362,127 @@ p{ margin: 0 0 1em; }
 }
 @keyframes shimmer{ 0%{ background-position: 200% 0;} 100%{ background-position: -200% 0;} }
 
-/* ---------- Post detail ---------- */
-.post-hero{ padding: 60px 0 40px; background: var(--paper-dim); }
-/* .post-hero-image{ margin-top: -1px; } */
-.post-hero-image img{
-  width:100%; max-height: 300px; object-fit:contain; 
-  /* border-radius: var(--radius); */
-  display:block; margin-top: 5px;
+/* =====================================================
+   POST HERO — full-bleed image with overlay
+   When post has an image:  image fills the full hero,
+   title/meta overlaid on a dark gradient.
+   When no image:  elegant forest-green panel with a
+   large decorative initial and the category tag.
+   ===================================================== */
+
+.post-hero{
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--paper-dim); /* base / fallback colour */
 }
+
+/* ---- Has-image variant ---- */
+.post-hero.has-image .post-hero-bg{
+  /* width: 90%;  height:50%; */
+  /* margin-top:5px; */
+  position: absolute; inset: 0;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* subtle zoom-in on load */
+  animation: heroZoom 8s ease forwards;
+}
+@keyframes heroZoom{
+  from{ transform: scale(1.04); }
+  to{   transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce){
+  .post-hero.has-image .post-hero-bg{ animation: none; }
+}
+/* gradient: transparent at top, dark at bottom so text pops */
+.post-hero.has-image::after{
+  content:"";
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14,36,29,0.15) 0%,
+    rgba(14,36,29,0.55) 45%,
+    rgba(14,36,29,0.90) 100%
+  );
+}
+
+/* ---- No-image variant ---- */
+.post-hero.no-image{
+  background: var(--forest);
+  min-height: 340px;
+}
+/* Decorative giant initial letter behind the text */
+.post-hero.no-image::before{
+  content: attr(data-initial);
+  position: absolute;
+  right: 6%;
+  bottom: -0.15em;
+  font-family: var(--font-display);
+  font-size: clamp(12rem, 22vw, 20rem);
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(255,255,255,0.05);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ---- Shared inner content ---- */
+.post-hero-content{
+  position: relative; z-index: 2;
+  width:100%;
+  padding: 48px 0 52px;
+}
+
+/* back-link colour adjusts to context */
+.post-hero.has-image .back-link,
+.post-hero.no-image  .back-link{ color: var(--gold-soft); }
+.post-hero.has-image .back-link:hover,
+.post-hero.no-image  .back-link:hover{ color: var(--white); }
+
+/* blog-tag pill on the hero */
+.post-hero .blog-tag{
+  background: rgba(233,169,74,0.2);
+  color: var(--gold-soft);
+  border: 1px solid rgba(233,169,74,0.4);
+  margin-bottom: 14px;
+}
+
+/* title */
+.post-hero h1{
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  color: var(--white);
+  max-width: 820px;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+/* meta row */
+.post-hero .blog-meta{
+  color: rgba(250,246,236,0.75);
+  flex-wrap: wrap;
+}
+.post-hero .blog-meta span + span::before{
+  content: "·";
+  margin: 0 8px;
+  opacity: 0.5;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 720px){
+  .post-hero{ min-height: 360px; }
+  .post-hero.no-image{ min-height: 280px; }
+  .post-hero-content{ padding: 36px 0 40px; }
+  .post-hero h1{ font-size: clamp(1.5rem, 6vw, 2.2rem); }
+}
+@media (max-width: 480px){
+  .post-hero{ min-height: 300px; }
+  .post-hero h1{ font-size: 1.4rem; }
+}
+
+/* ---------- Post body ---------- */
 .post-body{ max-width: 900px; margin: 0 auto; padding: 30px 28px; }
 .post-body p{ font-size:1.1rem; color: var(--ink); }
 .post-body h2{ margin-top: 1.4em; font-size:1.5rem; }
@@ -375,11 +491,11 @@ p{ margin: 0 0 1em; }
 /* Rich content: images, video, embeds inside a story */
 .post-figure{ margin: 32px 0; }
 .post-image, .post-video{
-  width:40%; height:40%;
-  border-radius: var(--radius);  background: var(--paper-dim);
-  margin-left: 300px;
+  width:100%; max-width:100%; height:auto;
+  border-radius: var(--radius); background: var(--paper-dim); display:block;
 }
 .post-video{ max-height: 480px; }
+
 .post-embed{
   position:relative; width:100%; padding-top:56.25%; /* 16:9 */
   border-radius: var(--radius); overflow:hidden; background: var(--paper-dim);
@@ -407,7 +523,7 @@ p{ margin: 0 0 1em; }
 }
 
 
-/* ---------- Contact ---------- */
+/* ---------- Volunteer ---------- */
 .contact-wrap{ display:grid; grid-template-columns: 1fr 1fr; gap: 50px; }
 .form-group{ margin-bottom: 20px; }
 .form-group label{ display:block; font-weight:600; font-size:0.9rem; margin-bottom:8px; }
@@ -441,9 +557,10 @@ textarea{ resize: vertical; min-height:120px; }
 .form-status{ margin-top:16px; font-weight:600; font-size:0.92rem; }
 .form-status.success{ color: var(--leaf); }
 .form-status.error{ color: var(--clay); }
+/* Contact */
 .contact-info-card{
-  background: var(--forest);
-   color: var(--paper); 
+  background: var(--paper-dim);
+   color: var(--gold-soft); 
    /* border-radius: var(--radius); */
   padding: 36px; height:fit-content;
 }

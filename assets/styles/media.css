@@ -1,8 +1,4 @@
 /* =====================================================================
-   Grace Life Foundation — Responsive Breakpoints
-   Base styles in style.css/header.css are laid out for large desktop.
-   This file layers overrides down to small phones.
-
    Breakpoint scale:
      ≥1440px        Large desktop (default, no override needed)
      1201–1439px    Laptop
