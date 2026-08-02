@@ -194,20 +194,46 @@ async function initPostDetail(){
 
   document.title = post.title + ' — Grace Life Foundation';
 
-  root.innerHTML = `
-    <div class="post-hero">
-      <div class="container">
-        <a class="back-link" href="blog.html">&larr; Back to all stories</a>
-        <span class="blog-tag">${post.category}</span>
-        <h1>${post.title}</h1>
-        <div class="blog-meta">
-          <span>${post.author}</span>
-          <span>${formatDate(post.date)}</span>
-          <span>${post.readTime}</span>
-        </div>
+  /* Update Open Graph / Twitter meta tags dynamically so sharing a direct
+     post URL gives the correct title, description and image */
+  const setMeta = (sel, val) => {
+    const el = document.querySelector(sel);
+    if(el && val) el.setAttribute(el.hasAttribute('content') ? 'content' : 'value', val);
+  };
+  setMeta('meta[property="og:title"]',       post.title + ' — Grace Life Foundation');
+  setMeta('meta[property="og:description"]', post.excerpt || '');
+  setMeta('meta[name="twitter:title"]',      post.title + ' — Grace Life Foundation');
+  setMeta('meta[name="twitter:description"]',post.excerpt || '');
+  if(post.image){
+    const abs = new URL(post.image, window.location.href).href;
+    setMeta('meta[property="og:image"]',    abs);
+    setMeta('meta[name="twitter:image"]',   abs);
+  }
+
+  /* ---- Build the hero ---- */
+  const hasImage = Boolean(post.image);
+  // Decorative initial for the no-image fallback (first letter of the title)
+  const initial  = post.title.trim()[0].toUpperCase();
+
+  const heroInner = `
+    ${hasImage ? `<div class="post-hero-bg" style="background-image:url('${esc(post.image)}')"></div>` : ''}
+    <div class="post-hero-content container">
+      <a class="back-link" href="blog.html">&larr; Back to all stories</a>
+      <span class="blog-tag">${esc(post.category)}</span>
+      <h1>${esc(post.title)}</h1>
+      <div class="blog-meta">
+        <span>${esc(post.author)}</span>
+        <span>${formatDate(post.date)}</span>
+        <span>${esc(post.readTime)}</span>
       </div>
+    </div>`;
+
+  root.innerHTML = `
+    <div class="post-hero ${hasImage ? 'has-image' : 'no-image'}"
+         ${!hasImage ? `data-initial="${initial}"` : ''}
+         ${!hasImage && post.color ? `style="background:${esc(post.color)}"` : ''}>
+      ${heroInner}
     </div>
-    ${post.image ? `<div class="post-hero-image container"><img src="${esc(post.image)}" alt=""></div>` : ''}
     <div class="post-body">
       ${post.content.map(renderContentBlock).join('')}
     </div>
