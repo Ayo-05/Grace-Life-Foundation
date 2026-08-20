@@ -12,6 +12,8 @@
 <meta name="theme-color" content="#16342A">
 <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
 <link rel="apple-touch-icon" href="assets/images/logo.jpg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -102,17 +104,17 @@
 
 <main>
   <!-- HERO -->
-  <section class="hero">
-    <div class="rings" aria-hidden="true">
-      <!-- <img src="assets/images/OCT30.jpg" alt="homepage image"> -->
+ <section class="hero">
+    <div class="hero-image" aria-hidden="true">
+      <img src="assets/images/OCT30.jpg" alt="homepage image">
     </div>
     <div class="container">
       <div>
         <span class="eyebrow">Grace Life Foundation for Social Impacts</span>
         <h1>Cleaner Environment, Safer Health and Stronger Communities</h1>
         <div class="hero-actions">
-          <a href="volunteer" data-page="volunteer.html" class="btn btn-primary">Volunteer with us</a>
-          <a href="programs" data-page="programs.html" data-page="programs.html" class="btn btn-primary">See our programs</a>
+          <a href="volunteer.html" class="btn btn-primary">Volunteer with us</a>
+          <a href="programs.html" data-page="programs.html" class="btn btn-primary">See our programs</a>
         </div>
       </div>
     </div>
@@ -223,38 +225,42 @@
 
   <!-- PROCESS / HOW WE WORK -->
   <section class="section section-forest">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow" style="color:var(--gold-soft)">How we work</span>
-        <h2>
-          Our programmes combine community engagement, environmental education, government
-          collaboration and structured follow-up. We use a five-stage model to move from local evidence to practical action.
-        </h2>
+    <div class=" container process-grid">
+      <div class="process-copy">
+        <div class="section-head">
+          <span class="eyebrow">How we work</span>
+          <h2>
+            Our programmes combine community engagement, environmental education, government
+            collaboration and structured follow-up. We use a five-stage model to move from local evidence to practical action.
+          </h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>Assess</h4>
+            <p>Identify local needs, stakeholders, barriers and existing resources.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Co-design</h4>
+            <p>Develop activities with schools, young people, communities and government.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Implement</h4>
+            <p>
+              Deliver education, mobilisation and practical environmental action.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h4 >Monitor</h4>
+            <p>Track participation, outputs, behaviour and implementation progress.</p>
+          </div>
+          <div class="timeline-item-end">
+            <h4 >Learn & Scale</h4>
+            <P>Use evidence to improve delivery, sustain partnerships and replicate what works.</P>
+          </div>
+        </div>
       </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Assess</h4>
-          <p>Identify local needs, stakeholders, barriers and existing resources.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Co-design</h4>
-          <p>Develop activities with schools, young people, communities and government.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Implement</h4>
-          <p>
-            Deliver education, mobilisation and practical environmental action.
-          </p>
-        </div>
-        <div class="timeline-item">
-          <h4 >Monitor</h4>
-          <p>Track participation, outputs, behaviour and implementation progress.</p>
-        </div>
-        <div class="timeline-item-end">
-          <h4 >Learn & Scale</h4>
-          <P>Use evidence to improve delivery, sustain partnerships and replicate what works.</P>
-        </div>
-
+      <div class="process-media">
+        <img src="assets/images/2026-MAR11-05.jpg" alt="Grace Life Foundation team implementing a community programme" loading="lazy">
       </div>
     </div>
   </section>
@@ -267,7 +273,7 @@
       <p>We want you to join us by volunteering or donating as we carry on our mission and vision.</p>
       <div class="hero-actions" style="justify-content:center">
         <a href="volunteer" data-page="volunteer.html" class="btn btn-primary">Volunteer with us</a>
-        <button type="button" class="btn btn-primary" id="donate-trigger" aria-haspopup="dialog" aria-controls="donate-modal">Get bank transfer details</button>
+        <button type="button" class="btn btn-primary" id="donate-trigger" aria-haspopup="dialog" aria-controls="donate-modal">Donate here</button>
       </div>
     </div>
     <!-- Donate modal: opened by #donate-trigger above -->
@@ -346,7 +352,7 @@
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
-<script src="assets/scripts/main.js"></script>
+<script type="text/javascript" src="assets/scripts/main.js"></script>
 
 </body>
 </html>

@@ -25,14 +25,14 @@
 .logo-image{ width:50px; height:50px}
 .nav-links{ display:flex; align-items:center; gap: 34px; }
 .nav-links a{
-  font-size: 0.95rem; font-weight: 500; color: var(--ink-soft);
+  font-size: 1.1rem; font-weight: 500; color: var(--ink-soft);
   position:relative; padding: 4px 0;
   transition: color .2s ease;
 }
 .nav-links a:hover{ color: var(--forest); }
 .nav-links a.nav-active{ color: var(--forest); font-weight:600; }
 .nav-links a.nav-active::after{
-  content:""; position:absolute; left:0; right:0; bottom:-6px;
+  content:""; position:absolute; left:0; right:0; bottom:-4px;
   height:2px; background: var(--gold); border-radius: 2px;
 }
 .nav-cta{ display:flex; align-items:center; gap:16px; }
