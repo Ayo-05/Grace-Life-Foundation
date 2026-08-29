@@ -1,6 +1,48 @@
 [
   {
-    "id": "promoting-environmental-responsinility",
+    "id":"clean-life-summit-2026",
+    "title":"Clean Life Summit 2026",
+    "excerpt":"Bringing government, academia, communities, youth, and civil society together to shape the environment we want to leave behind.",
+    "category":"clean life summit",
+    "author":"Grace Life Foundation for Social Impacts and Kwara State Government",
+    "date":"2026-08-25",
+    "readTime":"4 min read time",
+    "image":"assets/images/blogs/2026-AUG25-01.jpg",
+    "content":[
+      "The summit began with a warm welcome from the Convener, <b>Yahaya Mobolaji Yahaya</b>, who set the tone for a meaningful gathering focused on environmental responsibility and community action. His welcome speech emphasized the importance of bringing people together to address environmental challenges and build healthier, more sustainable communities.",
+      {
+        "type": "gallery",
+        "caption":"Photos from the summit",
+        "items":[
+          {"type":"image","src":"assets/images/blogs/2026-AUG25-02.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-AUG25-10.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-AUG25-06.jpg","alt":"Highlights of our day"}
+        ]
+      },
+      "The event featured a keynote address by <b>Hon. Nafisat Buge, Commissioner for Environment</b>, followed by an engaging Academia Panel Session and Multi-Stakeholder Panel Session. These sessions provided an opportunity for experts, professionals, institutions, and community stakeholders to share perspectives, discuss environmental challenges, and explore practical solutions for lasting impact.",
+        {
+        "type": "gallery",
+        "caption":"Photos from the summit",
+        "items":[
+          {"type":"image","src":"assets/images/blogs/2026-AUG25-03.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-AUG25-04.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-AUG25-07.jpg","alt":"Highlights of our day"}
+        ]
+      },
+      "The programme also included a dedicated session with market leaders, creating room for direct engagement and community-level discussions on environmental practices. The event concluded with a Vote of Thanks delivered by <b>Faridah Haruna</b>, appreciating the speakers, stakeholders, participants, and everyone who contributed to making the gathering a success",
+          {
+        "type": "gallery",
+        "caption":"Photos from the summit",
+        "items":[
+          {"type":"image","src":"assets/images/blogs/2026-AUG25-05.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-AUG25-09.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-AUG25-11.jpg","alt":"Highlights of our day"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "promoting-environmental-responsibility",
     "title": "Promoting Environmental Responsibility at Kwara State Environmental Day",
     "excerpt": "Engaging market traders with practical environmental awareness to inspire healthier communities and a more sustainable Kwara.",
     "category":"sanitation & environment",
