@@ -36,7 +36,8 @@
         "items":[
           {"type":"image","src":"assets/images/blogs/2026-AUG25-05.jpg","alt":"Highlights of our day"},
           {"type":"image","src":"assets/images/blogs/2026-AUG25-09.jpg","alt":"Highlights of our day"},
-          {"type":"image","src":"assets/images/blogs/2026-AUG25-11.jpg","alt":"Highlights of our day"}
+          {"type":"image","src":"assets/images/blogs/2026-AUG25-11.jpg","alt":"Highlights of our day"},
+          {"type":"video","src":"assets/videos/blogs/AUG25-01.mp4","alt":"Highlights of our day"}
         ]
       }
     ]
