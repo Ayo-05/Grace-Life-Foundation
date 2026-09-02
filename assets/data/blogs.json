@@ -1,5 +1,45 @@
 [
   {
+    "id":"everyone-has-a-role",
+    "title":"Everyone Has a Role to Play in Protecting Our Environment",
+    "excerpt":"Promoting environmental compliance through education, dialogue, and community engagement because people are more likely to act when they understand the why, not just the consequences.",
+    "category":"sanitation & environment",
+    "author":"Grace Life Foundation for Social Impacts and Kwara State Government",
+    "date":"2026-08-29",
+    "readTime":"4 min read time",
+    "image":"assets/images/blogs/2026-AUG29-01.jpg",
+    "content":[
+      "The Monthly Environmental Sanitation, held every last Saturday of the month, brings communities together to take practical action toward a cleaner, safer, and healthier environment. Through clean up activities, awareness, and responsible waste management, we encourage everyone to recognize that environmental protection is a shared responsibility.",
+      {
+        "type":"gallery",
+        "caption":"Photos from the outreach",
+        "items":[
+          {"type":"image","src":"assets/images/blogs/2026-AUG29-02.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-AUG29-03.jpg","alt":"Highlights of our day"}
+        ]
+      },
+      "Environmental compliance is not simply about enforcement, shutting down businesses, or imposing penalties. One of the major challenges is that many people do not fully understand environmental regulations or the reasons behind them. As an NGO, we believe education and open dialogue can help change this perception and make environmental responsibility easier to understand and embrace.",
+      {
+        "type":"gallery",
+        "caption":"Photos from the outreach",
+        "items":[
+          {"type":"image","src":"assets/images/blogs/2026-AUG29-04.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-AUG29-05.jpg","alt":"Highlights of our day"}
+        ]
+      },
+      "Through community engagement and sensitization, we aim to help people understand why environmental compliance matters and how their everyday actions can make a difference. When people understand the purpose behind environmental regulations, they are more likely to comply and become active participants in protecting their communities. Everyone has a role to play, and lasting change begins with understanding and action.",
+      {
+        "type":"gallery",
+        "caption":"Photos from the outreach",
+        "items":[
+          {"type":"image","src":"assets/images/blogs/2026-AUG29-06.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-AUG29-07.jpg","alt":"Highlights of our day"},
+          {"type":"video","src":"assets/videos/blogs/AUG30-1.mp4","alt":"Highlights of our day"}
+        ]
+      }
+    ]
+  },
+  {
     "id":"clean-life-summit-2026",
     "title":"Clean Life Summit 2026",
     "excerpt":"Bringing government, academia, communities, youth, and civil society together to shape the environment we want to leave behind.",
@@ -37,7 +77,7 @@
           {"type":"image","src":"assets/images/blogs/2026-AUG25-05.jpg","alt":"Highlights of our day"},
           {"type":"image","src":"assets/images/blogs/2026-AUG25-09.jpg","alt":"Highlights of our day"},
           {"type":"image","src":"assets/images/blogs/2026-AUG25-11.jpg","alt":"Highlights of our day"},
-          {"type":"video","src":"assets/videos/blogs/AUG25-01.mp4","alt":"Highlights of our day"}
+          {"type":"video","src":"assets/videos/blogs/AUG25-01.mp4","alt":"Highlights of"}
         ]
       }
     ]
