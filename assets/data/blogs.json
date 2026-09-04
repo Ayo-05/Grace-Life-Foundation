@@ -1,5 +1,36 @@
 [
   {
+    "id": "media-mentions-003",
+    "title": "Grace Life Foundation For Social Impacts Featured on ThisTimes",
+    "excerpt": "A feature highlighting Clean Life Summit 2026 ",
+    "category": "Featured In",
+    "date": "2026-08-27",
+    "readTime": "External Link",
+    "image":"assets/images/blogs/2026-AUG25-01.jpg",
+    "externalUrl": "https://www.thistimes.com.ng/2026/08/27/kwara-apc-guber-candidate-danladi-salihu-promises-environmental-sustainable-state/"
+  },
+  {
+    "id": "media-mentions-002",
+    "title": "Grace Life Foundation For Social Impacts Featured in a Facebook Post",
+    "excerpt": "A feature highlighting Clean Life Summit 2026 ",
+    "category": "Featured In",
+    "date": "2026-08-26",
+    "readTime": "External Link",
+    "image":"assets/images/blogs/2026-AUG25-01.jpg",
+    "externalUrl": "https://www.facebook.com/share/p/1DNRLHRvCN/?mibextid=wwXIfr"
+  },
+  {
+    "id": "media-mentions-001",
+    "title": "Grace Life Foundation For Social Impacts Featured on The Reflection",
+    "excerpt": "A feature highlighting Clean Life Summit 2026 ",
+    "category": "Featured In",
+    "date": "2026-08-15",
+    "readTime": "External Link",
+    "image":"assets/images/blogs/2026-AUG25-01.jpg",
+    "externalUrl": "https://thereflection.com.ng/2026/08/25/ill-continue-legacy-of-sustainable-kwara-apc-guber-candidate-as-ngo-grace-life-foundation-holds-summit/"
+  },
+
+  {
     "id":"everyone-has-a-role",
     "title":"Everyone Has a Role to Play in Protecting Our Environment",
     "excerpt":"Promoting environmental compliance through education, dialogue, and community engagement because people are more likely to act when they understand the why, not just the consequences.",
