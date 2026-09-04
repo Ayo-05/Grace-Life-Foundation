@@ -335,7 +335,10 @@ p{ margin: 0 0 1em; }
   background-size: 250% 100%; animation: shimmer 1.4s infinite;
 }
 @keyframes shimmer{ 0%{ background-position: 200% 0;} 100%{ background-position: -200% 0;} }
-
+/* Styling for external press links */
+.blog-card[target="_blank"] .blog-read {
+  color: var(--gold);
+}
 /* =====================================================
    POST HERO — full-bleed image with overlay
    When post has an image:  image fills the full hero,
