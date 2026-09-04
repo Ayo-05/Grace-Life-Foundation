@@ -79,21 +79,29 @@ async function initBlogList(){
       return;
     }
     emptyState.hidden = true;
-    grid.innerHTML = list.map(post => `
-      <a class="blog-card" href="post.html?id=${encodeURIComponent(post.id)}">
-        ${renderThumb(post)}
-        <div class="blog-body">
-          <span class="blog-tag">${post.category}</span>
-          <h3>${post.title}</h3>
-          <p>${post.excerpt}</p>
-          <div class="blog-meta">
-            <span>${formatDate(post.date)}</span>
-            <span>${post.readTime}</span>
+    grid.innerHTML = list.map(post => {
+      // If externalUrl exists in the JSON item, point directly to the press site
+      const isExternal = Boolean(post.externalUrl);
+      const linkHref = isExternal ? esc(post.externalUrl) : `post.html?id=${encodeURIComponent(post.id)}`;
+      const targetAttr = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
+      const readLabel = isExternal ? 'Read on publisher site &nearr;' : 'Read story &rarr;';
+
+      return `
+        <a class="blog-card" href="${linkHref}" ${targetAttr}>
+          ${renderThumb(post)}
+          <div class="blog-body">
+            <span class="blog-tag">${esc(post.category)}</span>
+            <h3>${esc(post.title)}</h3>
+            <p>${esc(post.excerpt)}</p>
+            <div class="blog-meta">
+              <span>${formatDate(post.date)}</span>
+              <span>${esc(post.readTime)}</span>
+            </div>
+            <span class="blog-read">${readLabel}</span>
           </div>
-          <span class="blog-read">Read story &rarr;</span>
-        </div>
-      </a>
-    `).join('');
+        </a>
+      `;
+    }).join('');
   }
 }
 
