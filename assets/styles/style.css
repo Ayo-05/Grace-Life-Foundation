@@ -89,6 +89,23 @@ p{ margin: 0 0 1em; }
 .btn btn-outline{color:var(--gold)}
 :focus-visible{ outline: 2px solid var(--gold); outline-offset: 3px; }
 
+/* NEW INITIATIVE */
+.initiative-section{ padding: 90px 0; background: var(--paper); }
+.initiative-wrapper{
+  display:grid; grid-template-columns: repeat(2, 1fr);
+  gap: 24px; margin: 20px 0 0;
+}
+.initiative-image{
+  width:100%; 
+  /* aspect-ratio: 4 / 3; */
+  object-fit:cover; border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 34px rgba(22,52,42,0.08);
+}
+.initiative-text p{
+  margin:20px 0px 0px 0px;
+  font-size:18px;
+}
 /* ---------- Stats (impact rings) ---------- */
 .stats-section{ padding: 90px 0; background: var(--paper); }
 
