@@ -1,5 +1,19 @@
 [
   {
+    "id":"grace-life-center",
+    "title":"The Grace Life Centre for Human Capital Development, Applied Research, Living Laboratory and Environmental Sustainability",
+    "excerpt":"Five hectares secured for a proposed environmental research and learning centre",
+    "category":"upcoming project",
+    "date":"2026-10-09",
+    "readTime":"4 min read time",
+    "image":"assets/images/blogs/preview.jpg",
+    "content":[
+      "The Grace Life Centre for Human Capital Development, Applied Research, Living Laboratory and Environmental Sustainability is an upcoming initiative of Grace Life Foundation For Social Impacts, conceived to bridge the gap between knowledge, practical experience, and sustainable development.",
+      "The centre is envisioned as a living laboratory where young people, students, and researchers can learn from nature, explore scientific ideas, study plant life and biodiversity, and develop practical responses to environmental challenges. Beyond research, it seeks to create opportunities for learning, innovation, and skills development that prepare young people to contribute meaningfully to their communities.",
+      "Through collaboration with universities, government institutions, research organisations, and development partners, the centre aims to build an environment where research informs action, knowledge leads to practical solutions, and environmental responsibility becomes part of everyday life.<a href='gracelifecenter' data-page='gracelifecenter.html' style='color: var(--gold); font-weight:bold;'>Read more.</a>"
+    ]
+  },
+  {
     "id": "media-mentions-003",
     "title": "Grace Life Foundation For Social Impacts Featured on ThisTimes",
     "excerpt": "A feature highlighting Clean Life Summit 2026 ",
@@ -506,7 +520,7 @@
     ]
   },
   {
-    "id":"",
+    "id":"observation",
     "title": "Observation of Microplastics Accumulation in Urban Waterways",
     "excerpt":"Protecting our waterways requires urgent action, stronger accountability, and a shared commitment to public health and environmental justice.",
     "category": "microplastics",
