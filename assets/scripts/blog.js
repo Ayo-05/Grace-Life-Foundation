@@ -1,4 +1,5 @@
 const BLOG_DATA_URL = 'assets/data/blogs.json';
+const LATEST_POSTS_COUNT = 1;   
 
 document.addEventListener('DOMContentLoaded', () => {
   if(document.getElementById('blog-grid')){
@@ -6,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if(document.getElementById('post-root')){
     initPostDetail();
+  }
+  if(document.getElementById('latest-posts')){
+    initLatestPosts();
   }
 });
 
@@ -23,6 +27,40 @@ function esc(str){
   const div = document.createElement('div');
   div.textContent = str ?? '';
   return div.innerHTML;
+}
+
+/* Card thumbnail: real image if `post.image` is set, otherwise the old
+   colour block + initials so existing posts without an image still work. */
+function renderThumb(post){
+  if(post.image){
+    return `<div class="blog-thumb"><img src="${esc(post.image)}" alt="" loading="lazy"></div>`;
+  }
+  return `<div class="blog-thumb blog-thumb-fallback" style="background:${post.color || '#4C8C6B'}">${initials(post.title)}</div>`;
+}
+
+/* One story card, shared by the blog listing and the home page. */
+function renderBlogCard(post){
+  // If externalUrl exists in the JSON item, point directly to the press site
+  const isExternal = Boolean(post.externalUrl);
+  const linkHref = isExternal ? esc(post.externalUrl) : `post.html?id=${encodeURIComponent(post.id)}`;
+  const targetAttr = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
+  const readLabel = isExternal ? 'Read on publisher site &nearr;' : 'Read story &rarr;';
+
+  return `
+    <a class="blog-card" href="${linkHref}" ${targetAttr}>
+      ${renderThumb(post)}
+      <div class="blog-body">
+        <span class="blog-tag">${esc(post.category)}</span>
+        <h3>${esc(post.title)}</h3>
+        <p>${esc(post.excerpt)}</p>
+        <div class="blog-meta">
+          <span>${formatDate(post.date)}</span>
+          <span>${esc(post.readTime)}</span>
+        </div>
+        <span class="blog-read">${readLabel}</span>
+      </div>
+    </a>
+  `;
 }
 
 /* ---------------- Blog listing page ---------------- */
@@ -63,15 +101,6 @@ async function initBlogList(){
     renderPosts(filtered);
   });
 
-  /* Card thumbnail: real image if `post.image` is set, otherwise the old
-     colour block + initials so existing posts without an image still work. */
-  function renderThumb(post){
-    if(post.image){
-      return `<div class="blog-thumb"><img src="${esc(post.image)}" alt="" loading="lazy"></div>`;
-    }
-    return `<div class="blog-thumb blog-thumb-fallback" style="background:${post.color || '#4C8C6B'}">${initials(post.title)}</div>`;
-  }
-
   function renderPosts(list){
     if(!list.length){
       grid.innerHTML = '';
@@ -79,29 +108,38 @@ async function initBlogList(){
       return;
     }
     emptyState.hidden = true;
-    grid.innerHTML = list.map(post => {
-      // If externalUrl exists in the JSON item, point directly to the press site
-      const isExternal = Boolean(post.externalUrl);
-      const linkHref = isExternal ? esc(post.externalUrl) : `post.html?id=${encodeURIComponent(post.id)}`;
-      const targetAttr = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
-      const readLabel = isExternal ? 'Read on publisher site &nearr;' : 'Read story &rarr;';
+    grid.innerHTML = list.map(renderBlogCard).join('');
+  }
+}
 
-      return `
-        <a class="blog-card" href="${linkHref}" ${targetAttr}>
-          ${renderThumb(post)}
-          <div class="blog-body">
-            <span class="blog-tag">${esc(post.category)}</span>
-            <h3>${esc(post.title)}</h3>
-            <p>${esc(post.excerpt)}</p>
-            <div class="blog-meta">
-              <span>${formatDate(post.date)}</span>
-              <span>${esc(post.readTime)}</span>
-            </div>
-            <span class="blog-read">${readLabel}</span>
-          </div>
-        </a>
-      `;
-    }).join('');
+/* ---------------- Home page: latest stories ---------------- */
+async function initLatestPosts(){
+  const grid = document.getElementById('latest-posts');
+  const section = grid.closest('section');
+
+  grid.innerHTML = Array.from({ length: LATEST_POSTS_COUNT }).map(() => '<div class="blog-skel"></div>').join('');
+
+  try{
+    const res = await fetch(BLOG_DATA_URL);
+    if(!res.ok) throw new Error('Failed to load blog data: ' + res.status);
+    const posts = await res.json();
+
+    const latest = posts
+      // Press mentions ("Featured In") open on another site, so they're left out here
+      // (remove this filter to include them). Posts without an id would give a broken link.
+      .filter(p => p.id && !p.externalUrl)
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, LATEST_POSTS_COUNT);
+
+    if(!latest.length){
+      section.hidden = true;
+      return;
+    }
+    grid.innerHTML = latest.map(renderBlogCard).join('');
+  }catch(err){
+    // On the home page it's better to hide the section than show an error.
+    console.error(err);
+    section.hidden = true;
   }
 }
 
