@@ -1,5 +1,11 @@
 const BLOG_DATA_URL = 'assets/data/blogs.json';
-const LATEST_POSTS_COUNT = 1;   
+const LATEST_POSTS_COUNT = 1;
+const HOME_POST_CATEGORY = 'upcoming project';
+const FEATURED_CATEGORY  = 'featured in';        
+
+function isCategory(post, name){
+  return (post.category || '').toLowerCase() === name;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   if(document.getElementById('blog-grid')){
@@ -89,16 +95,19 @@ async function initBlogList(){
     `<button class="filter-btn${i === 0 ? ' active' : ''}" data-cat="${cat}">${cat}</button>`
   ).join('');
 
-  renderPosts(posts);
+  // "All" leaves out the Featured In press mentions; they only show when that filter is clicked
+  const postsFor = cat => cat === 'All'
+    ? posts.filter(p => !isCategory(p, FEATURED_CATEGORY))
+    : posts.filter(p => p.category === cat);
+
+  renderPosts(postsFor('All'));
 
   filterBar.addEventListener('click', (e) => {
     const btn = e.target.closest('.filter-btn');
     if(!btn) return;
     filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const cat = btn.dataset.cat;
-    const filtered = cat === 'All' ? posts : posts.filter(p => p.category === cat);
-    renderPosts(filtered);
+    renderPosts(postsFor(btn.dataset.cat));
   });
 
   function renderPosts(list){
@@ -125,9 +134,9 @@ async function initLatestPosts(){
     const posts = await res.json();
 
     const latest = posts
-      // Press mentions ("Featured In") open on another site, so they're left out here
-      // (remove this filter to include them). Posts without an id would give a broken link.
-      .filter(p => p.id && !p.externalUrl)
+      // Only posts in HOME_POST_CATEGORY show here. Posts with no id, or that link
+      // off-site, are skipped so a card never has a broken link.
+      .filter(p => isCategory(p, HOME_POST_CATEGORY) && p.id && !p.externalUrl)
       .sort((a, b) => new Date(b.date) - new Date(a.date))
       .slice(0, LATEST_POSTS_COUNT);
 
