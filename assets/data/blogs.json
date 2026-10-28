@@ -1,5 +1,43 @@
 [
   {
+    "id":"environmental-health-akopari",
+    "title":"When Basic Needs Remain Out of Reach: The Reality of Children in Akopari",
+    "excerpt":"A community engagement in Akopari, Asa LGA, Kwara State, revealed the challenges children face in accessing safe drinking water, proper sanitation, educational resources, and healthcare.",
+    "category":"Community",
+    "date":"2026-10-28",
+    "readTime":"4 min read time",
+    "image":"assets/images/blogs/2026-OCT28-01.jpg",
+    "content":[
+      "Today, during our community engagement in <strong>Akopari</strong> Asa LGA, Kwara State we encountered a reality no child should have to grow up with. The community has a borehole, but it no longer works. Families now depend on river water, adding alum in an attempt to make it safe for drinking. Residents recounted a distressing experience in which a guest developed stomach problems after drinking water prepared this way. They spoke about the embarrassment and helplessness they feel when visitors come to their community. At the local school, teachers shared another concern. They have toilets, but without water, maintaining proper sanitation becomes difficult. They also lack the textbooks needed to support their pupils' learning.",
+      {
+        "type":"gallery",
+        "caption":"Photos from our outreach",
+        "items":[
+          {"type":"image","src":"assets/images/blogs/2026-OCT28-02.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-OCT28-03.jpg","alt":"Highlights of our day"}       
+        ]      
+      },
+      "Then came another painful revelation: when someone falls ill, getting medical attention means travelling outside the village to Eyenkorin. Think about that for a moment. A child may drink unsafe water, fall ill, struggle with inadequate sanitation at school, and still have no nearby healthcare facility to turn to. These are not isolated inconveniences. Together, they raise serious questions about children's health, safety, dignity and development.",
+      {
+        "type":"gallery",
+        "caption":"Photos from our outreach",
+        "items":[
+          {"type":"image","src":"assets/images/blogs/2026-OCT28-04.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-OCT28-05.jpg","alt":"Highlights of our day"}       
+        ]      
+      },
+      "Through Environmental Health of a Child, Grace Life Foundation For Social Impacts is seeking to understand the everyday realities shaping children’s lives, because protecting a child must go beyond what happens inside the classroom. It must include the water they drink, the sanitation they access, the healthcare available to them and the environment in which they grow. A child’s future should not depend on how far their family can travel to find clean water or medical care. How can we speak about protecting children’s health while these basic needs remain out of reach for some communities?",
+      {
+        "type":"gallery",
+        "caption":"Photos from our outreach",
+        "items":[
+          {"type":"image","src":"assets/images/blogs/2026-OCT28-06.jpg","alt":"Highlights of our day"},
+          {"type":"image","src":"assets/images/blogs/2026-OCT28-07.jpg","alt":"Highlights of our day"}       
+        ]      
+      }
+    ]
+  },
+  {
     "id":"grace-life-center",
     "title":"The Grace Life Centre for Human Capital Development, Applied Research, Living Laboratory and Environmental Sustainability",
     "excerpt":"Five hectares secured for a proposed environmental research and learning centre",
