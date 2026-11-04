@@ -1,8 +1,9 @@
 const BLOG_DATA_URL = 'assets/data/blogs.json';
 const LATEST_POSTS_COUNT = 1;
-const HOME_POST_CATEGORY = 'upcoming project';
-const FEATURED_CATEGORY  = 'featured in';        
+const HOME_POST_CATEGORY = 'upcoming project';   // the home page only shows posts from this category
+const FEATURED_CATEGORY  = 'featured in';        // press mentions: hidden under "All", shown only via their own filter
 
+/* Case-insensitive category check, so 'Featured In' / 'upcoming project' match however they're typed */
 function isCategory(post, name){
   return (post.category || '').toLowerCase() === name;
 }
@@ -48,7 +49,7 @@ function renderThumb(post){
 function renderBlogCard(post){
   // If externalUrl exists in the JSON item, point directly to the press site
   const isExternal = Boolean(post.externalUrl);
-  const linkHref = isExternal ? esc(post.externalUrl) : `post.html?id=${encodeURIComponent(post.id)}`;
+  const linkHref = isExternal ? esc(post.externalUrl) : `stories/${encodeURIComponent(post.id)}.html`;
   const targetAttr = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
   const readLabel = isExternal ? 'Read on publisher site &nearr;' : 'Read story &rarr;';
 
@@ -223,7 +224,7 @@ function renderContentBlock(block){
 async function initPostDetail(){
   const root = document.getElementById('post-root');
   const params = new URLSearchParams(window.location.search);
-  const id = params.get('id');
+  const id = params.get('id') || document.body.dataset.postId;   // generated pages in /stories/ carry the id on <body>
 
   if(!id){
     root.innerHTML = `<div class="post-body"><p>No story was specified. <a class="back-link" href="blog.html">&larr; Back to all stories</a></p></div>`;
