@@ -71,11 +71,11 @@ function initStatRings() {
   });
 }
 
-/* Donate modal — bank account details popup, triggered from #donate-trigger */
+/* Donate modal — bank account details popup, triggered from any .donate-trigger button */
 function initDonateModal(){
-  const trigger = document.getElementById('donate-trigger');
+  const triggers = document.querySelectorAll('.donate-trigger');
   const modal = document.getElementById('donate-modal');
-  if(!trigger || !modal) return;
+  if(!triggers.length || !modal) return;
 
   const closeBtn = document.getElementById('donate-modal-close');
   let lastFocused = null;
@@ -102,7 +102,7 @@ function initDonateModal(){
     if(lastFocused) lastFocused.focus();
   }
 
-  trigger.addEventListener('click', openModal);
+  triggers.forEach(btn => btn.addEventListener('click', openModal));
   if(closeBtn) closeBtn.addEventListener('click', closeModal);
 
   // Click on the dark backdrop (not the card itself) closes the modal
