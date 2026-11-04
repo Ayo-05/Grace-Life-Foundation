@@ -183,6 +183,7 @@ p{ margin: 0 0 1em; }
   opacity: 0.8;
 }
 
+
 .hero .container{ position:relative;
    z-index:2; align-items:center; }
 
@@ -512,16 +513,16 @@ p{ margin: 0 0 1em; }
    whether you add 2 items or 12. */
 .post-gallery{
   display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
 }
 .post-gallery .gallery-item{
   width:100%; height:200px; object-fit:cover;
   border-radius: 14px; background: var(--paper-dim); display:block;
 }
 @media (max-width: 560px){
-  .post-gallery{ grid-template-columns: repeat(2, 1fr); }
-  .post-gallery .gallery-item{ height:140px; }
+  .post-gallery{ grid-template-columns: repeat(1, 1fr); }
+  .post-gallery .gallery-item{ height:180px; border-radius:10px;}
 }
 
 
@@ -625,7 +626,7 @@ textarea{ resize: vertical; min-height:120px; }
 
 /* ---------- Scroll to top ---------- */
 .scroll-top{
-  position: fixed; right: 24px; bottom: 24px; width: 46px; height:46px; border-radius:50%;
+  position: fixed; right: 24px; bottom: 24px; width: 48px; height:48px; border-radius:50%;
   background: var(--gold); border:none; color: var(--forest-deep); cursor:pointer;
   display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none;
   transform: translateY(10px); transition: all .3s ease; z-index: 90; box-shadow: 0 8px 20px rgba(0,0,0,0.2);
