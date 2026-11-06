@@ -1,6 +1,6 @@
 const BLOG_DATA_URL = 'assets/data/blogs.json';
 const LATEST_POSTS_COUNT = 1;
-const HOME_POST_CATEGORY = 'upcoming project';   // the home page only shows posts from this category
+const HOME_POST_CATEGORY = 'community';   // the home page only shows posts from this category
 const FEATURED_CATEGORY  = 'featured in';        // press mentions: hidden under "All", shown only via their own filter
 
 /* Case-insensitive category check, so 'Featured In' / 'upcoming project' match however they're typed */
