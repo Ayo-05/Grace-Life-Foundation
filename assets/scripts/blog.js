@@ -1,4 +1,12 @@
 const BLOG_DATA_URL = 'assets/data/blogs.json';
+const LATEST_POSTS_COUNT = 1;
+const HOME_POST_CATEGORY = 'community';   // the home page only shows posts from this category
+const FEATURED_CATEGORY  = 'featured in';        // press mentions: hidden under "All", shown only via their own filter
+
+/* Case-insensitive category check, so 'Featured In' / 'upcoming project' match however they're typed */
+function isCategory(post, name){
+  return (post.category || '').toLowerCase() === name;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   if(document.getElementById('blog-grid')){
@@ -6,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if(document.getElementById('post-root')){
     initPostDetail();
+  }
+  if(document.getElementById('latest-posts')){
+    initLatestPosts();
   }
 });
 
@@ -23,6 +34,40 @@ function esc(str){
   const div = document.createElement('div');
   div.textContent = str ?? '';
   return div.innerHTML;
+}
+
+/* Card thumbnail: real image if `post.image` is set, otherwise the old
+   colour block + initials so existing posts without an image still work. */
+function renderThumb(post){
+  if(post.image){
+    return `<div class="blog-thumb"><img src="${esc(post.image)}" alt="" loading="lazy"></div>`;
+  }
+  return `<div class="blog-thumb blog-thumb-fallback" style="background:${post.color || '#4C8C6B'}">${initials(post.title)}</div>`;
+}
+
+/* One story card, shared by the blog listing and the home page. */
+function renderBlogCard(post){
+  // If externalUrl exists in the JSON item, point directly to the press site
+  const isExternal = Boolean(post.externalUrl);
+  const linkHref = isExternal ? esc(post.externalUrl) : `stories/${encodeURIComponent(post.id)}.html`;
+  const targetAttr = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
+  const readLabel = isExternal ? 'Read on publisher site &nearr;' : 'Read story &rarr;';
+
+  return `
+    <a class="blog-card" href="${linkHref}" ${targetAttr}>
+      ${renderThumb(post)}
+      <div class="blog-body">
+        <span class="blog-tag">${esc(post.category)}</span>
+        <h3>${esc(post.title)}</h3>
+        <p>${esc(post.excerpt)}</p>
+        <div class="blog-meta">
+          <span>${formatDate(post.date)}</span>
+          <span>${esc(post.readTime)}</span>
+        </div>
+        <span class="blog-read">${readLabel}</span>
+      </div>
+    </a>
+  `;
 }
 
 /* ---------------- Blog listing page ---------------- */
@@ -51,26 +96,20 @@ async function initBlogList(){
     `<button class="filter-btn${i === 0 ? ' active' : ''}" data-cat="${cat}">${cat}</button>`
   ).join('');
 
-  renderPosts(posts);
+  // "All" leaves out the Featured In press mentions; they only show when that filter is clicked
+  const postsFor = cat => cat === 'All'
+    ? posts.filter(p => !isCategory(p, FEATURED_CATEGORY))
+    : posts.filter(p => p.category === cat);
+
+  renderPosts(postsFor('All'));
 
   filterBar.addEventListener('click', (e) => {
     const btn = e.target.closest('.filter-btn');
     if(!btn) return;
     filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const cat = btn.dataset.cat;
-    const filtered = cat === 'All' ? posts : posts.filter(p => p.category === cat);
-    renderPosts(filtered);
+    renderPosts(postsFor(btn.dataset.cat));
   });
-
-  /* Card thumbnail: real image if `post.image` is set, otherwise the old
-     colour block + initials so existing posts without an image still work. */
-  function renderThumb(post){
-    if(post.image){
-      return `<div class="blog-thumb"><img src="${esc(post.image)}" alt="" loading="lazy"></div>`;
-    }
-    return `<div class="blog-thumb blog-thumb-fallback" style="background:${post.color || '#4C8C6B'}">${initials(post.title)}</div>`;
-  }
 
   function renderPosts(list){
     if(!list.length){
@@ -79,21 +118,38 @@ async function initBlogList(){
       return;
     }
     emptyState.hidden = true;
-    grid.innerHTML = list.map(post => `
-      <a class="blog-card" href="post.html?id=${encodeURIComponent(post.id)}">
-        ${renderThumb(post)}
-        <div class="blog-body">
-          <span class="blog-tag">${post.category}</span>
-          <h3>${post.title}</h3>
-          <p>${post.excerpt}</p>
-          <div class="blog-meta">
-            <span>${formatDate(post.date)}</span>
-            <span>${post.readTime}</span>
-          </div>
-          <span class="blog-read">Read story &rarr;</span>
-        </div>
-      </a>
-    `).join('');
+    grid.innerHTML = list.map(renderBlogCard).join('');
+  }
+}
+
+/* ---------------- Home page: latest stories ---------------- */
+async function initLatestPosts(){
+  const grid = document.getElementById('latest-posts');
+  const section = grid.closest('section');
+
+  grid.innerHTML = Array.from({ length: LATEST_POSTS_COUNT }).map(() => '<div class="blog-skel"></div>').join('');
+
+  try{
+    const res = await fetch(BLOG_DATA_URL);
+    if(!res.ok) throw new Error('Failed to load blog data: ' + res.status);
+    const posts = await res.json();
+
+    const latest = posts
+      // Only posts in HOME_POST_CATEGORY show here. Posts with no id, or that link
+      // off-site, are skipped so a card never has a broken link.
+      .filter(p => isCategory(p, HOME_POST_CATEGORY) && p.id && !p.externalUrl)
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, LATEST_POSTS_COUNT);
+
+    if(!latest.length){
+      section.hidden = true;
+      return;
+    }
+    grid.innerHTML = latest.map(renderBlogCard).join('');
+  }catch(err){
+    // On the home page it's better to hide the section than show an error.
+    console.error(err);
+    section.hidden = true;
   }
 }
 
@@ -168,7 +224,7 @@ function renderContentBlock(block){
 async function initPostDetail(){
   const root = document.getElementById('post-root');
   const params = new URLSearchParams(window.location.search);
-  const id = params.get('id');
+  const id = params.get('id') || document.body.dataset.postId;   // generated pages in /stories/ carry the id on <body>
 
   if(!id){
     root.innerHTML = `<div class="post-body"><p>No story was specified. <a class="back-link" href="blog.html">&larr; Back to all stories</a></p></div>`;
