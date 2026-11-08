@@ -49,10 +49,27 @@
   .values-grid{ grid-template-columns: 1fr; }
   .post-image, .post-video{ width:70%; height:auto; margin-left:0; }
   .cta-band{ padding: 50px 30px; }
+  .eh-lga-grid{ grid-template-columns: repeat(2,1fr); }
+}
+
+/* ---------- Environmental Health dropdown: opens on hover (desktop) ---------- */
+@media (min-width: 721px) and (hover: hover){
+  .has-dropdown:hover .dropdown-menu{ display:block; }
 }
 
 /* ---------- Large phone / small tablet portrait ---------- */
 @media (max-width: 720px){
+  /* Environmental Health nav: dropdown expands inline inside the hamburger menu */
+  .has-dropdown{ width: 100%; }
+  .dropdown-toggle{ width: 100%; justify-content: space-between; padding: 12px 0 10px; }
+  .dropdown-menu{
+    position: static; min-width: 0; border: none; box-shadow: none; background: transparent;
+    padding: 0 0 6px 14px;
+  }
+  .dropdown-menu::before{ display:none; }
+  .dropdown-menu a{ padding: 10px 0; font-size: 1.05rem; }
+  .dropdown-menu a:hover, .nav-links .dropdown-menu a.nav-active{ background: none; }
+
   .logo{ margin-left:0; font-size:1.05rem; }
   .logo-image{ width:40px; height:40px; }
   .nav-links{
@@ -92,6 +109,11 @@
   .modal-card{ padding: 28px 22px; }
   .post-image, .post-video{ width:100%; }
   .footer-col p{font-size: 0.8rem; padding-left:40px;}
+  .scroll-top{ right:16px; bottom:16px; width:42px; height:42px; }
+  .eh-question-grid, .eh-contrast{ grid-template-columns: 1fr; }
+  .eh-pullquote{ font-size: 1.2rem; }
+  .post-gallery.eh-gallery-4{ grid-template-columns: repeat(2, 1fr); }
+
 }
 
 /* ---------- Phone ---------- */
@@ -118,6 +140,7 @@
   .modal-card{ max-height: 90vh; }
   .account-number-row{ flex-direction:column; align-items:flex-start; gap:8px; }
   .scroll-top{ right:16px; bottom:16px; width:42px; height:42px; }
+  .eh-lga-grid{ grid-template-columns: 1fr; }
 }
 
 /* ---------- Small / older phones ---------- */
@@ -129,6 +152,7 @@
   .cta-band{ padding: 32px 18px; }
   .program-icon-program{ height:160px; }
   .blog-grid{ grid-template-columns: 2fr; }
+  .scroll-top{ right:16px; bottom:16px; width:42px; height:42px; }
 
 }
 
