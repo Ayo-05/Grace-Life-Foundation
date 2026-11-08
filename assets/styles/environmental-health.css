@@ -1,0 +1,109 @@
+/* =====================================================================
+   Environmental Health section (overview, approach, local governments)
+   ===================================================================== */
+.lead{ color:var(--forest)}
+   .eh-paragraph{
+  font-size:1.15rem ;
+}
+/* Quotes */
+.eh-pullquote{
+  font-style: italic; font-size: 1.25rem; line-height: 1.4;
+  background-color: var(--paper-dim); padding:10px;
+  /* color: var(--forest);  */
+  border-left: 3px solid var(--gold); 
+  padding-left: 12px;
+   margin: 22px 0;
+}
+
+/* What we want to understand */
+.eh-question-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.eh-question-grid li{
+  padding: 18px 22px; background: var(--paper-dim); border-left: 3px solid var(--gold);
+  border-radius: 14px; color: var(--ink);
+}
+
+/* Six-LGA cards */
+.eh-lga-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.eh-lga-card{
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 24px 26px; display:flex; flex-direction:column; gap: 6px;
+}
+.eh-lga-card h3{ font-size: 1.25rem; margin: 0; }
+.eh-lga-card p{ color: var(--ink-soft); font-size: 0.95rem; margin: 0; }
+.eh-lga-card-link{ transition: transform .3s ease, box-shadow .3s ease; border-color: var(--gold); }
+.eh-lga-card-link:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(22,52,42,0.1); }
+.eh-status{
+  align-self:flex-start; margin-top: 10px; font-family: var(--font-mono); font-size: 0.72rem;
+  padding: 4px 12px; border-radius: 100px; background: var(--paper-dim); color: var(--ink-soft);
+}
+.eh-status-done{ background: var(--leaf); color: var(--white); }
+.eh-note{ margin-top: 30px; color: var(--ink-soft); font-style: italic; }
+/* CTA EH */
+.cta-eh{
+  background:var(--clay); color: var(--white); 
+  border-radius: var(--radius);
+   padding: 20px;
+   text-align:center;
+  margin:0 50px;
+}
+.cta-eh h2{ color:var(--white); }
+.cta-eh p{ color: rgba(255,255,255,0.85); max-width: 50ch; margin: 0 auto 30px; }
+
+/* Our Approach: the two questions */
+.eh-contrast{ display:grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0; }
+.eh-contrast-item{ background: var(--paper-dim); border-radius: var(--radius); padding: 22px 26px; }
+.eh-contrast-item p{ font-family: var(--font-display); font-size: 1.2rem; margin: 8px 0 0; color: var(--forest); }
+.eh-contrast-item-main{ background: var(--forest); }
+.eh-contrast-item-main p{ color: var(--white); }
+.eh-contrast-item-main .program-tag{ color: var(--gold-soft); }
+
+/* Local Governments */
+.eh-lga-select{ max-width: 360px; margin-bottom: 40px; }
+.eh-panel[hidden]{ display:none; }
+.eh-panel h2{ margin-bottom: 6px; }
+.eh-panel h3{ margin-top: 1.6em; font-size: 1.3rem; }
+.eh-panel p{ font-size: 1.05rem; }
+
+/*post body  */
+.post-body-eh{ max-width: 1200px; margin: 0 auto; padding: 30px 10px; }
+.post-body p{ font-size:1.3rem; color: var(--ink); }
+.post-body h2{ margin-top: 1.4em; font-size:1.5rem; }
+
+/* =====================================================================
+   Environmental Health nav: "Local Governments" dropdown
+   ===================================================================== */
+.has-dropdown{ position: relative; }
+.dropdown-toggle{
+  display:inline-flex; align-items:center; gap:8px;
+  font: inherit; font-size: 1.1rem; font-weight: 500; color: var(--ink-soft);
+  background: none; border: none; padding: 4px 0; cursor: pointer;
+  transition: color .2s ease;
+}
+.dropdown-toggle:hover, .has-dropdown.open .dropdown-toggle{ color: var(--forest); }
+.dropdown-toggle::after{
+  content:""; width:6px; height:6px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px); transition: transform .2s ease;
+}
+.has-dropdown.open .dropdown-toggle::after{ transform: rotate(-135deg) translateY(-2px); }
+.dropdown-toggle.nav-active{
+  color: var(--forest); font-weight: 600;
+  text-decoration: underline; text-decoration-color: var(--gold);
+  text-decoration-thickness: 2px; text-underline-offset: 8px;
+}
+
+.dropdown-menu{
+  display:none; position:absolute; top: calc(100% + 12px); left: -14px; min-width: 200px;
+  background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(22,52,42,0.12); padding: 8px; z-index: 120;
+}
+.dropdown-menu::before{ content:""; position:absolute; left:0; right:0; top:-12px; height:12px; } /* hover bridge */
+.dropdown-menu a{ display:block; padding: 10px 14px; border-radius: 10px; white-space: nowrap; font-size: 1rem; }
+.dropdown-menu a:hover{ background: var(--paper-dim); }
+.nav-links .dropdown-menu a.nav-active{ background: var(--paper-dim); }
+.nav-links .dropdown-menu a.nav-active::after{ display:none; }
+.has-dropdown.open .dropdown-menu{ display:block; }
+
+/* Photo grid: four across, two on phones */
+.post-gallery.eh-gallery-4{ grid-template-columns: repeat(4, 1fr); margin-bottom:5px;}
+.post-gallery.eh-gallery-4 .gallery-item{ height: 230px; }

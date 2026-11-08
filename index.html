@@ -4,14 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grace Life Foundation for Social Impacts — Community Health & Environmental Impact in Nigeria</title>
-<meta name="description" content="Grace Life Foundation for Social Impacts delivers clean water, community health outreach, and environmental restoration across Nigeria. See our work and get involved.">
-<meta name="keywords" content="Grace Life Foundation, NGO Nigeria, Kwara State NGO, environmental health, WASH, community health, youth leadership, sanitation, volunteer Nigeria">
+<meta name="description" content="Grace Life Foundation for Social Impacts, community health outreach, environmental restoration across Nigeria. See our work and get involved.">
+<meta name="keywords" content="Grace Life Foundation for Social Impacts, NGO Nigeria, Kwara State NGO, environmental health,community health, youth leadership, sanitation, volunteer Nigeria">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Grace Life Foundation for Social Impacts">
 <link rel="canonical" href="https://gracelifefoundation.org/">
 <meta name="theme-color" content="#16342A">
 <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
 <link rel="apple-touch-icon" href="assets/images/logo.jpg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FDGWE38YDS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FDGWE38YDS');
+</script>
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -22,24 +34,14 @@
 <meta property="og:image" content="https://gracelifefoundation.org/assets/images/logo_og.jpg">
 <meta property="og:locale" content="en_NG">
 
-<!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FDGWE38YDS"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  
-  gtag('config', 'G-FDGWE38YDS');
-  </script>
-
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://gracelifefoundation.org/index.html">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Grace Life Foundation for Social Impacts — Community Health & Environmental Impact in Nigeria">
-  <meta property="og:description" content="Grace Life Foundation for Social Impacts delivers community health outreach, and environmental restoration across Nigeria.">
-  <meta property="og:image" content="https://gracelifefoundation.org/assets/images/logo_og.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://gracelifefoundation.org/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Grace Life Foundation for Social Impacts — Community Health & Environmental Impact in Nigeria">
+<meta property="og:description" content="Grace Life Foundation for Social Impacts delivers community health outreach, and environmental restoration across Nigeria.">
+<meta property="og:image" content="https://gracelifefoundation.org/assets/images/logo_og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -85,9 +87,11 @@
       Grace Life Foundation for Social Impacts
     </a>
     <ul class="nav-links">
-      <li><a href="index" data-page="index.html">Home</a></li>
+      <li><a href="" data-page="index.html">Home</a></li>
       <li><a href="about" data-page="about.html">About</a></li>
       <li><a href="programs" data-page="programs.html">Programs</a></li>
+      <li><a href="environmental-health" data-page="environmental-health.html">Environmental Health</a></li>
+      <!-- <li><a href="environme.html">Grace Life Center</a></li> -->
       <li><a href="blog" data-page="blog.html">Stories</a></li>
       <li><a href="volunteer" data-page="volunteer.html">Volunteer</a></li>
       <li><a href="contact" data-page="contact.html">Contact</a></li>
@@ -102,71 +106,51 @@
 
 <main>
   <!-- HERO -->
-  <section class="hero">
-    <div class="rings" aria-hidden="true">
-      <!-- <img src="assets/images/OCT30.jpg" alt="homepage image"> -->
+ <section class="hero">
+    <div class="hero-image" aria-hidden="true">
+      <img src="assets/images/community/Akopari-005.jpg" alt="homepage image">
     </div>
     <div class="container">
       <div>
         <span class="eyebrow">Grace Life Foundation for Social Impacts</span>
         <h1>Cleaner Environment, Safer Health and Stronger Communities</h1>
-        <div class="hero-actions">
-          <a href="volunteer.html" class="btn btn-primary">Volunteer with us</a>
-          <a href="programs.html" data-page="programs.html" class="btn btn-primary">See our programs</a>
-        </div>
       </div>
     </div>
   </section>
 
+  <!--LATEST STORIES-->
+  <section class="section section-about" id="latest-stories">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Ongoing Project</span>
+        <!-- <h2>Our latest work in the community</h2> -->
+      </div>
+      <div class="blog-grid" id="latest-posts" aria-live="polite"></div>
+    </div>
+  </section>
+
+   
   <!-- STATS -->
-  <section class="stats-section">
+  <section class="stats-section">   
     <div class="container">
       <div class="section-head center">
         <span class="eyebrow">Our Impacts</span>
         <p>Every ring below represents a commitment we track and report on not a number we round up.</p>
       </div>
       <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-ring">
-            <svg viewBox="0 0 92 92"><circle class="bg" cx="46" cy="46" r="40"/>
-              <circle class="fg" data-percent="30" cx="46" cy="46" r="40"/>
-            </svg>
-            <span class="stat-num">3</span>
-          </div>
-          <div class="stat-title">Partnership</div>
-          <p class="stat-desc">
-            Working closely with Kwara State ministries, agencies & community youths to drive impact.
-          </p>
-        </div>
         <div class="stat-card leaf-tone">
           <div class="stat-ring">
-            <svg viewBox="0 0 92 92"><circle class="bg" cx="46" cy="46" r="40"/><circle class="fg" data-percent="90" cx="46" cy="46" r="40"/></svg>
-            <span class="stat-num">900+</span>
+            <svg viewBox="0 0 92 92"><circle class="bg" cx="46" cy="46" r="40"/><circle class="fg" data-percent="50" cx="46" cy="46" r="40"/></svg>
+            <span class="stat-num">1500+</span>
           </div>
           <div class="stat-title">Students Reached</div>
           <p class="stat-desc">
             Equipping young people with knowledge on sanitation, environmental responsibility, & public health.
           </p>
         </div>
-        <div class="stat-card clay-tone">
-          <div class="stat-ring">
-            <svg viewBox="0 0 92 92"><circle class="bg" cx="46" cy="46" r="40"/><circle class="fg" data-percent="60" cx="46" cy="46" r="40"/></svg>
-            <span class="stat-num">12+</span>
-          </div>
-          <div class="stat-title">Program Outreach</div>
-          <p class="stat-desc">Environmental health & sanitation initiatives across communities.</p>
-        </div>
         <div class="stat-card">
           <div class="stat-ring">
-            <svg viewBox="0 0 92 92"><circle class="bg" cx="46" cy="46" r="40"/><circle class="fg" data-percent="10" cx="46" cy="46" r="40"/></svg>
-            <span class="stat-num">10+</span>
-          </div>
-          <div class="stat-title">Sanitation Events</div>
-          <p class="stat-desc">Conducting monthly community clean-up & sanitation exercises since our inception.</p>
-        </div>
-        <div class="stat-card">
-          <div class="stat-ring">
-            <svg viewBox="0 0 92 92"><circle class="bg" cx="46" cy="46" r="40"/><circle class="fg" data-percent="60" cx="46" cy="46" r="40"/></svg>
+            <svg viewBox="0 0 92 92"><circle class="bg" cx="46" cy="46" r="40"/><circle class="fg" data-percent="37" cx="46" cy="46" r="40"/></svg>
             <span class="stat-num">40+</span>
           </div>
           <div class="stat-title">Active volunteers</div>
@@ -223,38 +207,42 @@
 
   <!-- PROCESS / HOW WE WORK -->
   <section class="section section-forest">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow" style="color:var(--gold-soft)">How we work</span>
-        <h2>
-          Our programmes combine community engagement, environmental education, government
-          collaboration and structured follow-up. We use a five-stage model to move from local evidence to practical action.
-        </h2>
+    <div class=" container process-grid">
+      <div class="process-copy">
+        <div class="section-head">
+          <span class="eyebrow">How we work</span>
+          <h2>
+            Our programmes combine community engagement, environmental education, government
+            collaboration and structured follow-up. We use a five-stage model to move from local evidence to practical action.
+          </h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>Assess</h4>
+            <p>Identify local needs, stakeholders, barriers and existing resources.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Co-design</h4>
+            <p>Develop activities with schools, young people, communities and government.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Implement</h4>
+            <p>
+              Deliver education, mobilisation and practical environmental action.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h4 >Monitor</h4>
+            <p>Track participation, outputs, behaviour and implementation progress.</p>
+          </div>
+          <div class="timeline-item-end">
+            <h4 >Learn & Scale</h4>
+            <P>Use evidence to improve delivery, sustain partnerships and replicate what works.</P>
+          </div>
+        </div>
       </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>Assess</h4>
-          <p>Identify local needs, stakeholders, barriers and existing resources.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Co-design</h4>
-          <p>Develop activities with schools, young people, communities and government.</p>
-        </div>
-        <div class="timeline-item">
-          <h4>Implement</h4>
-          <p>
-            Deliver education, mobilisation and practical environmental action.
-          </p>
-        </div>
-        <div class="timeline-item">
-          <h4 >Monitor</h4>
-          <p>Track participation, outputs, behaviour and implementation progress.</p>
-        </div>
-        <div class="timeline-item-end">
-          <h4 >Learn & Scale</h4>
-          <P>Use evidence to improve delivery, sustain partnerships and replicate what works.</P>
-        </div>
-
+      <div class="process-media">
+        <img src="assets/images/2026-MAR11-05.jpg" alt="Grace Life Foundation team implementing a community programme" loading="lazy">
       </div>
     </div>
   </section>
@@ -267,7 +255,8 @@
       <p>We want you to join us by volunteering or donating as we carry on our mission and vision.</p>
       <div class="hero-actions" style="justify-content:center">
         <a href="volunteer" data-page="volunteer.html" class="btn btn-primary">Volunteer with us</a>
-        <button type="button" class="btn btn-primary" id="donate-trigger" aria-haspopup="dialog" aria-controls="donate-modal">Get bank transfer details</button>
+        <button type="button" class="btn btn-primary donate-trigger" aria-haspopup="dialog" aria-controls="donate-modal">Donate here</button>
+        <!-- <button type="button" class="btn btn-primary" id="donate-trigger" aria-haspopup="dialog" aria-controls="donate-modal">Donate here</button> -->
       </div>
     </div>
     <!-- Donate modal: opened by #donate-trigger above -->
@@ -302,17 +291,6 @@
               <button type="button" class="copy-btn" data-copy-target="0076252814">Copy</button>
             </div>
           </div>
-          <div class="account-card">
-            <h3>
-              <img src="assets/images/tatumbank-logo.jpg" alt="Tatum Bank Logo" class="bank-logo">
-              Tatum Bank
-            </h3>
-            <p><strong>Account Name:</strong> Grace Life Foundation for Social Impacts</p>
-            <div class="account-number-row">
-              <p><strong>Account Number:</strong> <span class="account-number">3010003384</span></p>
-              <button type="button" class="copy-btn" data-copy-target="3010003384">Copy</button>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -336,7 +314,7 @@
         </div>
       <!-- </div> -->
     <div class="footer-bottom">
-      <span>&copy; 2026 Grace Life Foundation for Social Impacts. All rights reserved.</span><br
+      <span>&copy; 2026 Grace Life Foundation for Social Impacts. All rights reserved.</span><br>
       <span>Registered NGO · Nigeria</span>
     </div>
   </div>
@@ -346,7 +324,8 @@
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
-<script src="assets/scripts/main.js"></script>
+<script type="text/javascript" src="assets/scripts/main.js"></script>
+<script type="text/javascript" src="assets/scripts/blog.js"></script>
 
 </body>
 </html>

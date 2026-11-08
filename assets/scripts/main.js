@@ -29,7 +29,15 @@ function initNav(){
 
 /* Highlight the current page in the nav */
 function markActiveNav(){
-  const current = (window.location.pathname.split('/').pop() || 'index.html');
+  let current = window.location.pathname.split('/').pop();
+  
+  // If we are on the homepage (no pathname), default to 'index.html'
+  if (current === "" || current === "index") {
+    current = "index.html";
+  } else if (!current.endsWith('.html')) {
+    current = current + ".html"; // append '.html' to match your HTML data-page attributes
+  }
+
   document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
     if(link.dataset.page === current){
       link.classList.add('nav-active');
@@ -63,11 +71,11 @@ function initStatRings() {
   });
 }
 
-/* Donate modal — bank account details popup, triggered from #donate-trigger */
+/* Donate modal — bank account details popup, triggered from any .donate-trigger button */
 function initDonateModal(){
-  const trigger = document.getElementById('donate-trigger');
+  const triggers = document.querySelectorAll('.donate-trigger');
   const modal = document.getElementById('donate-modal');
-  if(!trigger || !modal) return;
+  if(!triggers.length || !modal) return;
 
   const closeBtn = document.getElementById('donate-modal-close');
   let lastFocused = null;
@@ -94,7 +102,7 @@ function initDonateModal(){
     if(lastFocused) lastFocused.focus();
   }
 
-  trigger.addEventListener('click', openModal);
+  triggers.forEach(btn => btn.addEventListener('click', openModal));
   if(closeBtn) closeBtn.addEventListener('click', closeModal);
 
   // Click on the dark backdrop (not the card itself) closes the modal
