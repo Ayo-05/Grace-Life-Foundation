@@ -20,7 +20,7 @@
   font-weight:700; 
   font-size:1.2rem;
   color: var(--forest);
-  margin-left: -18px;
+  margin-left:-28px;
 }
 .logo-image{ width:50px; height:50px}
 .nav-links{ display:flex; align-items:center; gap: 34px; }
