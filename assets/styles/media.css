@@ -113,6 +113,9 @@
   .eh-question-grid, .eh-contrast{ grid-template-columns: 1fr; }
   .eh-pullquote{ font-size: 1.2rem; }
   .post-gallery.eh-gallery-4{ grid-template-columns: repeat(2, 1fr); }
+  .cta-eh{ margin: 0 16px; padding: 32px 20px; border-radius: 20px; }
+  .section-forest-eh{ margin: 0 16px; border-radius: 20px; }
+  .post-body p{ font-size: 1.1rem; }
 
 }
 
@@ -141,6 +144,7 @@
   .account-number-row{ flex-direction:column; align-items:flex-start; gap:8px; }
   .scroll-top{ right:16px; bottom:16px; width:42px; height:42px; }
   .eh-lga-grid{ grid-template-columns: 1fr; }
+  .cta-eh h2{ font-size:1.5rem; }
 }
 
 /* ---------- Small / older phones ---------- */
@@ -150,6 +154,7 @@
   .stats-grid{ grid-template-columns: 1fr; }
   .nav-cta{ gap:10px; }
   .cta-band{ padding: 32px 18px; }
+  .cta-eh{ padding: 28px 16px; }
   .program-icon-program{ height:160px; }
   .blog-grid{ grid-template-columns: 2fr; }
   .scroll-top{ right:16px; bottom:16px; width:42px; height:42px; }
