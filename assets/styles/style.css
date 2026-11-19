@@ -56,8 +56,8 @@ p{ margin: 0 0 1em; }
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 28px;
-
 }
+
 .eyebrow{
   font-family: var(--font-mono);
   font-size: 1.1rem;
