@@ -145,6 +145,7 @@
   .scroll-top{ right:16px; bottom:16px; width:42px; height:42px; }
   .eh-lga-grid{ grid-template-columns: 1fr; }
   .cta-eh h2{ font-size:1.5rem; }
+  .eh-video-play::before{ width: 54px; height: 38px; }
 }
 
 /* ---------- Small / older phones ---------- */
